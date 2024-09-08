@@ -1,0 +1,97 @@
+---
+tags:
+  - stack
+  - queue
+---
+![[problems/pictures/Pasted image 20240908191438.png]]
+
+
+```c++
+// push O(n)  
+class Solution {  
+  std::queue<int> q1, q2;  
+  
+public:  
+  void push(int x) {  
+    if (q1.empty())  
+      q1.push(x);  
+    while (!q2.empty()) {  
+      q1.push(q2.front());  
+      q2.pop();  
+    }  
+  
+    while (!q1.empty()) {  
+      q2.push(q1.front());  
+      q1.pop();  
+    }  
+  }  
+  
+  int pop() {  
+    int res = q2.front();  
+    q2.pop();  
+    return res;  
+  }  
+  
+  int top() { return q2.front(); }  
+  
+  bool empty() { return q1.empty() && q2.empty(); }  
+};
+```
+
+```c++
+// pop O(n)  
+class Solution_2 {  
+  std::queue<int> q1, q2;  
+  int front;  
+  
+public:  
+  void push(int x) {  
+    q1.push(x);  
+    front = x;  
+  }  
+  
+  int pop() {  
+    while (q1.size() > 1) {  
+      front = q1.front();  
+      q1.pop();  
+      q2.push(front);  
+    }  
+  
+    int value = q1.front();  
+    std::swap(q1, q2);  
+  
+    return value;  
+  }  
+  
+  int top() { return front; }  
+  
+  bool empty() { return q1.empty() && q2.empty(); }  
+};
+```
+
+```c++
+class Solution_3 {  
+  std::queue<int> q;  
+  
+public:  
+  void push(int x) {  
+    std::queue<int> tmp;  
+    tmp.push(x);  
+    while (!q.empty()) {  
+      tmp.push(q.front());  
+      q.pop();  
+    }  
+    std::swap(tmp, q);  
+  }  
+  
+  int pop() {  
+    int res = q.front();  
+    q.pop();  
+    return res;  
+  }  
+  
+  int top() { return q.front(); }  
+  
+  bool empty() { return q.empty(); }  
+};
+```
