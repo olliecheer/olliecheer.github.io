@@ -1,0 +1,31 @@
+---
+tags:
+  - shuffle
+  - array
+---
+
+
+![[problems/pictures/Pasted image 20240909220518.png]]
+
+```c++
+class Solution {  
+  vec<int> nums, orig;  
+  
+public:  
+  explicit Solution(vec<int> &nums) : nums{nums}, orig{nums} {}  
+  
+  vec<int> reset() {  
+    nums = orig;  
+    return nums;  
+  }  
+  
+  vec<int> shuffle() {  
+    for (int i = 0; i < nums.size(); i++) {  
+      int j = i + rand() % (nums.size() - i);  
+      std::swap(nums[i], nums[j]);  
+    }  
+  
+    return nums;  
+  }  
+};
+```
