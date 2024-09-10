@@ -125,3 +125,59 @@ To ensure that competing threads do not fall into lockstep, each backing off and
 	- Such **unfairness** has some **positive consequences**: The repeated access to the same thread without intervening accesses by threads at different processors **reduces cache misses** dur to accesses to this data structure, and so **reduces bus traffic** and avoids the latency of communication. For longer critical sections, this effect can be more significant that the effect of reduced contention on the lock itself. So **there is a tension between fairness and performance.**
 
 
+
+## Queue Locks
+
+Aside from back-off lock, queue lock is another approach to implementing scalable spin locks. It's slightly more complicated, but inherently more portable and avoids or ameliorates many of the problems of back-off locks.
+
+The idea is to have threads waiting to acquire the lock from a **queue**, with each thread discovering when its turn has arrived by checking whether its **predecessor** has finished. Cache-coherence traffic is reduced by having each thread **spin on a different location**, and first-come-first-served fairness is provided by the queue inherently.
+
+### Array-based lock
+
+```c++
+template<int capacity>  
+class ArrayLock : public Lock {  
+    std::unordered_map<std::thread::id, int> tid2slot;  
+    std::mutex tid2slot_mtx; // Need a mutex to protect tid2slot. Ignore this... 
+    std::atomic<int> tail;  
+  
+    static_assert(capacity > 0, "capacity has to be larger than 0");  
+    bool flag[capacity]; // There may be cache bouncing due to cache line size. Proper layout can fix this issue.  
+  
+public:  
+    explicit ArrayLock()  
+            : tail{}, flag{} {  
+        flag[0] = true;  
+    }  
+  
+    void lock() final {  
+        int slot = tail.fetch_add(1, std::memory_order::memory_order_seq_cst) % capacity;  
+        {  
+            std::scoped_lock lk(tid2slot_mtx);  // Ignore this...
+            tid2slot[std::this_thread::get_id()] = slot;  
+        }  
+        while (!flag[slot]);  
+    }  
+  
+    void unlock() final {  
+        int slot;  
+        {  
+            std::scoped_lock lk(tid2slot_mtx);  // Ignore this...
+            slot = tid2slot[std::this_thread::get_id()];  
+        }  
+        flag[slot] = false;  
+        flag[(slot + 1) % capacity] = true;  
+    }  
+};
+```
+
+
+Contention may still occur because of a phenomenon called ***false sharing***, which occurs when **adjacent data items share a single cache line**. A write to one item invalidates that item's cache line, which causes invalidation traffic to processors that are spinning on nearby unchanged items that happen to fall in the same cache line.
+
+Properly **padding** array elements can avoid false sharing.
+
+Array Lock is **not space-efficient**. It requires a known bound **n** on the maximum number of concurrent threads, and it allocates an array of that size per lock. Synchronizing **L** distinct objects requires ***O(Ln)*** space, event if a thread accesses only one lock at a time.
+
+
+
+### CLH Queue Lock
