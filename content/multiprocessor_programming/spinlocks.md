@@ -230,7 +230,8 @@ public:
             // assert cur->locked.load() == false  
             cur.locked.store(true, std::memory_order::memory_order_release);  
             // assert prev->next.load() == nullptr  
-            // put my qnode to predecessor's next pointer            prev->next.store(&cur, std::memory_order::memory_order_release);  
+            // put my qnode to predecessor's next pointer
+            prev->next.store(&cur, std::memory_order::memory_order_release);  
   
             // wait until predecessor gives up the lock  
             while (cur.locked.load(std::memory_order::memory_order_acquire));  
@@ -245,7 +246,8 @@ public:
                 return;  
   
             // well, a successor is trying to lock  
-            // wait until successor fills my next pointer            while (cur.next.load(std::memory_order::memory_order_acquire) == nullptr);  
+            // wait until successor fills my next pointer
+            while (cur.next.load(std::memory_order::memory_order_acquire) == nullptr);
         }  
   
         auto next = cur.next.load(std::memory_order::memory_order_acquire);  
@@ -269,7 +271,9 @@ It requires **more reads, writes, and *compare_exchange()*** calls than CLH Lock
 class TimeoutQueueLock : public Lock {  
     struct QNode {  
         // if prev == nullptr, this qnode is spinning  
-        // else if prev == AVAILABLE, this qnode is released (unlocked)        // else, this node is abandoned (timeout)        std::atomic<QNode *> prev{};  
+        // else if prev == AVAILABLE, this qnode is released (unlocked)
+        // else, this node is abandoned (timeout)
+        std::atomic<QNode *> prev{};  
     };  
   
     static QNode *AVAILABLE;  
@@ -281,11 +285,14 @@ public:
         auto start_time = std::chrono::steady_clock::now();  
   
         // delete cur;  
-        // we cannot simply delete this node, because our successor may access it. Just leak it :)        cur = new QNode{}; // cur->prev == nullptr, we're spinning  
+        // we cannot simply delete this node, because our successor may access it. Just leak it :)
+		cur = new QNode{}; // cur->prev == nullptr, we're spinning  
         auto my_prev = tail.exchange(cur, std::memory_order::memory_order_seq_cst);  
         if (my_prev == nullptr || my_prev->prev.load(std::memory_order::memory_order_acquire) == AVAILABLE)  
             // if tail == nullptr, this lock has not been used  
-            // if tail->prev == AVAILABLE, this lock is released            // either way, we acquired this lock.            return true;  
+            // if tail->prev == AVAILABLE, this lock is released
+            // either way, we acquired this lock.
+            return true;  
   
         while (std::chrono::steady_clock::now() - start_time < patience) {  
             auto prev_prev = my_prev->prev.load(std::memory_order::memory_order_acquire);  
@@ -293,8 +300,8 @@ public:
                 // our predecessor has released this lock  
                 return true;  
             else if (prev_prev)  
-                // our predecessor has abandoned, let's look forward and try again  
-                my_prev = prev_prev;  
+                // our predecessor has abandoned, let's look forward and try again
+                my_prev = prev_prev;
             // else prev_prev == nullptr, which indicates our prev is spinning, so we spin as well  
         }  
   
