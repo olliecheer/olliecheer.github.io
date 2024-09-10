@@ -181,3 +181,141 @@ Array Lock is **not space-efficient**. It requires a known bound **n** on the ma
 
 
 ### CLH Queue Lock
+
+
+```c++
+class CLHLock : public Lock {  
+    static thread_local std::atomic<bool> *prev;  
+    static thread_local std::atomic<bool> *cur;  
+    std::atomic<std::atomic<bool> *> tail{new std::atomic<bool>{false}};  
+  
+public:  
+    void lock() final {  
+        cur->store(true, std::memory_order::memory_order_release);  
+        prev = tail.exchange(cur, std::memory_order::memory_order_seq_cst);  
+        while (prev->load(std::memory_order::memory_order_acquire));  
+    }  
+  
+    void unlock() final {  
+        cur->store(false, std::memory_order::memory_order_release);  
+        cur = prev;  
+    }  
+};  
+  
+thread_local std::atomic<bool> *CLHLock::prev = nullptr;  
+thread_local std::atomic<bool> *CLHLock::cur = new std::atomic<bool>{false};
+```
+
+Perhaps the only disadvantage of this lock algorithm is that it **performs poorly on cacheless NUMA** architectures.
+- Each thread spins waiting for its predecessor's node to become false. If this memory location is remote, then performance suffers.
+- On cache-coherent architectures, however, this approach should work well.
+
+
+### MCS Lock
+
+```c++
+class MCSLock final : public Lock {  
+    struct QNode {  
+        std::atomic<bool> locked{false};  
+        std::atomic<QNode *> next{};  
+    };  
+  
+    std::atomic<QNode *> tail{};  
+    static thread_local QNode cur;  
+  
+public:  
+    void lock() final {  
+        auto prev = tail.exchange(&cur, std::memory_order::memory_order_acq_rel);  
+        if (prev) {  
+            // assert cur->locked.load() == false  
+            cur.locked.store(true, std::memory_order::memory_order_release);  
+            // assert prev->next.load() == nullptr  
+            // put my qnode to predecessor's next pointer            prev->next.store(&cur, std::memory_order::memory_order_release);  
+  
+            // wait until predecessor gives up the lock  
+            while (cur.locked.load(std::memory_order::memory_order_acquire));  
+        }  
+    }  
+  
+    void unlock() final {  
+        if (cur.next.load(std::memory_order::memory_order_acquire) == nullptr) {  
+            // looks like there's no successor, let's compare_and_exchange and exit if succeed  
+            auto expect_value = &cur; // compare_exchange ask for lvalue ref, so we add this tmp variable  
+            if (tail.compare_exchange_strong(expect_value, nullptr, std::memory_order::memory_order_seq_cst))  
+                return;  
+  
+            // well, a successor is trying to lock  
+            // wait until successor fills my next pointer            while (cur.next.load(std::memory_order::memory_order_acquire) == nullptr);  
+        }  
+  
+        auto next = cur.next.load(std::memory_order::memory_order_acquire);  
+        next->locked.store(false, std::memory_order::memory_order_release);  
+        cur.next.store(nullptr, std::memory_order::memory_order_release);  
+    }  
+};  
+  
+thread_local MCSLock::QNode MCSLock::cur{};
+```
+
+MCS lock shares the advantages of the CLH Lock, in particular, the property that each lock release invalidates only the successor's cache entry. It is better suited to cacheless NUMA architectures because each thread controls the location on which it spins.
+
+Like CLH Lock, nodes can be recycles so that this lock has space complexity ***O(L+n)***.
+It requires **more reads, writes, and *compare_exchange()*** calls than CLH Lock.
+
+
+### Timeout Queue Lock -- based on CLH Lock
+
+```c++
+class TimeoutQueueLock : public Lock {  
+    struct QNode {  
+        // if prev == nullptr, this qnode is spinning  
+        // else if prev == AVAILABLE, this qnode is released (unlocked)        // else, this node is abandoned (timeout)        std::atomic<QNode *> prev{};  
+    };  
+  
+    static QNode *AVAILABLE;  
+    std::atomic<QNode *> tail{};  
+    static thread_local QNode *cur;  
+  
+public:  
+    bool tryLock(std::chrono::nanoseconds patience) {  
+        auto start_time = std::chrono::steady_clock::now();  
+  
+        // delete cur;  
+        // we cannot simply delete this node, because our successor may access it. Just leak it :)        cur = new QNode{}; // cur->prev == nullptr, we're spinning  
+        auto my_prev = tail.exchange(cur, std::memory_order::memory_order_seq_cst);  
+        if (my_prev == nullptr || my_prev->prev.load(std::memory_order::memory_order_acquire) == AVAILABLE)  
+            // if tail == nullptr, this lock has not been used  
+            // if tail->prev == AVAILABLE, this lock is released            // either way, we acquired this lock.            return true;  
+  
+        while (std::chrono::steady_clock::now() - start_time < patience) {  
+            auto prev_prev = my_prev->prev.load(std::memory_order::memory_order_acquire);  
+            if (prev_prev == AVAILABLE)  
+                // our predecessor has released this lock  
+                return true;  
+            else if (prev_prev)  
+                // our predecessor has abandoned, let's look forward and try again  
+                my_prev = prev_prev;  
+            // else prev_prev == nullptr, which indicates our prev is spinning, so we spin as well  
+        }  
+  
+        if (!tail.compare_exchange_strong(cur, my_prev, std::memory_order::memory_order_seq_cst))  
+            // this qnode is abandoned, but we cannot free this qnode. because successors may access it.  
+            cur->prev = my_prev;  
+  
+        return false;  
+    }  
+  
+    void unlock() final {  
+        if (!tail.compare_exchange_strong(cur, nullptr, std::memory_order::memory_order_seq_cst))  
+            cur->prev = AVAILABLE;  
+    }  
+};  
+  
+TimeoutQueueLock::QNode *TimeoutQueueLock::AVAILABLE{new TimeoutQueueLock::QNode{}};  
+thread_local TimeoutQueueLock::QNode *TimeoutQueueLock::cur{};
+```
+
+
+Timeout Queue Lock spins locally on a cached location, and detect quickly if the lock is free. It also has the **wait-free timeout** (responding to a timeout is wait-free, requiring only a constant number of steps) property of the **Backoff Lock**.
+
+However, it need to **allocate a new node** (leak) per lock access, and a thread spinning on the lock may have to traverse a chain of timed-out nodes before it can access the critical section.
