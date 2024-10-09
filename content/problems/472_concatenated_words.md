@@ -4,57 +4,69 @@ tags:
 ![[problems/pictures/Pasted image 20240909223608.png]]
 
 ```c++
-class Solution {  
-  struct TrieNode {  
-    bool is_word;  
-    vec<TrieNode *> children;  
-  };  
-  
-  TrieNode *root;  
-  
-  bool search(std::string &word, int index, int count) {  
-    if (index == word.size() && count > 1)  
-      return true;  
-  
-    auto cur = root;  
-    for (int i = index; i < word.size(); i++) {  
-      if (cur->children[word[i] - 'a'] == nullptr)  
-        return false;  
-  
-      cur = cur->children[word[i] - 'a'];  
-  
-      if (cur->is_word && search(word, i + 1, count + 1))  
-        return true;  
-    }  
-  
-    return false;  
-  }  
-  
-  void addWord(std::string &word) {  
-    auto cur = root;  
-    for (char c : word) {  
-      if (!cur->children[c - 'a'])  
-        cur->children[c - 'a'] = new TrieNode{};  
-  
-      cur = cur->children[c - 'a'];  
-    }  
-  
-    cur->is_word = true;  
-  }  
-  
-public:  
-  vec<std::string> findAllConcatenatedWordsInADict(vec<std::string> &words) {  
-    vec<std::string> res;  
-    root = new TrieNode{};  
-  
-    for (auto &&it : words)  
-      addWord(it);  
-  
-    for (auto &&it : words)  
-      if (search(it, 0, 0))  
-        res.push_back(it);  
-  
-    return res;  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+  struct TrieNode {
+    bool is_word;
+    vec<TrieNode *> children{26};
+  };
+
+  TrieNode *root;
+  std::unordered_map<int, std::unordered_map<int, int>> mp;
+
+  void addWord(std::string &word) {
+    auto cur = root;
+    for (char c : word) {
+      if (!cur->children[c - 'a'])
+        cur->children[c - 'a'] = new TrieNode{};
+
+      cur = cur->children[c - 'a'];
+    }
+
+    cur->is_word = true;
+  }
+
+  bool dfs(int pos, std::string &target, int which) {
+    if (mp[which][pos] == 1)
+      return false;
+
+    if (pos >= target.size())
+      return true;
+
+    auto cur = root;
+    for (int i = pos; i < target.size(); i++) {
+      if (!cur->children[target[i] - 'a'])
+        break;
+
+      if (cur->children[target[i] - 'a']->is_word && dfs(i + 1, target, which))
+        return true;
+
+      cur = cur->children[target[i] - 'a'];
+    }
+
+    mp[which][pos] = 1;
+    return false;
+  }
+
+public:
+  vec<std::string> findAllConcatenatedWordsInADict(vec<std::string> &words) {
+    std::sort(words.begin(), words.end(),
+              [](auto &a, auto &b) { return a.size() < b.size(); });
+    vec<std::string> res;
+    root = new TrieNode{};
+
+    for (int i = 0; i < words.size(); i++) {
+      if (words[i].empty())
+        continue;
+
+      if (dfs(0, words[i], i))
+        res.push_back(words[i]);
+
+      addWord(words[i]);
+    }
+
+    return res;
+  }
 };
 ```

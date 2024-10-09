@@ -6,24 +6,32 @@ tags:
 
 
 ```c++
-class Solution {  
-public:  
-  vec<int> nextGreaterElement(vec<int> &nums1, vec<int> &nums2) {  
-    std::unordered_map<int, int> mp;  
-    std::stack<int> stk;  
-  
-    for (int i = nums2.size() - 2; i >= 0; i--) {  
-      while (!stk.empty() && nums2[i] >= stk.top())  
-        stk.pop();  
-  
-      mp[nums2[i]] = (stk.empty() ? -1 : stk.top());  
-      stk.push(nums2[i]);  
-    }  
-    vec<int> res;  
-    for (auto it : nums1)  
-      res.push_back(mp[it]);  
-  
-    return res;  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+public:
+  vec<int> nextGreaterElement(vec<int> &nums1, vec<int> &nums2) {
+    std::unordered_map<int, int> mp;
+    std::stack<int> stk;
+
+    for (int n : nums2) {
+      while (!stk.empty() && n > stk.top()) {
+        mp[stk.top()] = n;
+        stk.pop();
+      }
+      stk.push(n);
+    }
+
+    while (!stk.empty()) {
+      mp[stk.top()] = -1;
+      stk.pop();
+    }
+
+    vec<int> res;
+    for (auto it : nums1)
+      res.push_back(mp[it]);
+
+    return res;
+  }
 };
 ```

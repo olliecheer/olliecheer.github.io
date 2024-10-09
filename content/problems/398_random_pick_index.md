@@ -1,27 +1,31 @@
 ---
 tags:
   - random
+  - reservoir_sampling
 ---
 ![[problems/pictures/Pasted image 20240909220947.png]]
 
 ```c++
-class Solution {  
-  vec<int> nums;  
-  
-public:  
-  explicit Solution(vec<int> nums) : nums{std::move(nums)} {}  
-  
-  int pick(int target) {  
-    int res = -1, count = 1;  
-  
-    for (int i = 0; i < nums.size(); i++) {  
-      if (nums[i] == target && rand() % count == 0)  
-        res = i;  
-  
-      count++;  
-    }  
-  
-    return res;  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+  vec<int> nums;
+
+public:
+  explicit Solution(vec<int> _nums) : nums{std::move(_nums)} {}
+
+  int pick(int target) {
+    int res;
+
+    for (int i = 0, cnt = 0; i < nums.size(); i++) {
+      if (nums[i] == target) {
+        cnt++;
+        if (rand() % cnt == 0)
+          res = i;
+      }
+    }
+
+    return res;
+  }
 };
 ```

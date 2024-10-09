@@ -5,38 +5,45 @@ tags:
 ![[problems/pictures/Pasted image 20240909232914.png]]
 
 ```c++
-class MyCalendar {  
-  vec<vec<int>> calendar;  
-  
-public:  
-  bool book(int start, int end) {  
-    for (auto &&it : calendar) {  
-      if (it[0] < end && start < it[1])  
-        return false;  
-    }  
-  
-    calendar.push_back({start, end});  
-    return true;  
-  }  
-};  
+template <typename T> using vec = std::vector<T>;
+
+class MyCalendar {
+  vec<vec<int>> calendar;
+
+public:
+  bool book(int start, int end) {
+    for (auto &&it : calendar)
+      if (it[0] < end && start < it[1])
+        return false;
+
+    calendar.push_back({start, end});
+    return true;
+  }
+};
 ```
 
 
 ```c++
-class MyCalendar_2 {  
-  std::map<int, int> calendar;  
-  
-public:  
-  bool book(int start, int end) {  
-    int prev = calendar.floorKey(start);  
-    int next = calendar.ceilingKey(start);  
-  
-    if ((prev == nullptr || calendar[prev] <= start) &&  
-        (next == nullptr || end <= next)) {  
-      calendar.insert({start, end});  
-      return true;  
-    }  
-    return false;  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class MyCalendar {
+  std::set<std::pair<int, int>> calendar;
+
+public:
+  bool book(int start, int end) {
+    std::pair<int, int> evt{start, end};
+    auto next_event = calendar.lower_bound(evt);
+    if (next_event != calendar.end() && next_event->first < end)
+      return false;
+
+    if (next_event != calendar.begin()) {
+      auto prev_event = std::prev(next_event);
+      if (prev_event->second > start)
+        return false;
+    }
+
+    calendar.insert(evt);
+    return true;
+  }
 };
 ```

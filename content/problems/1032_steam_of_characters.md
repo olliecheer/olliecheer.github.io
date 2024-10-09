@@ -2,54 +2,72 @@
 tags:
   - data_stream
   - trie
+  - ac_automaton
 ---
 ![[problems/pictures/Pasted image 20240910003814.png]]
 ![[problems/pictures/Pasted image 20240910003823.png]]
 
+### Automaton
 
 ```c++
-class StreamChecker {  
-  struct TrieNode {  
-    bool is_word;  
-    vec<TrieNode *> children{26};  
-  };  
-  
-  TrieNode *root;  
-  std::string s;  
-  
-  void createTrie(vec<std::string> &words) {  
-    for (auto &&it : words) {  
-      auto cur = root;  
-      int N = it.size();  
-      for (int i = N; i >= 0; i--) {  
-        char c = s[i];  
-        if (!cur->children[c - 'a'])  
-          cur->children[c - 'a'] = new TrieNode{};  
-  
-        cur = cur->children[c - 'a'];  
-      }  
-  
-      cur->is_word = true;  
-    }  
-  }  
-  
-public:  
-  explicit StreamChecker(vec<std::string> &words) : root{new TrieNode{}} {  
-    createTrie(words);  
-  }  
-  
-  bool query(char letter) {  
-    s.push_back(letter);  
-    TrieNode *cur = root;  
-  
-    for (int i = s.size() - 1; i >= 0 && cur; i--) {  
-      char c = s[i];  
-      cur = cur->children[c - 'a'];  
-      if (cur && cur->is_word)  
-        return true;  
-    }  
-  
-    return false;  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+struct TrieNode {
+  vec<TrieNode *> children;
+  bool isEnd;
+  TrieNode *fail;
+  TrieNode() {
+    this->children = vec<TrieNode *>(26, nullptr);
+    this->isEnd = false;
+    this->fail = nullptr;
+  }
+};
+
+class StreamChecker {
+public:
+  TrieNode *root;
+  TrieNode *temp;
+  StreamChecker(vec<std::string> &words) {
+    root = new TrieNode();
+    for (std::string &word : words) {
+      TrieNode *cur = root;
+      for (int i = 0; i < word.size(); i++) {
+        int index = word[i] - 'a';
+        if (cur->children[index] == nullptr) {
+          cur->children[index] = new TrieNode();
+        }
+        cur = cur->children[index];
+      }
+      cur->isEnd = true;
+    }
+    root->fail = root;
+    std::queue<TrieNode *> q;
+    for (int i = 0; i < 26; i++) {
+      if (root->children[i] != nullptr) {
+        root->children[i]->fail = root;
+        q.emplace(root->children[i]);
+      } else
+        root->children[i] = root;
+    }
+    while (!q.empty()) {
+      TrieNode *node = q.front();
+      q.pop();
+      node->isEnd = node->isEnd || node->fail->isEnd;
+      for (int i = 0; i < 26; i++) {
+        if (node->children[i] != nullptr) {
+          node->children[i]->fail = node->fail->children[i];
+          q.emplace(node->children[i]);
+        } else
+          node->children[i] = node->fail->children[i];
+      }
+    }
+
+    temp = root;
+  }
+
+  bool query(char letter) {
+    temp = temp->children[letter - 'a'];
+    return temp->isEnd;
+  }
 };
 ```

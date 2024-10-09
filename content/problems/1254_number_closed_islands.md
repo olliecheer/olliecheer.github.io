@@ -9,36 +9,44 @@ tags:
 
 
 ```c++
-class Solution {  
-  enum {  
-    WATER = 1,  
-    LAND = 0,  
-  };  
-  
-  bool dfs(vec<vec<int>> &grid, int i, int j, int m, int n) {  
-    if (i < 0 || j < 0 || i >= m || j >= n)  
-      return false;  
-  
-    if (grid[i][j] == 1)  
-      return true;  
-  
-    grid[i][j] = 1;  
-  
-    return dfs(grid, i - 1, j, m, n) && dfs(grid, i, j - 1, m, n) &&  
-           dfs(grid, i + 1, j, m, n) && dfs(grid, i, j + 1, m, n);  
-  }  
-  
-public:  
-  int closedIsland(vec<vec<int>> &grid) {  
-    int res = 0;  
-    int m = grid.size(), n = grid[0].size();  
-    for (int i = 0; i < m; i++) {  
-      for (int j = 0; j < n; j++) {  
-        if (grid[i][j] == 0 && dfs(grid, i, j, m, n))  
-          res++;  
-      }  
-    }  
-    return res;  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+  bool dfs(int x, int y, int m, int n, vec<vec<int>> &grid,
+           vec<vec<bool>> &visit) {
+    if (x < 0 || x >= m || y < 0 || y >= n)
+      return false;
+
+    if (grid[x][y] == 1 || visit[x][y])
+      return true;
+
+    visit[x][y] = true;
+    bool isClosed = true;
+    vec<int> dirx{0, 1, 0, -1};
+    vec<int> diry{-1, 0, 1, 0};
+
+    for (int i = 0; i < 4; i++) {
+      int r = x + dirx[i];
+      int c = y + diry[i];
+      if (!dfs(r, c, m, n, grid, visit))
+        isClosed = false;
+    }
+
+    return isClosed;
+  }
+
+public:
+  int closedIsland(vec<vec<int>> &grid) {
+    int m = grid.size();
+    int n = grid[0].size();
+    int count = 0;
+    vec<vec<bool>> visit(m, vec<bool>(n));
+    for (int i = 0; i < m; i++)
+      for (int j = 0; j < n; j++)
+        if (grid[i][j] == 0 && !visit[i][j] && dfs(i, j, m, n, grid, visit))
+          count++;
+
+    return count;
+  }
 };
 ```

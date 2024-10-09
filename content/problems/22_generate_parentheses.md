@@ -11,46 +11,69 @@ tags:
 
 
 ```c++
-class Solution {  
-  void backtrack(vec<std::string> &res, std::string cur, int open, int close,  
-                 int max) {  
-    if (cur.size() == max * 2) {  
-      res.push_back(cur);      return;  
-    }  
-    if (open < max) {  
-      cur.push_back('(');  
-      backtrack(res, cur, open + 1, close, max);  
-      cur.pop_back();    }  
-    if (close < open) {  
-      cur.push_back(')');  
-      backtrack(res, cur, open, close + 1, max);  
-      cur.pop_back();    }  }  
-public:  
-  vec<std::string> generateParenthesis(int n) {  
-    vec<std::string> res;    backtrack(res, {}, 0, 0, n);  
-    return res;  
-  }};
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+  void backtrack(vec<std::string> &res, std::string &tmp, int open, int close,
+                 int max) {
+    if (tmp.size() == max * 2) {
+      res.push_back(tmp);
+      return;
+    }
+    if (open < max) {
+      tmp.push_back('(');
+      backtrack(res, tmp, open + 1, close, max);
+      tmp.pop_back();
+    }
+    if (close < open) {
+      tmp.push_back(')');
+      backtrack(res, tmp, open, close + 1, max);
+      tmp.pop_back();
+    }
+  }
+
+public:
+  vec<std::string> generateParenthesis(int n) {
+    vec<std::string> res;
+    std::string tmp;
+    backtrack(res, tmp, 0, 0, n);
+    return res;
+  }
+};
 ```
 
 
 ```c++
-class Solution_2 {  
-  void dfs(int left, int right, std::string level, vec<std::string> &res) {  
-    if (left > right)  
-      return;  
-  
-    if (left == 0 && right == 0)  
-      res.push_back(level);  
-    if (left > 0)  
-      dfs(left - 1, right, level + "(", res);  
-  
-    if (right > 0)  
-      dfs(left, right - 1, level + ")", res);  
-  }  
-public:  
-  vec<std::string> generateParenthesis(int n) {  
-    vec<std::string> res;    dfs(n, n, "", res);  
-    return res;  
-  }};
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+  void dfs(int left, int right, std::string &tmp, vec<std::string> &res) {
+    if (left > right)
+      return;
+
+    if (left == 0 && right == 0)
+      res.push_back(tmp);
+
+    if (left > 0) {
+      tmp.push_back('(');
+      dfs(left - 1, right, tmp, res);
+      tmp.pop_back();
+    }
+
+    if (right > 0) {
+      tmp.push_back(')');
+      dfs(left, right - 1, tmp, res);
+      tmp.pop_back();
+    }
+  }
+
+public:
+  vec<std::string> generateParenthesis(int n) {
+    vec<std::string> res;
+    std::string tmp;
+    dfs(n, n, tmp, res);
+    return res;
+  }
+};
 ```
 

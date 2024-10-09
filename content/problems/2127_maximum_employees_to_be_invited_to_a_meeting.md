@@ -6,88 +6,61 @@ tags:
 ![[problems/pictures/Pasted image 20240910021212.png]]
 
 ```c++
-// find circle in directed graph  
-class Solution {  
-  int N;  
-  std::unordered_map<int, vec<int>> graph;  
-  int singleMaxCycleSize = 0;  
-  vec<vec<int>> paris;  
-  vec<int> favorite;  
-  
-  std::unordered_map<int, int> max;  
-  
-  void dfs(int cur, vec<bool> visited, int len, int start) {  
-    if (visited[cur])  
-      return;  
-  
-    max[start] = std::max(max[start], len);  
-    visited[cur] = true;  
-    for (int neighbor : graph[cur]) {  
-      if (!visited[neighbor])  
-        dfs(neighbor, visited, len + 1, start);  
-    }  
-  }  
-  
-  void isCyclicUtil(int i, vec<bool> &visited, vec<bool> &recStack, int count) {  
-    if (recStack[i]) {  
-      singleMaxCycleSize = std::max(singleMaxCycleSize, count);  
-      if (count == 2)  
-        paris.push_back({i, favorite[i]});  
-      return;  
-    }  
-    if (visited[i])  
-      return;  
-  
-    visited[i] = true;  
-    recStack[i] = true;  
-    auto &&children = graph[i];  
-    for (int c : children)  
-      isCyclicUtil(c, visited, recStack, count + 1);  
-  
-    recStack[i] = false;  
-  }  
-  
-  void countCycle() {  
-    vec<bool> visited(N), recStack(N);  
-    for (int i = 0; i < N; i++)  
-      isCyclicUtil(i, visited, recStack, 0);  
-  }  
-  
-  int countSizeTwoExtra() {  
-    vec<bool> visited(N);  
-    int res = 0;  
-  
-    for (auto &&it : paris) {  
-      int a = it[0], b = it[1];  
-      max[a] = 0;  
-      max[b] = 0;  
-  
-      visited[a] = true;  
-      dfs(b, visited, 0, b);  
-      visited[a] = false;  
-  
-      visited[b] = true;  
-      dfs(a, visited, 0, a);  
-      visited[b] = false;  
-  
-      res += 2 + max[a] + max[b];  
-    }  
-  
-    return res;  
-  }  
-  
-public:  
-  int maximumInvitations(vec<int> favorite) {  
-    this->favorite = std::move(favorite);  
-    N = this->favorite.size();  
-    for (int i = 0; i < N; i++) {  
-      int from = this->favorite[i];  
-      int to = i;  
-      graph[from].push_back(to);  
-    }  
-  
-    countCycle();  
-    return std::max(singleMaxCycleSize, countSizeTwoExtra());  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+public:
+  int maximumInvitations(vector<int> &favorite) {
+    int n = favorite.size();
+    // 统计入度，便于进行拓扑排序
+    vector<int> indeg(n);
+    for (int i = 0; i < n; ++i)
+      ++indeg[favorite[i]];
+
+    vector<int> used(n), f(n, 1);
+    queue<int> q;
+    for (int i = 0; i < n; ++i)
+      if (!indeg[i])
+        q.push(i);
+
+    while (!q.empty()) {
+      int u = q.front();
+      used[u] = true;
+      q.pop();
+      int v = favorite[u];
+      // 状态转移
+      f[v] = max(f[v], f[u] + 1);
+      --indeg[v];
+      if (!indeg[v])
+        q.push(v);
+    }
+    // ring 表示最大的环的大小
+    // total 表示所有环大小为 2 的「基环内向树」上的最长的「双向游走」路径之和
+    int ring = 0, total = 0;
+    for (int i = 0; i < n; ++i) {
+      if (!used[i]) {
+        int j = favorite[i];
+        // favorite[favorite[i]] = i 说明环的大小为 2
+        if (favorite[j] == i) {
+          total += f[i] + f[j];
+          used[i] = used[j] = true;
+        }
+        // 否则环的大小至少为 3，我们需要找出环
+        else {
+          int u = i, cnt = 0;
+          while (true) {
+            ++cnt;
+            u = favorite[u];
+            used[u] = true;
+            if (u == i)
+              break;
+          }
+          ring = max(ring, cnt);
+        }
+      }
+    }
+    return max(ring, total);
+  }
 };
+
 ```

@@ -9,41 +9,43 @@ tags:
 ![[problems/pictures/Pasted image 20240908024721.png]]
 
 ```c++
-struct TreeNode {  
-  int val;  
-  TreeNode *left;  
-  TreeNode *right;  
-};  
-  
-class Solution {  
-  vec<int> inorder, postorder;  
-  int N;  
-  std::unordered_map<int, int> mp;  
-  
-  TreeNode *helper(int in_start, int in_end, int post_start, int post_end) {  
-    if (in_start > in_end)  
-      return nullptr;  
-  
-    auto root = new TreeNode{postorder[post_end]};  
-    int in_index = mp[root->val];  
-    int right_tree_sz = in_end - in_index;  
-    root->left = helper(in_start, in_index - 1, post_start,  
-                        post_end - right_tree_sz - 1);  
-    root->right =  
-        helper(in_start + 1, in_end, post_end - right_tree_sz, post_end - 1);  
-    return root;  
-  }  
-  
-public:  
-  TreeNode *buildTree(vec<int> &inorder, vec<int> &postorder) {  
-    this->inorder = std::move(inorder);  
-    this->postorder = std::move(postorder);  
-    int N = inorder.size();  
-  
-    for (int i = 0; i < N; i++)  
-      mp[inorder[i]] = i;  
-  
-    return helper(0, N - 1, 0, N - 1);  
-  }  
+struct TreeNode {
+  int val;
+  TreeNode *left;
+  TreeNode *right;
+};
+
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+  vec<int> inorder, postorder;
+  int postorder_index;
+  std::unordered_map<int, int> mp;
+
+  TreeNode *helper(int in_start, int in_end) {
+    if (in_start > in_end)
+      return nullptr;
+
+    auto root = new TreeNode{postorder[postorder_index]};
+    postorder_index--;
+
+    int in_index = mp[root->val];
+    root->right = helper(in_index + 1, in_end);
+    root->left = helper(in_start, in_index - 1);
+    return root;
+  }
+
+public:
+  TreeNode *buildTree(vec<int> &_inorder, vec<int> &_postorder) {
+    inorder = std::move(_inorder);
+    postorder = std::move(_postorder);
+    postorder_index = postorder.size() - 1;
+    int N = inorder.size();
+
+    for (int i = 0; i < N; i++)
+      mp[inorder[i]] = i;
+
+    return helper(0, N - 1);
+  }
 };
 ```

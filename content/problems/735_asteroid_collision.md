@@ -6,31 +6,27 @@ tags:
 
 
 ```c++
-class Solution {  
-public:  
-  vec<int> asteroidCollision(vec<int> &asteroids) {  
-    std::stack<int> stk;  
-    for (int cur : asteroids) {  
-      if (cur > 0)  
-        stk.push(cur);  
-      else {  
-        while (!stk.empty() && stk.top() > 0 && stk.top() + cur < 0)  
-          stk.pop();  
-  
-        if (stk.empty() || stk.top() < 0)  
-          stk.push(cur);  
-        else if (stk.top() == -cur)  
-          stk.pop();  
-      }  
-    }  
-  
-    vec<int> res(stk.size());  
-    for (int i = res.size() - 1; i >= 0; i--) {  
-      res[i] = stk.top();  
-      stk.pop();  
-    }  
-  
-    return res;  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+public:
+  vec<int> asteroidCollision(vec<int> &asteroids) {
+    std::deque<int> stk;
+    for (int cur : asteroids) {
+      if (cur > 0)
+        stk.push_back(cur);
+      else {
+        while (!stk.empty() && stk.back() > 0 && stk.back() + cur < 0)
+          stk.pop_back();
+
+        if (stk.empty() || stk.back() < 0)
+          stk.push_back(cur);
+        else if (stk.back() == -cur)
+          stk.pop_back();
+      }
+    }
+
+    return {stk.begin(), stk.end()};
+  }
 };
 ```

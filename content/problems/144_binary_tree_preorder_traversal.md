@@ -10,33 +10,35 @@ tags:
 
 
 ```c++
-struct TreeNode {  
-  int val;  
-  TreeNode *left;  
-  TreeNode *right;  
-};  
-  
-class Solution {  
-public:  
-  vec<int> preorderTraversal(TreeNode *root) {  
-    vec<int> res;  
-    std::stack<TreeNode *> stk;  
-    auto cur = root;  
-  
-    if (cur)  
-      stk.push(cur);  
-  
-    while (!stk.empty()) {  
-      cur = stk.top();  
-      stk.pop();  
-      res.push_back(cur->val);  
-      if (cur->right)  
-        stk.push(cur->right);  
-  
-      if (cur->left)  
-        stk.push(cur->left);  
-    }  
-    return res;  
-  }  
+struct TreeNode {
+  int val;
+  TreeNode *left;
+  TreeNode *right;
+};
+
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+public:
+  vec<int> preorderTraversal(TreeNode *root) {
+    vec<int> res;
+    std::stack<TreeNode *> stk;
+    auto cur = root;
+
+    if (cur)
+      stk.push(cur);
+
+    while (!stk.empty()) {
+      cur = stk.top();
+      stk.pop();
+      res.push_back(cur->val);
+      if (cur->right)
+        stk.push(cur->right);
+
+      if (cur->left)
+        stk.push(cur->left);
+    }
+    return res;
+  }
 };
 ```

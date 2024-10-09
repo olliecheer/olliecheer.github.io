@@ -5,19 +5,21 @@ tags: []
 
 
 ```c++
-class Solution {  
-public:  
-  void moveZeroes(vec<int> &nums) {  
-    int left = 0, N = nums.size();  
-    for (int right = 0; right < N; right++) {  
-      if (nums[right] != 0) {  
-        nums[left] = nums[right];  
-        left++;  
-      }  
-    }  
-  
-    for (; left < N; left++)  
-      nums[left] = 0;  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+public:
+  void moveZeroes(vec<int> &nums) {
+    int left = 0, N = nums.size();
+    for (int it : nums) {
+      if (it != 0) {
+        nums[left] = it;
+        left++;
+      }
+    }
+
+    for (; left < N; left++)
+      nums[left] = 0;
+  }
 };
 ```

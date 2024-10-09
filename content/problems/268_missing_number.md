@@ -6,30 +6,34 @@ tags:
 
 
 ```c++
-class Solution {  
-public:  
-  int missingNumber(vec<int> &nums) {  
-    int miss = 0;  
-    for (int it : nums)  
-      miss ^= it;  
-  
-    for (int i = 1; i <= nums.size(); i++)  
-      miss ^= i;  
-  
-    return miss;  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+public:
+  int missingNumber(vec<int> &nums) {
+    int miss = 0;
+    for (int it : nums)
+      miss ^= it;
+
+    for (int i = 0; i <= nums.size(); i++)
+      miss ^= i;
+
+    return miss;
+  }
 };
 ```
 
 
 ```c++
-class Solution_2 {  
-public:  
-  int missingNumber(vec<int> &nums) {  
-    int expectedSum = nums.size() * (nums.size() + 1) / 2;  
-    int actualSum = std::accumulate(nums.begin(), nums.end(), 0);  
-  
-    return expectedSum - actualSum;  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+public:
+  int missingNumber(vec<int> &nums) {
+    int expectedSum = nums.size() * (nums.size() + 1) / 2;
+    int actualSum = std::accumulate(nums.begin(), nums.end(), 0);
+
+    return expectedSum - actualSum;
+  }
 };
 ```

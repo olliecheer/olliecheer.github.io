@@ -1,9 +1,13 @@
 ---
 tags:
   - matrix
+  - trie
 ---
 ![[problems/pictures/Pasted image 20240908190020.png]]
 ![[problems/pictures/Pasted image 20240908190031.png]]
+
+
+## Skipped This Problem, fix later
 
 ```c++
 struct TrieNode {  

@@ -5,88 +5,89 @@ tags:
 ---
 ![[problems/pictures/Pasted image 20240910001610.png]]
 
+
 ```c++
-class Solution {  
-  class DSU {  
-  public:  
-    vec<int> parent;  
-    vec<int> size;  
-  
-    explicit DSU(int n) {  
-      parent = vec<int>(n);  
-      for (int i = 0; i < n; i++)  
-        parent[i] = i;  
-  
-      size = vec<int>(n, 1);  
-    }  
-  
-    int find(int x) {  
-      if (parent[x] != x)  
-        parent[x] = find(parent[x]);  
-  
-      return parent[x];  
-    }  
-  
-    void union_(int x, int y) {  
-      int root_x = find(x), root_y = find(y);  
-      if (root_x == root_y)  
-        return;  
-  
-      if (size[root_x] < size[root_y]) {  
-        parent[root_x] = root_y;  
-        size[root_y] += size[root_x];  
-      } else {  
-        parent[root_y] = root_x;  
-        size[root_x] += size[root_y];  
-      }  
-    }  
-  };  
-  
-  vec<vec<int>> dirs = {  
-      {0, 1},  
-      {0, -1},  
-      {1, 0},  
-      {-1, 0},  
-  };  
-  
-public:  
-  int largestIsland(vec<vec<int>> &grid) {  
-    int m = grid.size(), n = grid[0].size();  
-    int res = 1;  
-    DSU dsu(m * n);  
-  
-    for (int i = 0; i < m; i++) {  
-      for (int j = 0; j < n; j++) {  
-        if (grid[i][j] == 1) {  
-          for (auto &&dir : dirs) {  
-            int x = i + dir[0], y = j + dir[1];  
-            if (x < 0 || y < 0 || x >= m || y >= n || grid[x][y] != 1)  
-              continue;  
-  
-            dsu.union_(i * n + j, x * n + y);  
-            res = std::max(res, dsu.size[dsu.find(i * n + j)]);  
-          }  
-        }  
-      }  
-    }  
-  
-    for (int i = 0; i < m; i++) {  
-      for (int j = 0; j < n; j++) {  
-        if (grid[i][j] == 0) {  
-          std::unordered_map<int, int> mp;  
-          for (auto &&dir : dirs) {  
-            int x = i + dir[0], y = j + dir[1];  
-            if (x < 0 || y < 0 || x >= m || y >= n || grid[x][y] != 1)  
-              continue;  
-  
-            int parent = dsu.find(x * n + y);  
-            mp.insert({parent, dsu.size[parent]});  
-          }  
-        }  
-      }  
-    }  
-  
-    return res;  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class DisjointSet {
+public:
+  vec<int> parent, size;
+  DisjointSet(int n) {
+    parent.resize(n + 1);
+    size.resize(n + 1);
+    for (int i = 0; i <= n; i++) {
+      parent[i] = i;
+      size[i] = 1;
+    }
+  }
+  int UParent(int node) {
+    if (node == parent[node])
+      return node;
+    return parent[node] = UParent(parent[node]);
+  }
+  void unionBySize(int u, int v) {
+    int ulp_u = UParent(u);
+    int ulp_v = UParent(v);
+    if (ulp_u == ulp_v)
+      return;
+    if (size[ulp_u] < size[ulp_v]) {
+      parent[ulp_u] = ulp_v;
+      size[ulp_v] += size[ulp_u];
+    } else {
+      parent[ulp_v] = ulp_u;
+      size[ulp_u] += size[ulp_v];
+    }
+  }
+};
+class Solution {
+public:
+  int largestIsland(vec<vec<int>> &grid) {
+    int n = grid.size();
+    DisjointSet ds(n * n);
+    int mx = 0;
+    vec<vec<int>> dirs = {{0, -1}, {0, 1}, {1, 0}, {-1, 0}};
+    for (int row = 0; row < n; row++)
+      for (int col = 0; col < n; col++) {
+        if (grid[row][col] == 0)
+          continue;
+        for (int ind = 0; ind < 4; ind++) {
+          int newr = row + dirs[ind][0];
+          int newc = col + dirs[ind][1];
+          if (newr >= 0 && newr < n && newc >= 0 && newc < n &&
+              grid[newr][newc] == 1) {
+            int nodeNo =
+                row * n +
+                col; // using formula to convert grid into 1d array for DSU
+            int adjNodeNo = newr * n + newc;
+            ds.unionBySize(nodeNo, adjNodeNo);
+          }
+        }
+      }
+
+    for (int row = 0; row < n; row++)
+      for (int col = 0; col < n; col++) {
+        if (grid[row][col] == 1)
+          continue;
+        std::set<int> SetOfultimateparents;
+        for (int idx = 0; idx < 4; idx++) {
+          int newr = row + dirs[idx][0];
+          int newc = col + dirs[idx][1];
+          if (newr >= 0 && newr < n && newc >= 0 && newc < n &&
+              grid[newr][newc] == 1) {
+            SetOfultimateparents.insert(ds.UParent(newr * n + newc));
+          }
+        }
+        int sizeTot = 0;
+        for (auto it : SetOfultimateparents) {
+          sizeTot += ds.size[it];
+        }
+        mx = std::max(mx, sizeTot + 1);
+      }
+
+    for (int cellNo = 0; cellNo < n * n; cellNo++)
+      mx = std::max(mx, ds.size[ds.UParent(cellNo)]);
+
+    return mx;
+  }
 };
 ```

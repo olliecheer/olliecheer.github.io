@@ -5,23 +5,29 @@ tags:
 ![[problems/pictures/Pasted image 20240909224722.png]]
 
 ```c++
-class Solution {  
-public:  
-  int change(int amount, vec<int> &coins) {  
-    auto dp = vec<vec<int>>(coins.size() + 1, vec<int>(amount + 1));  
-  
-    for (int i = 0; i <= coins.size(); i++)  
-      dp[i][0] = 1;  
-  
-    for (int i = 1; i <= coins.size(); i++) {  
-      for (int j = 1; j <= amount; j++) {  
-        dp[i][j] = dp[i - 1][j];  
-        if (j - coins[i - 1] >= 0)  
-          dp[i][j] = dp[i][j - coins[i - 1]];  
-      }  
-    }  
-  
-    return dp[coins.size()][amount];  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+public:
+  bool checkSubarraySum(vec<int> nums, int k) {
+    int M = nums.size();
+    if (M < 2)
+      return false;
+
+    std::unordered_map<int, int> mp;
+    mp[0] = -1;
+    int remainder = 0;
+    for (int i = 0; i < M; i++) {
+      remainder = (remainder + nums[i]) % k;
+      if (mp.count(remainder)) {
+        if (i - mp[remainder] >= 2)
+          return true;
+      } else
+        mp[remainder] = i;
+    }
+
+    return false;
+  }
 };
 ```
+

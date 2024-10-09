@@ -6,35 +6,36 @@ tags:
 ![[problems/pictures/Pasted image 20240910002935.png]]
 
 ```c++
-class Solution {  
-public:  
-  vec<vec<int>> kClosest(vec<vec<int>> const &points, int K) {  
-    int N = points.size();  
-    vec<std::pair<int, int>> dists(N);  
-  
-    auto compute_square_sum = [](vec<int> const &p) {  
-      return p[0] * p[0] + p[1] * p[1];  
-    };  
-  
-    for (int i = 0; i < N; i++) {  
-      dists[i].first = compute_square_sum(points[i]);  
-      dists[i].second = i;  
-    }  
-  
-    std::sort(dists.begin(), dists.end());  
-  
-    int distK = dists[K - 1].first;  
-    vec<vec<int>> res;  
-  
-    for (auto const &it : dists) {  
-      if (it.first <= distK)  
-        res.push_back(points[it.second]);  
-      else  
-        break;  
-    }  
-  
-    return res;  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+public:
+  vec<vec<int>> kClosest(vec<vec<int>> const &points, int K) {
+    int N = points.size();
+    vec<std::pair<int, int>> dists(N);
+
+    auto compute_square_sum = [](vec<int> const &p) {
+      return p[0] * p[0] + p[1] * p[1];
+    };
+
+    for (int i = 0; i < N; i++) {
+      dists[i].first = compute_square_sum(points[i]);
+      dists[i].second = i;
+    }
+
+    std::sort(dists.begin(), dists.end());
+
+    int distK = dists[K - 1].first;
+    vec<vec<int>> res;
+
+    for (auto const &it : dists)
+      if (it.first <= distK)
+        res.push_back(points[it.second]);
+      else
+        break;
+
+    return res;
+  }
 };
 ```
 

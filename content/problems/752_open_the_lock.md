@@ -1,54 +1,94 @@
 ---
 tags:
-  - dual_bfs
+  - bfs
 ---
 ![[problems/pictures/Pasted image 20240910000431.png]]
 ![[problems/pictures/Pasted image 20240910000457.png]]
 
 
+### BFS
+
 ```c++
-// Dual BFS  
-class Solution {  
-public:  
-  int openLock(vec<std::string> &deadends, std::string &target) {  
-    std::unordered_set<std::string> begin, end;  
-    std::unordered_set<std::string> deads(deadends.begin(), deadends.end());  
-  
-    begin.insert("0000");  
-    end.insert(target);  
-  
-    int level = 0;  
-  
-    while (!begin.empty() && !end.empty()) {  
-      std::unordered_set<std::string> tmp;  
-      for (auto &&s : begin) {  
-        if (end.count(s))  
-          return level;  
-  
-        if (deads.count(s))  
-          continue;  
-  
-        deads.insert(s);  
-  
-        for (int i = 0; i < 4; i++) {  
-          char c = s[i];  
-          std::string s1 = s, s2 = s;  
-          s1.insert(0, 1, (char)(c == '9' ? 0 : c - '0' + 1));  
-          s2.insert(0, 1, (char)(c == '0' ? 9 : c - '0' - 1));  
-          if (!deads.count(s1))  
-            tmp.insert(s1);  
-  
-          if (!deads.count(s2))  
-            tmp.insert(s2);  
-        }  
-      }  
-  
-      level++;  
-      begin = end;  
-      end = std::move(tmp);  
-    }  
-  
-    return -1;  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+public:
+  int openLock(vec<std::string> &deadends, std::string target) {
+    // Map the next slot digit for each current slot digit.
+    std::unordered_map<char, char> nextSlot = {
+        {'0', '1'}, {'1', '2'}, {'2', '3'}, {'3', '4'}, {'4', '5'},
+        {'5', '6'}, {'6', '7'}, {'7', '8'}, {'8', '9'}, {'9', '0'}};
+    // Map the previous slot digit for each current slot digit.
+    std::unordered_map<char, char> prevSlot = {
+        {'0', '9'}, {'1', '0'}, {'2', '1'}, {'3', '2'}, {'4', '3'},
+        {'5', '4'}, {'6', '5'}, {'7', '6'}, {'8', '7'}, {'9', '8'}};
+
+    // Hash set to store visited and dead-end combinations.
+    std::unordered_set<std::string> visitedCombinations(deadends.begin(),
+                                                        deadends.end());
+    // Queue to store combinations generated after each turn.
+    std::queue<std::string> pendingCombinations;
+
+    // Count the number of wheel turns made.
+    int turns = 0;
+
+    // If the starting combination is also a dead-end,
+    // then we can't move from the starting combination.
+    if (visitedCombinations.find("0000") != visitedCombinations.end()) {
+      return -1;
+    }
+
+    // Start with the initial combination '0000'.
+    pendingCombinations.push("0000");
+    visitedCombinations.insert("0000");
+
+    while (!pendingCombinations.empty()) {
+      // Explore all the combinations of the current level.
+      for (int currLevelNodesCount = pendingCombinations.size();
+           currLevelNodesCount > 0; --currLevelNodesCount) {
+        // Get the current combination from the front of the queue.
+        std::string currentCombination = pendingCombinations.front();
+        pendingCombinations.pop();
+
+        // If the current combination matches the target,
+        // return the number of turns/level.
+        if (currentCombination == target) {
+          return turns;
+        }
+
+        // Explore all possible new combinations by turning each wheel in both
+        // directions.
+        for (int wheel = 0; wheel < 4; wheel += 1) {
+          // Generate the new combination by turning the wheel to the next
+          // digit.
+          std::string newCombination = currentCombination;
+          newCombination[wheel] = nextSlot[newCombination[wheel]];
+          // If the new combination is not a dead-end and was never visited,
+          // add it to the queue and mark it as visited.
+          if (visitedCombinations.find(newCombination) ==
+              visitedCombinations.end()) {
+            pendingCombinations.push(newCombination);
+            visitedCombinations.insert(newCombination);
+          }
+
+          // Generate the new combination by turning the wheel to the previous
+          // digit.
+          newCombination = currentCombination;
+          newCombination[wheel] = prevSlot[newCombination[wheel]];
+          // If the new combination is not a dead-end and is never visited,
+          // add it to the queue and mark it as visited.
+          if (visitedCombinations.find(newCombination) ==
+              visitedCombinations.end()) {
+            pendingCombinations.push(newCombination);
+            visitedCombinations.insert(newCombination);
+          }
+        }
+      }
+      // We will visit the next-level combinations.
+      turns += 1;
+    }
+    // We never reached the target combination.
+    return -1;
+  }
 };
 ```

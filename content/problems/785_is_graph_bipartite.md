@@ -1,45 +1,43 @@
 ---
 tags:
   - graph
+  - dfs
+  - coloring
 ---
 ![[problems/pictures/Pasted image 20240910001010.png]]
 ![[problems/pictures/Pasted image 20240910001020.png]]
 ![[problems/pictures/Pasted image 20240910001028.png]]
 
 ```c++
-class Solution {  
-  enum class Color {  
-    NONE,  
-    BLUE,  
-    RED,  
-  };  
-  
-public:  
-  bool isBipartite(vec<vec<int>> &graph) {  
-    int N = graph.size();  
-    vec<Color> colors(N, Color::NONE);  
-    for (int i = 0; i < N; i++) {  
-      if (colors[i] != Color::NONE)  
-        continue;  
-  
-      std::queue<int> q;  
-      q.push(i);  
-      colors[i] = Color::BLUE;  
-  
-      while (!q.empty()) {  
-        int cur = q.front();  
-        for (int next : graph[cur]) {  
-          if (colors[next] == Color::NONE) {  
-            colors[next] =  
-                (colors[cur] == Color::BLUE) ? Color::RED : Color::BLUE;  
-            q.push(next);  
-          } else if (colors[next] == colors[cur])  
-            return false;  
-        }  
-      }  
-    }  
-  
-    return true;  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+public:
+  bool isBipartite(vec<vec<int>> &graph) {
+    int n = graph.size();
+    vec<int> color(n, -1);
+
+    for (int start = 0; start < n; ++start) {
+      if (color[start] == -1) {
+        std::stack<int> stk;
+        stk.push(start);
+        color[start] = 0;
+
+        while (!stk.empty()) {
+          int node = stk.top();
+          stk.pop();
+
+          for (int neigh : graph[node]) {
+            if (color[neigh] == -1) {
+              stk.push(neigh);
+              color[neigh] = color[node] ^ 1;
+            } else if (color[neigh] == color[node])
+              return false;
+          }
+        }
+      }
+    }
+    return true;
+  }
 };
 ```

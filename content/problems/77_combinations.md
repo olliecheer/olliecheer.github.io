@@ -6,25 +6,27 @@ tags:
 ![[problems/pictures/Pasted image 20240907234544.png]]
 
 ```c++
-class Solution {  
-  void dfs(vec<vec<int>> &res, vec<int> &level, int n, int k, int idx) {  
-    if (level.size() == k)  
-      res.push_back(level);  
-    else {  
-      for (int i = idx; i <= n; i++) {  
-        level.push_back(i);  
-        dfs(res, level, n, k, i + 1);  
-        level.pop_back();  
-      }  
-    }  
-  }  
-  
-public:  
-  vec<vec<int>> combine(int n, int k) {  
-    vec<vec<int>> res;  
-    vec<int> level;  
-    dfs(res, level, n, k, 1);  
-    return res;  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+  void dfs(vec<vec<int>> &res, vec<int> &tmp, int n, int k, int idx) {
+    if (tmp.size() == k)
+      res.push_back(tmp);
+    else {
+      for (int i = idx; i <= n; i++) {
+        tmp.push_back(i);
+        dfs(res, tmp, n, k, i + 1);
+        tmp.pop_back();
+      }
+    }
+  }
+
+public:
+  vec<vec<int>> combine(int n, int k) {
+    vec<vec<int>> res;
+    vec<int> tmp;
+    dfs(res, tmp, n, k, 1);
+    return res;
+  }
 };
 ```

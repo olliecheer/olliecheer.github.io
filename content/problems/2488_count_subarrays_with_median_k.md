@@ -7,30 +7,36 @@ tags:
 
 
 ```c++
-class Solution {  
-public:  
-  int countSubarrays(vec<int> &nums, int k) {  
-    std::map<int, int> cnt;  
-    cnt.insert({0, 1});  
-    int res = 0, balance = 0;  
-    bool found = false;  
-  
-    for (int num : nums) {  
-      if (num < k) {  
-        balance--;  
-      } else if (num > k) {  
-        balance++;  
-      } else {  
-        found = true;  
-      }  
-  
-      if (found) {  
-        res += cnt[0] + cnt[balance - 1];  
-      } else {  
-        cnt.insert({balance, cnt[0] + 1});  
-      }  
-    }  
-    return res;  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+public:
+  int countSubarrays(vec<int> &nums, int k) {
+    int N = nums.size();
+    int kIndex = -1;
+    for (int i = 0; i < N; i++)
+      if (nums[i] == k) {
+        kIndex = i;
+        break;
+      }
+
+    int res = 0;
+    std::unordered_map<int, int> counts;
+    counts[0] = 1;
+    int sum = 0;
+    for (int i = 0; i < N; i++) {
+      if (nums[i] - k > 0)
+        sum++;
+      else if (nums[i] - k < 0)
+        sum--;
+
+      if (i < kIndex)
+        counts[sum]++;
+      else
+        res += counts[sum] + counts[sum - 1];
+    }
+
+    return res;
+  }
 };
 ```

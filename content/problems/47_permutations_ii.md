@@ -7,33 +7,37 @@ tags:
 ![[problems/pictures/Pasted image 20240907232239.png]]
 
 ```c++
-class Solution {  
-  void backtrack(vec<vec<int>> &res, vec<int> &level, vec<int> &nums,  
-                 vec<bool> &used) {  
-    if (level.size() == nums.size())  
-      res.push_back(level);  
-    else {  
-      for (int i = 0; i < nums.size(); i++) {  
-        if (used[i] || i > 0 && nums[i] == nums[i - 1] && !used[i - 1])  
-          continue;  
-  
-        used[i] = true;  
-        level.push_back(nums[i]);  
-        backtrack(res, level, nums, used);  
-        used[i] = false;  
-        level.pop_back();  
-      }  
-    }  
-  }  
-  
-public:  
-  vec<vec<int>> permuteUnique(vec<int> &nums) {  
-    vec<vec<int>> res;  
-    std::sort(nums.begin(), nums.end());  
-    vec<int> level;  
-    vec<bool> visited(nums.size());  
-    backtrack(res, level, nums, visited);  
-    return res;  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+  void backtrack(vec<vec<int>> &res, vec<int> &tmp, vec<int> &nums,
+                 vec<bool> &visited) {
+    if (tmp.size() == nums.size())
+      res.push_back(tmp);
+    else {
+      for (int i = 0; i < nums.size(); i++) {
+        // When a number has the same value with its previous, we can use this
+        // number only if the previous is used.
+        if (visited[i] || i > 0 && nums[i] == nums[i - 1] && !visited[i - 1])
+          continue;
+
+        visited[i] = true;
+        tmp.push_back(nums[i]);
+        backtrack(res, tmp, nums, visited);
+        tmp.pop_back();
+        visited[i] = false;
+      }
+    }
+  }
+
+public:
+  vec<vec<int>> permuteUnique(vec<int> &nums) {
+    vec<vec<int>> res;
+    vec<int> tmp;
+    vec<bool> visited(nums.size());
+    std::sort(nums.begin(), nums.end());
+    backtrack(res, tmp, nums, visited);
+    return res;
+  }
 };
 ```

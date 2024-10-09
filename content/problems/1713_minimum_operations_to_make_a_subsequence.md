@@ -5,39 +5,28 @@ tags:
 ![[problems/pictures/Pasted image 20240910020034.png]]
 
 ```c++
-class Solution {  
-    int lengthOfLIS(vec<int> &nums) {  
-        vec<int> dp(nums.size());  
-        int len = 0;  
-        for (int x: nums) {  
-            if (x == -1)  
-                continue;  
-  
-            int i = std::binary_search(dp.begin(), dp.begin() + len, x);  
-            if (i < 0)  
-                i = -(i + 1);  
-            dp[i] = x;  
-            if (i == len)  
-                len++;  
-        }  
-  
-        return len;  
-    }  
-  
-public:  
-    int minOperations(vec<int> target, vec<int> arr) {  
-        std::unordered_map<int, int> mp;  
-        for (int i = 0; i < target.size(); i++)  
-            mp[target[i]] = i;  
-        vec<int> nums(arr.size());  
-        for (int i = 0; i < arr.size(); i++) {  
-            if (!mp.count(arr[i]))  
-                nums[i] = -1;  
-            else  
-                nums[i] = mp[arr[i]];  
-        }  
-  
-        return target.size() - lengthOfLIS(nums);  
-    }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+public:
+  int minOperations(vec<int> &target, vec<int> &arr) {
+    int n = target.size();
+    std::unordered_map<int, int> pos;
+    for (int i = 0; i < n; ++i)
+      pos[target[i]] = i;
+
+    vec<int> d;
+    for (int val : arr)
+      if (pos.count(val)) {
+        int idx = pos[val];
+        auto it = std::lower_bound(d.begin(), d.end(), idx);
+        if (it != d.end())
+          *it = idx;
+        else
+          d.push_back(idx);
+      }
+
+    return n - d.size();
+  }
 };
 ```

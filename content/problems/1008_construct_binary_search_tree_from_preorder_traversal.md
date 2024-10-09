@@ -9,29 +9,31 @@ tags:
 
 
 ```c++
-struct TreeNode {  
-  int val;  
-  TreeNode *left;  
-  TreeNode *right;  
-};  
-  
-class Solution {  
-  int i = 0;  
-  
-  TreeNode *bstFromPreorder(vec<int> &nums, int uppper_bound) {  
-    if (i == nums.size() || nums[i] > uppper_bound)  
-      return nullptr;  
-  
-    auto root = new TreeNode{nums[i]};  
-    i++;  
-    root->left = bstFromPreorder(nums, root->val);  
-    root->right = bstFromPreorder(nums, uppper_bound);  
-    return root;  
-  }  
-  
-public:  
-  TreeNode *bstFromPreorder(vec<int> &nums) {  
-    return bstFromPreorder(nums, std::numeric_limits<int>::max());  
-  }  
+struct TreeNode {
+  int val;
+  TreeNode *left;
+  TreeNode *right;
+};
+
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+  int i = 0;
+
+  TreeNode *bstFromPreorder(vec<int> &nums, int uppper_bound) {
+    if (i == nums.size() || nums[i] > uppper_bound)
+      return nullptr;
+
+    auto root = new TreeNode{nums[i]};
+    i++;
+    root->left = bstFromPreorder(nums, root->val);
+    root->right = bstFromPreorder(nums, uppper_bound);
+    return root;
+  }
+
+public:
+  TreeNode *bstFromPreorder(vec<int> &nums) {
+    return bstFromPreorder(nums, std::numeric_limits<int>::max());
+  }
 };
 ```

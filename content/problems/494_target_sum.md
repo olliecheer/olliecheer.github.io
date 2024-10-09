@@ -5,27 +5,26 @@ tags:
 ![[problems/pictures/Pasted image 20240909224051.png]]
 
 ```c++
-class Solution {  
-  int subsetSum(vec<int> &nums, int target) {  
-    vec<int> dp(target + 1);  
-    dp[0] = 1;  
-    for (int num : nums) {  
-      for (int j = target; j >= 0; j--) {  
-        if (j - num >= 0)  
-          dp[j] += dp[j - num];  
-      }  
-    }  
-    return dp[target];  
-  }  
-  
-public:  
-  int findTargetSumWays(vec<int> &nums, int target) {  
-    int sum = std::accumulate(nums.begin(), nums.end(), 0);  
-  
-    if (target > sum || (sum + target) % 2 == 1)  
-      return 0;  
-  
-    return subsetSum(nums, (sum + target) / 2);  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+public:
+  int findTargetSumWays(vec<int> &nums, int target) {
+    int sum = std::accumulate(nums.begin(), nums.end(), 0);
+
+    int diff = sum - target;
+    if (diff < 0 || diff % 2)
+      return 0;
+
+    int negative = diff / 2;
+    vec<int> dp(negative + 1);
+    dp[0] = 1;
+
+    for (int &n : nums)
+      for (int j = negative; j >= n; j--)
+        dp[j] += dp[j - n];
+
+    return dp[negative];
+  }
 };
 ```

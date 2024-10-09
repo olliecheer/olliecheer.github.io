@@ -1,86 +1,51 @@
 ---
 tags:
   - array
+  - binary_index_tree
 ---
 
 ![[problems/pictures/Pasted image 20240910015448.png]]
 ![[problems/pictures/Pasted image 20240910015505.png]]
 
-```c++
-struct TreeNode {  
-  int val;  
-  TreeNode *left;  
-  TreeNode *right;  
-};  
-  
-class Solution_2_pass {  
-  
-  TreeNode *dfs(TreeNode *cur, int target) {  
-    if (!cur)  
-      return nullptr;  
-  
-    if (cur->val == target)  
-      return cur;  
-  
-    auto left = dfs(cur->left, target);  
-    auto right = dfs(cur->right, target);  
-    return left == nullptr ? right : left;  
-  }  
-  
-  TreeNode *lca(TreeNode *root, TreeNode *p, TreeNode *q) {  
-    if (!root || root == p || root == q)  
-      return root;  
-  
-    auto left = lca(root->left, p, q);  
-    auto right = lca(root->right, p, q);  
-    if (left && right)  
-      return root;  
-  
-    if (left)  
-      return left;  
-    if (right)  
-      return right;  
-    return nullptr;  
-  }  
-  
-public:  
-  TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q) {  
-    auto p_node = dfs(root, p->val);  
-    auto q_node = dfs(root, q->val);  
-    return (p_node && q_node) ? lca(root, p_node, q_node) : nullptr;  
-  }  
-};
-```
-
 
 ```c++
-class Solution_1_pass {  
-  int count = 0;  
-  
-  TreeNode *lca(TreeNode *root, TreeNode *p, TreeNode *q) {  
-    if (!root)  
-      return root;  
-  
-    auto left = lca(root->left, p, q);  
-    auto right = lca(root->right, p, q);  
-  
-    if (root == p || root == q) {  
-      count++;  
-      return root;  
-    }  
-  
-    if (!left)  
-      return right;  
-  
-    if (!right)  
-      return left;  
-  
-    return root;  
-  }  
-  
-public:  
-  TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q) {  
-    return count == 2 ? lca(root, p, q) : nullptr;  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+  class BIT {
+    vec<int> parent;
+
+  public:
+    BIT(int N) : parent(N) {}
+
+    int sum(int x) {
+      int sum = 0;
+      for (x++; x > 0; x -= (x & -x))
+        sum += parent[x];
+
+      return sum;
+    }
+
+    void add(int x, int val) {
+      for (x++; x < parent.size(); x += (x & -x))
+        parent[x] += val;
+    }
+  };
+
+  int MOD = 1e9 + 7;
+
+public:
+  int createSortedArray(vec<int> &instructions) {
+    BIT bit(1'000'000);
+    int cost = 0;
+    for (int num : instructions) {
+      int left = bit.sum(num - 1);
+      int right = bit.sum(100'000) - bit.sum(num);
+      cost = (cost + std::min(left, right)) % MOD;
+      bit.add(num, 1);
+    }
+
+    return cost;
+  }
 };
 ```

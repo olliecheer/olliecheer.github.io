@@ -8,7 +8,12 @@ tags:
 ![[problems/pictures/Pasted image 20240909224024.png]]
 
 
+
+### BFS
+
 ```c++
+template <typename T> using vec = std::vector<T>;
+
 class Solution_BFS {  
   vec<vec<int>> dirs = {  
       {0, 1},  
@@ -58,47 +63,50 @@ public:
 ```
 
 
+### DFS
 
 ```c++
-class Solution_DFS {  
-  vec<vec<int>> dirs = {  
-      {0, 1},  
-      {0, -1},  
-      {-1, 0},  
-      {1, 0},  
-  };  
-  
-  bool dfs(vec<vec<int>> &maze, vec<vec<bool>> &visited, vec<int> cur,  
-           vec<int> &destination) {  
-    int M = maze.size(), N = maze[0].size();  
-    if (visited[cur[0]][cur[1]])  
-      return false;  
-  
-    if (cur == destination)  
-      return true;  
-  
-    visited[cur[0]][cur[1]] = true;  
-  
-    for (auto &dir : dirs) {  
-      int x = cur[0], y = cur[1];  
-      while (x + dir[0] >= 0 && y + dir[1] >= 0 && x + dir[0] < M &&  
-             y + dir[1] < N && maze[x + dir[0]][y + dir[1]] == 0) {  
-        x += dir[0];  
-        y += dir[1];  
-      }  
-  
-      if (dfs(maze, visited, {x, y}, destination))  
-        return true;  
-    }  
-  
-    return false;  
-  }  
-  
-public:  
-  bool hasPath(vec<vec<int>> maze, vec<int> start, vec<int> destination) {  
-    int M = maze.size(), N = maze[0].size();  
-    vec<vec<bool>> visited;  
-    return dfs(maze, visited, start, destination);  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+  vec<vec<int>> dirs = {
+      {0, 1},
+      {0, -1},
+      {-1, 0},
+      {1, 0},
+  };
+
+  bool dfs(vec<vec<int>> &maze, vec<vec<bool>> &visited, vec<int> cur,
+           vec<int> &destination) {
+    int M = maze.size(), N = maze[0].size();
+    if (visited[cur[0]][cur[1]])
+      return false;
+
+    if (cur == destination)
+      return true;
+
+    visited[cur[0]][cur[1]] = true;
+
+    for (auto &dir : dirs) {
+      int x = cur[0], y = cur[1];
+      while (x + dir[0] >= 0 && y + dir[1] >= 0 && x + dir[0] < M &&
+             y + dir[1] < N && maze[x + dir[0]][y + dir[1]] == 0) {
+        x += dir[0];
+        y += dir[1];
+      }
+
+      if (dfs(maze, visited, {x, y}, destination))
+        return true;
+    }
+
+    return false;
+  }
+
+public:
+  bool hasPath(vec<vec<int>> maze, vec<int> start, vec<int> destination) {
+    int M = maze.size(), N = maze[0].size();
+    vec<vec<bool>> visited(M, vec<bool>(N));
+    return dfs(maze, visited, start, destination);
+  }
 };
 ```

@@ -6,34 +6,41 @@ tags:
 ![[problems/pictures/Pasted image 20240907235225.png]]
 
 
+## Mono Stack
+
 ```c++
-class Solution_mono_stack {  
-public:  
-  int largestRectangleArea(vec<int> heights) {  
-    std::stack<int> stk;  
-    stk.push(-1);  
-    int res = 0, N = heights.size();  
-    for (int i = 0; i < N; i++) {  
-      while (stk.top() != -1 && heights[stk.top()] >= heights[i]) {  
-        int prev_height = heights[stk.top()];  
-        stk.pop();  
-        int width = i - stk.top() - 1;  
-        res = std::max(res, prev_height * width);  
-      }  
-      stk.push(i);  
-    }  
-    while (stk.top() != -1) {  
-      int prev_height = heights[stk.top()];  
-      stk.pop();  
-      int width = N - stk.top() - 1;  
-      res = std::max(res, prev_height * width);  
-    }  
-    return res;  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+public:
+  int largestRectangleArea(vec<int> heights) {
+    std::stack<int> stk;
+    stk.push(-1);
+    int res = 0, N = heights.size();
+    for (int i = 0; i < N; i++) {
+      while (stk.top() != -1 && heights[stk.top()] >= heights[i]) {
+        int prev_height = heights[stk.top()];
+        stk.pop();
+        int width = i - stk.top() - 1;
+        res = std::max(res, prev_height * width);
+      }
+      stk.push(i);
+    }
+    while (stk.top() != -1) {
+      int prev_height = heights[stk.top()];
+      stk.pop();
+      int width = N - stk.top() - 1;
+      res = std::max(res, prev_height * width);
+    }
+    return res;
+  }
 };
 ```
 
 
+## DFS
+
+Time limit Exceeded. But you can use two monostacks to get fixt int.
 
 ```c++
 class Solution_dfs {  

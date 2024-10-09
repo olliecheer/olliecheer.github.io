@@ -1,7 +1,6 @@
 ---
 tags:
-  - mod
-  - pow
+  - pow_mod
 ---
 
 ![[problems/pictures/Pasted image 20240910023455.png]]
@@ -10,6 +9,7 @@ tags:
 
 
 ```c++
+// 正难则反，只有全部顺时针和全部逆时针才不会碰撞。
 class Solution {  
 public:  
   int monkeyMove(int n) { return (pow_mod(2, n, MOD) - 2 + MOD) % MOD; }  

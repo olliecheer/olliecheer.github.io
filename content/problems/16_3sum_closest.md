@@ -1,43 +1,36 @@
 ---
 tags:
   - sum
+  - dual_pointer
 ---
 
 ![[problems/pictures/Pasted image 20240907193255.png]]
 
 ```c++
-class Solution {  
-public:  
-  vec<vec<int>> threeSum(vec<int> &nums) {  
-    std::sort(nums.begin(), nums.end());  
-    vec<vec<int>> res;  
-  
-    for (int i = 0; i + 2 < nums.size(); i++) {  
-      if (i > 0 && nums[i] == nums[i - 1]) {  
-        continue;  
-      }  
-  
-      int target = -nums[i];  
-      int k = nums.size() - 2;  
-      for (int j = i + 1; j + 1 < nums.size(); j++) {  
-        if (j > i + 1 && nums[j] == nums[j - 1]) {  
-          continue;  
-        }  
-  
-        while (j < k && nums[j] + nums[k] > target) {  
-          k--;  
-        }  
-        if (j == k) {  
-          break;  
-        }  
-  
-        if (nums[j] + nums[k] == target) {  
-          res.push_back({nums[i], nums[j], nums[k]});  
-        }  
-      }  
-    }  
-  
-    return res;  
-  }  
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+public:
+  int threeSumClosest(vec<int> &nums, int target) {
+    std::sort(nums.begin(), nums.end());
+    int N = nums.size();
+    int res = nums[0] + nums[1] + nums[N - 1];
+
+    for (int i = 0; i < N - 2; i++) {
+      int left = i + 1, right = N - 1;
+      while (left < right) {
+        int sum = nums[i] + nums[left] + nums[right];
+        if (std::abs(sum - target) < std::abs(res - target))
+          res = sum;
+
+        if (sum > target)
+          right--;
+        else
+          left++;
+      }
+    }
+
+    return res;
+  }
 };
 ```
