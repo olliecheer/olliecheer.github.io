@@ -1,6 +1,7 @@
 ---
 tags:
   - pow_mod
+  - permutation
 ---
 
 ![[problems/pictures/Pasted image 20240910023455.png]]

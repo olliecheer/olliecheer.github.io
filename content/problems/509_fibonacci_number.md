@@ -1,9 +1,13 @@
 ---
 tags:
   - dynamic_programming
+  - memo
+  - fibonacci
 ---
 
-![[problems/pictures/Pasted image 20240909224415.png]]
+![[pictures/Pasted image 20241010210711.png]]
+![[pictures/Pasted image 20241010210724.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

@@ -1,8 +1,11 @@
 ---
 tags:
   - subarray
+  - sum
 ---
-![[problems/pictures/Pasted image 20240909224722.png]]
+![[pictures/Pasted image 20241010213509.png]]
+![[pictures/Pasted image 20241010213522.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

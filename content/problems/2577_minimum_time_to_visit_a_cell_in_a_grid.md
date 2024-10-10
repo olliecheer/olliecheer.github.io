@@ -1,7 +1,7 @@
 ---
 tags:
-  - dfs
   - priority_queue
+  - dijkstra
 ---
 
 ![[problems/pictures/Pasted image 20240910023550.png]]
@@ -37,7 +37,7 @@ public:
     while (!pq.empty()) {
       auto cur = pq.top();
       pq.pop();
-      for (auto &&dir : dirs) {
+      for (auto &dir : dirs) {
         int r = cur[ROW] + dir[ROW], c = cur[COL] + dir[COL];
         if (r < 0 || r == M || c < 0 || c == N)
           continue;

@@ -1,10 +1,13 @@
 ---
 tags:
   - priority_queue
+  - dijkstra
 ---
-![[problems/pictures/Pasted image 20240910021125.png]]
-![[problems/pictures/Pasted image 20240910021129.png]]
-
+![[pictures/Pasted image 20241009223858.png]]
+![[pictures/Pasted image 20241009223910.png]]
+![[pictures/Pasted image 20241009223922.png]]
+![[pictures/Pasted image 20241009223936.png]]
+![[pictures/Pasted image 20241009223947.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;
@@ -12,43 +15,69 @@ template <typename T> using vec = std::vector<T>;
 class Solution {
 public:
   int minimumCost(int n, vec<vec<int>> &highways, int discounts) {
-    vec<vec<vec<int>>> graph(n);
-    for (auto &&it : highways) {
-      int a = it[0], b = it[1], c = it[2];
-      graph[a].push_back({b, c});
-      graph[b].push_back({a, c});
+    // construct the graph from the given highways array
+    vec<vec<std::pair<int, int>>> graph(n);
+    for (int i = 0; i < highways.size(); ++i) {
+      int u = highways[i][0], v = highways[i][1], toll = highways[i][2];
+      graph[u].push_back({v, toll});
+      graph[v].push_back({u, toll});
     }
 
-    auto pq_comp = [](vec<int> &a, vec<int> &b) { return a[0] > b[0]; };
-    std::priority_queue<vec<int>, vec<vec<int>>, decltype(pq_comp)> pq(pq_comp);
-    pq.push({0, 0, discounts});
-    vec<vec<int>> visited(
-        n, vec<int>(discounts + 1, std::numeric_limits<int>::max()));
-    visited[0][0] = 0;
+    // Min-heap priority queue to store tuples of (cost, city,
+    // discountsUsed)
+    std::priority_queue<std::tuple<int, int, int>,
+                        vec<std::tuple<int, int, int>>, std::greater<>>
+        pq;
+    pq.push(std::make_tuple(
+        0, 0, 0)); // Start from city 0 with cost 0 and 0 discounts used
+
+    // 2D array to track minimum distance to each city with a given number
+    // of discounts used
+    vec<vec<int>> dist(n, vec<int>(discounts + 1, INT_MAX));
+    dist[0][0] = 0;
+
+    vec<vec<bool>> visited(n, vec<bool>(discounts + 1, false));
 
     while (!pq.empty()) {
-      auto cur = pq.top();
+      // int currentCost, city, discountsUsed;
+      auto [currentCost, city, discountsUsed] = pq.top();
       pq.pop();
 
-      int cost = cur[0], city = cur[1], dis = cur[2];
-      if (city == n - 1)
-        return cost;
+      // Skip processing if already visited with the same number of
+      // discounts used
+      if (visited[city][discountsUsed])
+        continue;
 
-      for (auto &&it : graph[city]) {
-        int next = it[0], weight = it[1];
-        if (cost + weight < visited[next][dis]) {
-          pq.push({cost + weight, next, dis});
-          visited[next][dis] = cost + weight;
+      visited[city][discountsUsed] = true;
+
+      // Explore all neighbors of the current city
+      for (int i = 0; i < graph[city].size(); ++i) {
+        int neighbor = graph[city][i].first;
+        int toll = graph[city][i].second;
+
+        // Case 1: Move to the neighbor without using a discount
+        if (currentCost + toll < dist[neighbor][discountsUsed]) {
+          dist[neighbor][discountsUsed] = currentCost + toll;
+          pq.push(std::make_tuple(dist[neighbor][discountsUsed], neighbor,
+                                  discountsUsed));
         }
 
-        if (dis > 0 && cost + weight / 2 < visited[next][dis - 1]) {
-          pq.push({cost + weight / 2, next, dis - 1});
-          visited[next][dis - 1] = cost + weight / 2;
+        // Case 2: Move to the neighbor using a discount if available
+        if (discountsUsed < discounts) {
+          int newCostWithDiscount = currentCost + toll / 2;
+          if (newCostWithDiscount < dist[neighbor][discountsUsed + 1]) {
+            dist[neighbor][discountsUsed + 1] = newCostWithDiscount;
+            pq.push(std::make_tuple(newCostWithDiscount, neighbor,
+                                    discountsUsed + 1));
+          }
         }
       }
     }
 
-    return -1;
+    // Find the minimum cost to reach city n-1 with any number of discounts
+    // used
+    int minCost = *std::min_element(dist[n - 1].begin(), dist[n - 1].end());
+    return minCost == INT_MAX ? -1 : minCost;
   }
 };
 ```

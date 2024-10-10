@@ -1,6 +1,7 @@
 ---
 tags:
   - subarray
+  - median
 ---
 
 ![[problems/pictures/Pasted image 20240910023010.png]]
@@ -25,9 +26,9 @@ public:
     counts[0] = 1;
     int sum = 0;
     for (int i = 0; i < N; i++) {
-      if (nums[i] - k > 0)
+      if (nums[i] > k)
         sum++;
-      else if (nums[i] - k < 0)
+      else if (nums[i] < k)
         sum--;
 
       if (i < kIndex)

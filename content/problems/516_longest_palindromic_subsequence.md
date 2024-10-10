@@ -1,11 +1,11 @@
 ---
 tags:
   - palindrome
+  - subsequence
 ---
-![[problems/pictures/Pasted image 20240909224448.png]]
+![[pictures/Pasted image 20241010210829.png]]
 
-
-### LCS
+### Based on Longest Common Subsequence
 
 ```c++
 template <typename T> using vec = std::vector<T>;

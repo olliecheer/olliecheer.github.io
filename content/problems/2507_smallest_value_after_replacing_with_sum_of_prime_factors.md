@@ -1,6 +1,7 @@
 ---
 tags:
   - prime
+  - prime_factor
 ---
 ![[problems/pictures/Pasted image 20240910023120.png]]
 

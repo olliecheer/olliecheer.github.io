@@ -73,9 +73,8 @@ class SegmentTree {
     return node;
   }
   static int floor_mid(int a, int b) {
-    if (a > b) {
+    if (a > b)
       std::swap(a, b);
-    }
     return a + (b - a) / 2;
   }
   static void _update(Node *node, int i, int val) {

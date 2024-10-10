@@ -1,8 +1,10 @@
 ---
-tags: []
+tags:
+  - subarray
+  - sum
+  - prefix_sum
 ---
-![[problems/pictures/Pasted image 20240909225651.png]]
-
+![[pictures/Pasted image 20241010221543.png]]
 
 ### Prefix Sum
 
@@ -29,8 +31,7 @@ public:
 };
 ```
 
-
-### Hash Map
+### Prefix Sum + Hash Map
 
 ```c++
 // O(n)  

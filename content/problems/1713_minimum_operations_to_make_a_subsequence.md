@@ -1,8 +1,10 @@
 ---
 tags:
+  - greedy
   - subsequence
 ---
-![[problems/pictures/Pasted image 20240910020034.png]]
+![[pictures/Pasted image 20241010093654.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

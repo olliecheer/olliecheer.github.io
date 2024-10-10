@@ -1,9 +1,9 @@
 ---
 tags:
+  - mono_stack
 ---
-![[problems/pictures/Pasted image 20240910021308.png]]
-![[problems/pictures/Pasted image 20240910021320.png]]
-
+![[pictures/Pasted image 20241009212929.png]]
+![[pictures/Pasted image 20241009212947.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;
@@ -25,7 +25,7 @@ public:
         collisions++;
       }
 
-      while (!stk.empty() && ((stk.top() == 'R' && cur == 'S'))) {
+      while (!stk.empty() && (stk.top() == 'R' && cur == 'S')) {
         collisions++;
         stk.pop();
       }

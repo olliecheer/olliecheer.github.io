@@ -1,9 +1,10 @@
 ---
 tags:
   - dfs
+  - pruning
 ---
-![[problems/pictures/Pasted image 20240910020951.png]]
-![[problems/pictures/Pasted image 20240910020959.png]]
+![[pictures/Pasted image 20241010084740.png]]
+![[pictures/Pasted image 20241010084751.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;
@@ -13,7 +14,7 @@ class Solution {
   vec<int> tasks, sessions;
 
   void dfs(int task_id, int session_count) {
-    if (session_count > res)
+    if (session_count > res) // pruning
       return;
     if (task_id < 0) {
       res = std::min(res, session_count);
@@ -36,7 +37,7 @@ class Solution {
 public:
   int minSessions(vec<int> _tasks, int sessionTime) {
     tasks = std::move(_tasks);
-    std::sort(tasks.begin(), tasks.end());
+    std::sort(tasks.begin(), tasks.end()); // pruning
     res = tasks.size();
     max_session_time = sessionTime;
     sessions = vec<int>(tasks.size());

@@ -1,10 +1,9 @@
 ---
 tags:
-  - path
-  - graph
+  - bfs
 ---
-![[problems/pictures/Pasted image 20240910020905.png]]
-![[problems/pictures/Pasted image 20240910020915.png]]
+![[pictures/Pasted image 20241010085956.png]]
+![[pictures/Pasted image 20241010090017.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;
@@ -30,7 +29,7 @@ public:
         return true;
 
       for (int i : mp[cur])
-        if (visited.count(i) == 0) {
+        if (!visited.count(i)) {
           visited.insert(i);
           q.push(i);
         }

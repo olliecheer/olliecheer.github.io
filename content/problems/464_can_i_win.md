@@ -3,7 +3,7 @@ tags:
   - game
   - dfs
   - dynamic_programming
-  - state_compress
+  - state_compression
 ---
 ![[problems/pictures/Pasted image 20240909223329.png]]
 

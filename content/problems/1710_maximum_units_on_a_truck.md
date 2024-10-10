@@ -1,7 +1,8 @@
 ---
 tags:
 ---
-![[problems/pictures/Pasted image 20240910015952.png]]
+![[pictures/Pasted image 20241010100439.png]]
+![[pictures/Pasted image 20241010100447.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;
@@ -14,12 +15,12 @@ public:
 
     int res = 0;
 
-    for (int i = 0; i < boxTypes.size(); i++)
-      while (boxTypes[i][0] > 0 && truckSize > 0) {
-        res += boxTypes[i][1];
-        boxTypes[i][0]--;
-        truckSize--;
-      }
+	for (auto &it : boxTypes)
+		while(it[0] > 0 && truckSize > 0) {
+			res += it[1];
+			it[0]--;
+			truckSize--;
+		}
 
     return res;
   }

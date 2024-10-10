@@ -1,10 +1,11 @@
 ---
 tags:
-  - dfs
   - dynamic_programming
+  - backtracking
 ---
 
-![[problems/pictures/Pasted image 20240909224903.png]]
+![[pictures/Pasted image 20241010214028.png]]
+![[pictures/Pasted image 20241010214037.png]]
 
 ### Dynamic Programming
 
@@ -12,30 +13,24 @@ tags:
 template <typename T> using vec = std::vector<T>;
 
 class Solution {
-  vec<std::optional<int>> memo;
-  int N;
+  int count = 0;
+  void calculate(int N, int pos, vec<bool> &visited) {
+    if (pos > N)
+      count++;
 
-  int dfs(int pos, int state) {
-    if (pos == 1)
-      return 1;
-
-    if (memo[state])
-      return memo[state].value();
-
-    int count = 0;
     for (int i = 1; i <= N; i++)
-      if (!(state & (1 << (i - 1))) && (pos % i == 0 || i % pos == 0))
-        count += dfs(pos - 1, state | (1 << (i - 1)));
-
-    memo[state] = count;
-    return memo[state].value();
+      if (!visited[i] && (pos % i == 0 || i % pos == 0)) {
+        visited[i] = true;
+        calculate(N, pos + 1, visited);
+        visited[i] = false;
+      }
   }
 
 public:
-  int countArrangement(int n) {
-    N = n;
-    memo = vec<std::optional<int>>(1 << n);
-    return dfs(n, 0);
+  int countArrangement(int N) {
+    vec<bool> visited(N + 1);
+    calculate(N, 1, visited);
+    return count;
   }
 };
 ```

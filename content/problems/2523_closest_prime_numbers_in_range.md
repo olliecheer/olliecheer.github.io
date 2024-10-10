@@ -1,6 +1,7 @@
 ---
 tags:
   - prime
+  - eratosthenes
 ---
 ![[problems/pictures/Pasted image 20240910023417.png]]
 

@@ -1,10 +1,13 @@
 ---
 tags:
-  - array
-  - dynamic_programming
+  - subarray
+  - dp_array
+  - sliding_window
 ---
-![[problems/pictures/Pasted image 20240910021528.png]]
+![[pictures/Pasted image 20241009212220.png]]
+![[pictures/Pasted image 20241009212233.png]]
 
+### Sliding Window
 
 ```c++
 template <typename T> using vec = std::vector<T>;
@@ -25,6 +28,7 @@ public:
 ```
 
 
+### DP Array
 ```c++
 template <typename T> using vec = std::vector<T>;
 
@@ -46,30 +50,6 @@ public:
     for (int i = 0; i < N; i++)
       res += dp[i];
 
-    return res;
-  }
-};
-```
-
-
-```c++
-template <typename T> using vec = std::vector<T>;
-
-class Solution {
-public:
-  long countSubarrays(vec<int> &nums) {
-    long res = 0;
-    int j = 0;
-    long len;
-    for (int i = 1; i < nums.size(); i++)
-      if (nums[i] <= nums[i - 1]) {
-        len = i - j;
-        res += (len + 1) * len / 2;
-        j = i;
-      }
-
-    len = nums.size() - j;
-    res += (len + 1) * len / 2;
     return res;
   }
 };

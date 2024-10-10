@@ -1,9 +1,9 @@
 ---
 tags:
-  - array
+  - subarray
   - prefix_sum
 ---
-![[problems/pictures/Pasted image 20240909224819.png]]
+![[pictures/Pasted image 20241010213615.png]]
 
 
 ### Prefix Sum

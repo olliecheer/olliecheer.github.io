@@ -1,9 +1,11 @@
 ---
 tags:
   - priority_queue
+  - offline_algorithm
 ---
-![[problems/pictures/Pasted image 20240910020644.png]]
-![[problems/pictures/Pasted image 20240910020653.png]]
+![[pictures/Pasted image 20241010091254.png]]
+![[pictures/Pasted image 20241010091307.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;
@@ -12,14 +14,14 @@ class Solution {
 public:
   vec<int> minInterval(vec<vec<int>> &intervals, vec<int> &queries) {
     vec<int> qindex(queries.size());
-    iota(qindex.begin(), qindex.end(), 0);
-    sort(qindex.begin(), qindex.end(),
-         [&](int i, int j) -> bool { return queries[i] < queries[j]; });
-    sort(intervals.begin(), intervals.end(),
-         [](const vec<int> &it1, const vec<int> &it2) -> bool {
-           return it1[0] < it2[0];
-         });
-    priority_queue<vec<int>> pq;
+    std::iota(qindex.begin(), qindex.end(), 0);
+    std::sort(qindex.begin(), qindex.end(),
+              [&](int i, int j) -> bool { return queries[i] < queries[j]; });
+    std::sort(intervals.begin(), intervals.end(),
+              [](const vec<int> &it1, const vec<int> &it2) -> bool {
+                return it1[0] < it2[0];
+              });
+    std::priority_queue<vec<int>> pq;
     vec<int> res(queries.size(), -1);
     int i = 0;
     for (auto qi : qindex) {

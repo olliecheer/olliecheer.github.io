@@ -1,6 +1,7 @@
 ---
 tags:
   - prime
+  - prime_factor
 ---
 ![[problems/pictures/Pasted image 20240910023338.png]]
 
@@ -13,12 +14,10 @@ public:
   int distinctPrimeFactors(vec<int> nums) {
     std::unordered_set<int> st;
     for (int x : nums) {
-
       int i = 2;
       while (i * i <= x) {
         if (x % i == 0) {
           st.insert(i);
-          x /= i;
           while (x % i == 0)
             x /= i;
         }

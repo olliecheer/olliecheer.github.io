@@ -2,48 +2,52 @@
 tags:
   - dfs
 ---
-![[problems/pictures/Pasted image 20240910021201.png]]
-![[problems/pictures/Pasted image 20240910021212.png]]
+![[pictures/Pasted image 20241009213712.png]]
+![[pictures/Pasted image 20241009213724.png]]
+![[pictures/Pasted image 20241009213740.png]]
+![[pictures/Pasted image 20241009213759.png]]
+![[pictures/Pasted image 20241009213811.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;
 
 class Solution {
 public:
-  int maximumInvitations(vector<int> &favorite) {
+  int maximumInvitations(vec<int> &favorite) {
     int n = favorite.size();
     // 统计入度，便于进行拓扑排序
-    vector<int> indeg(n);
+    vec<int> indeg(n);
     for (int i = 0; i < n; ++i)
-      ++indeg[favorite[i]];
+      indeg[favorite[i]]++;
 
-    vector<int> used(n), f(n, 1);
-    queue<int> q;
+    vec<int> visited(n), dp(n, 1);
+    std::queue<int> q;
     for (int i = 0; i < n; ++i)
       if (!indeg[i])
         q.push(i);
 
     while (!q.empty()) {
-      int u = q.front();
-      used[u] = true;
+      int from = q.front();
       q.pop();
-      int v = favorite[u];
+      visited[u] = true;
+      int to = favorite[from];
       // 状态转移
-      f[v] = max(f[v], f[u] + 1);
-      --indeg[v];
-      if (!indeg[v])
-        q.push(v);
+      dp[to] = std::max(dp[to], dp[from] + 1);
+      indeg[to]--;
+      if (!indeg[to])
+        q.push(to);
     }
     // ring 表示最大的环的大小
     // total 表示所有环大小为 2 的「基环内向树」上的最长的「双向游走」路径之和
     int ring = 0, total = 0;
     for (int i = 0; i < n; ++i) {
-      if (!used[i]) {
+      if (!visited[i]) {
         int j = favorite[i];
         // favorite[favorite[i]] = i 说明环的大小为 2
         if (favorite[j] == i) {
-          total += f[i] + f[j];
-          used[i] = used[j] = true;
+          total += dp[i] + dp[j];
+          visited[i] = visited[j] = true;
         }
         // 否则环的大小至少为 3，我们需要找出环
         else {
@@ -51,15 +55,15 @@ public:
           while (true) {
             ++cnt;
             u = favorite[u];
-            used[u] = true;
+            visited[u] = true;
             if (u == i)
               break;
           }
-          ring = max(ring, cnt);
+          ring = std::max(ring, cnt);
         }
       }
     }
-    return max(ring, total);
+    return std::max(ring, total);
   }
 };
 

@@ -1,6 +1,7 @@
 ---
 tags:
   - subsequence
+  - segment_tree
 ---
 
 ![[problems/pictures/Pasted image 20240910021605.png]]

@@ -1,10 +1,12 @@
 ---
 tags:
   - matrix
+  - bfs
+  - memo
 ---
+![[pictures/Pasted image 20241010215935.png]]
+![[pictures/Pasted image 20241010215948.png]]
 
-![[problems/pictures/Pasted image 20240909225139.png]]
-![[problems/pictures/Pasted image 20240909225202.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;
@@ -22,14 +24,13 @@ public:
     int M = matrix.size(), N = matrix[0].size();
     std::queue<vec<int>> q;
 
-    for (int i = 0; i < M; i++) {
+    for (int i = 0; i < M; i++)
       for (int j = 0; j < N; j++) {
         if (matrix[i][j] == 0)
           q.push({i, j});
         else
           matrix[i][j] = INT_MAX;
       }
-    }
 
     while (!q.empty()) {
       auto cur = q.front();
@@ -37,7 +38,6 @@ public:
 
       for (auto &dir : dirs) {
         int r = cur[0] + dir[0], c = cur[1] + dir[1];
-
         if (r < 0 || r >= M || c < 0 || c >= N || matrix[r][c] != INT_MAX)
           continue;
 
