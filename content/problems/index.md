@@ -10,8 +10,6 @@ title: problems
 
 [[fast_pow.md]]
 
-[[index.md]]
-
 [[kmp.md]]
 
 [[lint_code_391_number_of_airplanes_in_the_sky.md]]
@@ -378,8 +376,6 @@ title: problems
 
 [[395_longest_substring_with_at_least_k_repeating_characters.md]]
 
-[[398_random_pick_index.md]]
-
 [[402_remove_k_digits.md]]
 
 [[403_frog_jump.md]]
@@ -462,7 +458,7 @@ title: problems
 
 [[543_diameter_of_binary_tree.md]]
 
-[[547_friend_circles.md]]
+[[547_number_of_provinces.md]]
 
 [[549_binary_tree_longest_consecutive_sequence_ii.md]]
 
@@ -704,7 +700,7 @@ title: problems
 
 [[2211_count_collisions_on_a_road.md]]
 
-[[2302_cmount_subarrays_with_score_less_than_k.md]]
+[[2302_count_subarrays_with_score_less_than_k.md]]
 
 [[2393_count_strictly_increasing_subarrays.md]]
 
