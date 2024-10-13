@@ -3,76 +3,48 @@ tags:
   - subsequence
   - segment_tree
 ---
+![[pictures/Pasted image 20241013230235.png]]
+![[pictures/Pasted image 20241013230247.png]]
 
-![[problems/pictures/Pasted image 20240910021605.png]]
-![[problems/pictures/Pasted image 20240910021613.png]]
 
 
 ```c++
-template <typename T> using vec = std::vector<T>;
-
 class Solution {
-  class SegmentTree {
-    SegmentTree *left{}, *right{};
-    int start{}, end{}, val{};
+    vector<int> max;
 
-    void setup(SegmentTree *node, int start, int end) {
-      if (start == end)
-        return;
-
-      int mid = start + (end - start) / 2;
-      if (!node->left) {
-        node->left = new SegmentTree(start, mid);
-        node->right = new SegmentTree(mid + 1, end);
-      }
-
-      setup(node->left, start, mid);
-      setup(node->right, mid + 1, end);
-      node->val = std::max(node->left->val, node->right->val);
+    void modify(int o, int l, int r, int i, int val) {
+        if (l == r) {
+            max[o] = val;
+            return;
+        }
+        int m = (l + r) / 2;
+        if (i <= m) modify(o * 2, l, m, i, val);
+        else modify(o * 2 + 1, m + 1, r, i, val);
+        max[o] = std::max(max[o * 2], max[o * 2 + 1]);
     }
 
-  public:
-    SegmentTree(int start, int end) : start{start}, end{end} {
-      setup(this, start, end);
+    // 返回区间 [L,R] 内的最大值
+    int query(int o, int l, int r, int L, int R) { // L 和 R 在整个递归过程中均不变，将其大写，视作常量
+        if (L <= l && r <= R) return max[o];
+        int res = 0;
+        int m = (l + r) / 2;
+        if (L <= m) res = query(o * 2, l, m, L, R);
+        if (R > m) res = std::max(res, query(o * 2 + 1, m + 1, r, L, R));
+        return res;
     }
-
-    void update(SegmentTree *node, int index, int val) {
-      if (index < node->start || index > node->end)
-        return;
-
-      if (node->start == node->end && node->start == index) {
-        node->val = val;
-        return;
-      }
-
-      update(node->left, index, val);
-      update(node->right, index, val);
-      node->val = std::max(node->left->val, node->right->val);
-    }
-
-    int rangeMaxQuery(SegmentTree *node, int start, int end) {
-      if (node->start > end || node->end < start)
-        return 0;
-
-      if (node->start >= start && node->end <= end)
-        return node->val;
-
-      return std::max(rangeMaxQuery(node->left, start, end),
-                      rangeMaxQuery(node->right, start, end));
-    }
-  };
 
 public:
-  int lengthOfLIS(vec<int> &nums, int k) {
-    SegmentTree *root = new SegmentTree{1, 100000};
-    int res = 0;
-    for (int n : nums) {
-      int pre_max_len = root->rangeMaxQuery(root, n - k, n - 1);
-      root->update(root, n, pre_max_len + 1);
-      res = std::max(res, pre_max_len + 1);
+    int lengthOfLIS(vector<int> &nums, int k) {
+        int u = *max_element(nums.begin(), nums.end());
+        max.resize(u * 4);
+        for (int x: nums) {
+            if (x == 1) modify(1, 1, u, 1, 1);
+            else {
+                int res = 1 + query(1, 1, u, std::max(x - k, 1), x - 1);
+                modify(1, 1, u, x, res);
+            }
+        }
+        return max[1];
     }
-
-    return res;
-  }
 };
 ```

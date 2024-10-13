@@ -2,7 +2,8 @@
 tags:
   - parentheses
 ---
-![[problems/pictures/Pasted image 20240910015103.png]]
+![[pictures/Pasted image 20241013225020.png]]
+![[pictures/Pasted image 20241013225040.png]]
 
 
 ```c++

@@ -3,8 +3,8 @@ tags:
   - sum
   - dual_pointer
 ---
-
-![[problems/pictures/Pasted image 20240907193255.png]]
+![[pictures/Pasted image 20241012195052.png]]
+![[pictures/Pasted image 20241012195100.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

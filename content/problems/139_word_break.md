@@ -2,7 +2,10 @@
 tags:
   - dynamic_programming
 ---
-![[problems/pictures/Pasted image 20240908031828.png]]
+![[pictures/Pasted image 20241013234133.png]]
+![[pictures/Pasted image 20241013234147.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

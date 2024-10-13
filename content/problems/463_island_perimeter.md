@@ -2,9 +2,9 @@
 tags:
   - island
 ---
+![[pictures/Pasted image 20241014010735.png]]
+![[pictures/Pasted image 20241014010748.png]]
 
-![[problems/pictures/Pasted image 20240909223245.png]]
-![[problems/pictures/Pasted image 20240909223253.png]]
 
 
 ```c++

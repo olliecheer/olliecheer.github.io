@@ -3,7 +3,9 @@ tags:
   - dfs
   - bfs
 ---
-![[problems/pictures/Pasted image 20240908185033.png]]
+![[pictures/Pasted image 20241013235933.png]]
+![[pictures/Pasted image 20241013235942.png]]
+
 
 
 ## BFS

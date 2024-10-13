@@ -2,8 +2,10 @@
 tags:
   - binary_search_tree
 ---
-![[problems/pictures/Pasted image 20240908184146.png]]
-![[problems/pictures/Pasted image 20240908184156.png]]
+![[pictures/Pasted image 20241013235251.png]]
+![[pictures/Pasted image 20241013235304.png]]
+![[pictures/Pasted image 20241013235314.png]]
+
 
 
 ```c++

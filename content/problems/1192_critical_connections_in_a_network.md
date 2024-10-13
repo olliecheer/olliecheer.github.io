@@ -4,8 +4,9 @@ tags:
   - dfs
   - graph
 ---
-![[problems/pictures/Pasted image 20240910005756.png]]
-![[problems/pictures/Pasted image 20240910005805.png]]
+![[pictures/Pasted image 20241013220655.png]]
+![[pictures/Pasted image 20241013220701.png]]
+
 
 ```c++
 // Tarjan's Algorithm  

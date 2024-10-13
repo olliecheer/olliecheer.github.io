@@ -2,7 +2,8 @@
 tags:
   - stack
 ---
-![[problems/pictures/Pasted image 20240909233319.png]]
+![[pictures/Pasted image 20241012085328.png]]
+![[pictures/Pasted image 20241012085342.png]]
 
 
 ```c++

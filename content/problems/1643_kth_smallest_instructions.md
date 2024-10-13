@@ -2,8 +2,10 @@
 tags:
   - dynamic_programming
 ---
-![[problems/pictures/Pasted image 20240910015307.png]]
-![[problems/pictures/Pasted image 20240910015318.png]]
+![[pictures/Pasted image 20241013225211.png]]
+![[pictures/Pasted image 20241013225228.png]]
+![[pictures/Pasted image 20241013225239.png]]
+
 
 
 ```c++

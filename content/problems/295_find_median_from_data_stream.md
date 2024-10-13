@@ -2,8 +2,10 @@
 tags:
   - quick_select
 ---
-![[problems/pictures/Pasted image 20240908225934.png]]
-![[problems/pictures/Pasted image 20240908225944.png]]
+![[pictures/Pasted image 20241014002951.png]]
+![[pictures/Pasted image 20241014002959.png]]
+
+
 
 
 ```c++

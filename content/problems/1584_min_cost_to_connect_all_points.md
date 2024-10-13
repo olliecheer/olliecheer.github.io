@@ -3,10 +3,9 @@ tags:
   - prim
   - graph
 ---
+![[pictures/Pasted image 20241013224913.png]]
+![[pictures/Pasted image 20241013224935.png]]
 
-![[problems/pictures/Pasted image 20240910014933.png]]
-![[problems/pictures/Pasted image 20240910014943.png]]
-![[problems/pictures/Pasted image 20240910014952.png]]
 
 
 ```c++

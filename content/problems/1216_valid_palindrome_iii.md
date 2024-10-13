@@ -3,7 +3,7 @@ tags:
   - palindrome
   - dfs
 ---
-![[problems/pictures/Pasted image 20240910005917.png]]
+![[pictures/Pasted image 20241013222221.png]]
 
 
 ```c++

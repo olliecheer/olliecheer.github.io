@@ -2,7 +2,8 @@
 tags:
   - pow
 ---
-![[problems/pictures/Pasted image 20240909214509.png]]
+![[pictures/Pasted image 20241014004558.png]]
+
 
 ```c++
 class Solution {

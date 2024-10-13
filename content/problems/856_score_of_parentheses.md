@@ -2,7 +2,8 @@
 tags:
   - parentheses
 ---
-![[problems/pictures/Pasted image 20240910001735.png]]
+![[pictures/Pasted image 20241013231240.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

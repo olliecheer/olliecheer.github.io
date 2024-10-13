@@ -2,7 +2,9 @@
 tags:
   - sliding_window
 ---
-![[problems/pictures/Pasted image 20240908191249.png]]
+![[pictures/Pasted image 20241014000716.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

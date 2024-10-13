@@ -2,7 +2,8 @@
 tags:
   - linked_list
 ---
-![[problems/pictures/Pasted image 20240910005652.png]]
+![[pictures/Pasted image 20241013220621.png]]
+
 
 
 ```c++

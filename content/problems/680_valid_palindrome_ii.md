@@ -2,7 +2,8 @@
 tags:
   - palindrome
 ---
-![[problems/pictures/Pasted image 20240909231933.png]]
+![[pictures/Pasted image 20241011084914.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

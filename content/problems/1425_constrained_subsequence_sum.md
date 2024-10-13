@@ -2,7 +2,8 @@
 tags:
   - subsequence
 ---
-![[problems/pictures/Pasted image 20240910012756.png]]
+![[pictures/Pasted image 20241013223933.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

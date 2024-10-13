@@ -2,10 +2,10 @@
 tags:
   - dijkstra
   - floyd
+  - sssp
 ---
-![[problems/pictures/Pasted image 20240910000311.png]]
-![[problems/pictures/Pasted image 20240910000321.png]]
-
+![[pictures/Pasted image 20241012090007.png]]
+![[pictures/Pasted image 20241012090023.png]]
 
 ### Floyd Warshall
 
@@ -22,7 +22,7 @@ public:
     for (int i = 0; i <= N; i++)
       graph[i][i] = 0;
 
-    for (auto &&e : times)
+    for (auto &e : times)
       graph[e[0]][e[1]] = e[2];
 
     for (int k = 1; k <= N; k++)
@@ -70,9 +70,8 @@ public:
       int currNode = pq.top().second;
       pq.pop();
 
-      if (currNodeTime > signalReceivedAt[currNode]) {
+      if (currNodeTime > signalReceivedAt[currNode])
         continue;
-      }
 
       // Broadcast the signal to adjacent nodes
       for (std::pair<int, int> edge : adj[currNode]) {
@@ -104,9 +103,8 @@ public:
     dijkstra(signalReceivedAt, k, n);
 
     int answer = INT_MIN;
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1; i <= n; i++)
       answer = std::max(answer, signalReceivedAt[i]);
-    }
 
     // INT_MAX signifies atleat one node is unreachable
     return answer == INT_MAX ? -1 : answer;

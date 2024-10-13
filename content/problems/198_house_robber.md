@@ -3,7 +3,9 @@ tags:
   - house_robber
   - dynamic_programming
 ---
-![[problems/pictures/Pasted image 20240908184450.png]]
+![[pictures/Pasted image 20241013235440.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

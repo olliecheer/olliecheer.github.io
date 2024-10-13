@@ -3,7 +3,10 @@ tags:
   - binary_tree
   - traversal
 ---
-![[problems/pictures/Pasted image 20240908030619.png]]
+![[pictures/Pasted image 20241013233443.png]]
+![[pictures/Pasted image 20241013233514.png]]
+
+
 
 ```c++
 struct TreeNode {

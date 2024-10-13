@@ -2,8 +2,10 @@
 tags:
   - tree_depth
 ---
-![[problems/pictures/Pasted image 20240909211752.png]]
-![[problems/pictures/Pasted image 20240909211800.png]]
+![[pictures/Pasted image 20241014003827.png]]
+![[pictures/Pasted image 20241014003839.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

@@ -4,7 +4,9 @@ tags:
   - level_order
   - traversal
 ---
-![[problems/pictures/Pasted image 20240908024857.png]]
+![[pictures/Pasted image 20241013232529.png]]
+![[pictures/Pasted image 20241013232539.png]]
+
 
 
 ```c++

@@ -2,8 +2,8 @@
 tags:
   - bfs
 ---
-![[problems/pictures/Pasted image 20240910000431.png]]
-![[problems/pictures/Pasted image 20240910000457.png]]
+![[pictures/Pasted image 20241012091134.png]]
+![[pictures/Pasted image 20241012091156.png]]
 
 
 ### BFS
@@ -34,9 +34,8 @@ public:
 
     // If the starting combination is also a dead-end,
     // then we can't move from the starting combination.
-    if (visitedCombinations.find("0000") != visitedCombinations.end()) {
+    if (visitedCombinations.find("0000") != visitedCombinations.end())
       return -1;
-    }
 
     // Start with the initial combination '0000'.
     pendingCombinations.push("0000");
@@ -52,13 +51,12 @@ public:
 
         // If the current combination matches the target,
         // return the number of turns/level.
-        if (currentCombination == target) {
+        if (currentCombination == target)
           return turns;
-        }
 
         // Explore all possible new combinations by turning each wheel in both
         // directions.
-        for (int wheel = 0; wheel < 4; wheel += 1) {
+        for (int wheel = 0; wheel < 4; wheel++) {
           // Generate the new combination by turning the wheel to the next
           // digit.
           std::string newCombination = currentCombination;
@@ -85,7 +83,7 @@ public:
         }
       }
       // We will visit the next-level combinations.
-      turns += 1;
+      turns++;
     }
     // We never reached the target combination.
     return -1;

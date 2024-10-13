@@ -5,7 +5,8 @@ tags:
   - recursion
   - iteration
 ---
-![[problems/pictures/Pasted image 20240908025529.png]]
+![[pictures/Pasted image 20241013232830.png]]
+
 
 
 ```c++

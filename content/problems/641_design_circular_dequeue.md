@@ -2,7 +2,9 @@
 tags:
   - queue
 ---
-![[problems/pictures/Pasted image 20240909230536.png]]
+![[pictures/Pasted image 20241011083506.png]]
+![[pictures/Pasted image 20241011083517.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

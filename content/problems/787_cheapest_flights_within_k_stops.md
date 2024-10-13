@@ -3,9 +3,10 @@ tags:
   - dijkstra
   - bellman
 ---
-![[problems/pictures/Pasted image 20240910001136.png]]
-![[problems/pictures/Pasted image 20240910001148.png]]
-![[problems/pictures/Pasted image 20240910001159.png]]
+![[pictures/Pasted image 20241012094434.png]]
+![[pictures/Pasted image 20241012094454.png]]
+![[pictures/Pasted image 20241012094510.png]]
+![[pictures/Pasted image 20241012094526.png]]
 
 
 ```c++

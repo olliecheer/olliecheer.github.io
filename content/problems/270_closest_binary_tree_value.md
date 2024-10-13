@@ -2,7 +2,9 @@
 tags:
   - binary_tree
 ---
-// vip
+![[pictures/Pasted image 20241014002459.png]]
+![[pictures/Pasted image 20241014002505.png]]
+
 
 
 ```c++

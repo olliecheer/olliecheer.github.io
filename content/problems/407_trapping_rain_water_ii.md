@@ -6,8 +6,9 @@ tags:
   - priority_queue
   - bfs
 ---
-![[problems/pictures/Pasted image 20240909221222.png]]
-![[problems/pictures/Pasted image 20240909221235.png]]
+![[pictures/Pasted image 20241014005535.png]]
+![[pictures/Pasted image 20241014005549.png]]
+
 
 
 ### Dijkstra + Priority Queue

@@ -6,11 +6,10 @@ tags:
   - dfs
   - bfs
 ---
-![[problems/pictures/Pasted image 20240909212127.png]]
-![[problems/pictures/Pasted image 20240909212130.png]]
+![[pictures/Pasted image 20241014004002.png]]
+![[pictures/Pasted image 20241014004017.png]]
+![[pictures/Pasted image 20241014004028.png]]
 
-
-VIP problem, has not been verified
 
 ## BFS
 

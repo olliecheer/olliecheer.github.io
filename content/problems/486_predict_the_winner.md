@@ -3,8 +3,10 @@ tags:
   - game
   - dynamic_programming
 ---
+![[pictures/Pasted image 20241014011125.png]]
+![[pictures/Pasted image 20241014011139.png]]
 
-![[problems/pictures/Pasted image 20240909223806.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

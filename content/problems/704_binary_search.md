@@ -2,7 +2,8 @@
 tags:
   - binary_search
 ---
-![[problems/pictures/Pasted image 20240909232445.png]]
+![[pictures/Pasted image 20241011090248.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

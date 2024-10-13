@@ -3,7 +3,8 @@ tags:
   - sum
   - bit
 ---
-![[problems/pictures/Pasted image 20240909220103.png]]
+![[pictures/Pasted image 20241014004925.png]]
+
 
 ```c++
 class Solution {

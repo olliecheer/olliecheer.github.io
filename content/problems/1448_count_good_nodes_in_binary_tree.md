@@ -3,9 +3,10 @@ tags:
   - binary_tree
   - dfs
 ---
+![[pictures/Pasted image 20241013224051.png]]
+![[pictures/Pasted image 20241013224059.png]]
 
-![[problems/pictures/Pasted image 20240910012944.png]]
-![[problems/pictures/Pasted image 20240910012954.png]]
+
 
 ```c++
 struct TreeNode {

@@ -5,9 +5,7 @@ tags:
   - dfs
   - backtrack
 ---
-
-
-![[problems/pictures/Pasted image 20240907222924.png]]
+![[pictures/Pasted image 20241012195401.png]]
 
 
 ```c++

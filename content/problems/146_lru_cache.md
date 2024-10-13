@@ -2,8 +2,10 @@
 tags:
   - cache
 ---
-![[problems/pictures/Pasted image 20240908181452.png]]
-![[problems/pictures/Pasted image 20240908181502.png]]
+![[pictures/Pasted image 20241013234619.png]]
+![[pictures/Pasted image 20241013234628.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

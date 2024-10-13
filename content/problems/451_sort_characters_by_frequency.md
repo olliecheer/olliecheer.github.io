@@ -3,7 +3,10 @@ tags:
   - sort
   - frequency
 ---
-![[problems/pictures/Pasted image 20240909222947.png]]
+![[pictures/Pasted image 20241014010606.png]]
+![[pictures/Pasted image 20241014010614.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

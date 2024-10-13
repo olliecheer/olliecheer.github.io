@@ -2,8 +2,10 @@
 tags:
   - tree
 ---
-![[problems/pictures/Pasted image 20240910014248.png]]
-![[problems/pictures/Pasted image 20240910014256.png]]
+![[pictures/Pasted image 20241013224321.png]]
+![[pictures/Pasted image 20241013224332.png]]
+![[pictures/Pasted image 20241013224343.png]]
+
 
 
 ```c++

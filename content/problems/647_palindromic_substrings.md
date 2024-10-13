@@ -1,8 +1,10 @@
 ---
 tags:
   - palindrome
+  - dynamic_programming
+  - dp_array
 ---
-![[problems/pictures/Pasted image 20240909230637.png]]
+![[pictures/Pasted image 20241011083724.png]]
 
 
 ### Dynamic Programming

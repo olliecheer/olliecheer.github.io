@@ -2,9 +2,9 @@
 tags:
   - data_stream
 ---
+![[pictures/Pasted image 20241014004658.png]]
+![[pictures/Pasted image 20241014004709.png]]
 
-![[problems/pictures/Pasted image 20240909214711.png]]
-![[problems/pictures/Pasted image 20240909214737.png]]
 
 
 ```c++

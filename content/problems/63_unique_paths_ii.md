@@ -4,8 +4,10 @@ tags:
   - path
   - dfs
 ---
-![[problems/pictures/Pasted image 20240907233722.png]]
-![[problems/pictures/Pasted image 20240907233730.png]]
+![[pictures/Pasted image 20241012200733.png]]
+![[pictures/Pasted image 20241012200746.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

@@ -6,107 +6,120 @@ tags:
 ![[problems/pictures/Pasted image 20240910014631.png]]
 ![[problems/pictures/Pasted image 20240910014642.png]]
 
-### failed
+### Tarjan
 
 ```c++
-template <typename T> using vec = std::vector<T>;
-
 class Solution {
-  std::unordered_map<int, std::unordered_set<int>> graph;
-  std::unordered_map<int, int> time_map;
-  bool found_critical_edge;
-  vec<vec<int>> dirs = {
-      {-1, 0},
-      {1, 0},
-      {0, -1},
-      {0, 1},
-  };
-  int root = -1, time = 0, count = 0;
+private:
+    // Directions for adjacent cells: right, down, left, up
+    const vector<vector<int>> DIRECTIONS = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
 
-  void dfs(vec<vec<bool>> &visited, vec<vec<int>> &grid, int i, int j) {
-    if (i < 0 || j < 0 || i >= grid.size() || j >= grid[0].size() ||
-        visited[i][j] || grid[i][j] == 0)
-      return;
+    struct ArticulationPointInfo {
+        bool hasArticulationPoint;
+        int time;
 
-    count++;
-    visited[i][j] = true;
-    for (auto &dir : dirs)
-      dfs(visited, grid, i + dir[0], j + dir[1]);
-  }
-
-  int numOfIsland(vec<vec<int>> &grid) {
-    int res = 0;
-    vec<vec<bool>> visited(grid.size(), vec<bool>(grid[0].size()));
-
-    for (int i = 0; i < grid.size(); i++)
-      for (int j = 0; j < grid[0].size(); j++)
-        if (!visited[i][j] && grid[i][j] == 1) {
-          if (root == -1)
-            root = j * grid[0].size() + j;
-
-          res++;
-          dfs(visited, grid, i, j);
-        }
-
-    return res;
-  }
-
-  void mark(vec<vec<int>> &grid, int prev_x, int prev_y, int x, int y) {
-    if (x < 0 || y < 0 || x >= grid.size() || y >= grid[0].size() ||
-        grid[x][y] == 0)
-      return;
-
-    int n1 = prev_x * grid[0].size() + prev_y;
-    int n2 = x * grid[0].size() + y;
-    // graph[n1].push_back(n2);
-    // graph[n2].push_back(n1);
-    graph[n1].insert(n2);
-    graph[n2].insert(n1);
-
-  }
-
-  void buildGraph(vec<vec<int>> &grid) {
-    for (int i = 0; i < grid.size(); i++)
-      for (int j = 0; j < grid[0].size(); j++)
-        if (grid[i][j] == 1)
-          for (auto &dir : dirs)
-            mark(grid, i, j, i + dir[0], j + dir[1]);
-  }
-
-  void tarjin(int parent, int cur, int time, std::unordered_set<int> &visited) {
-    visited.insert(cur);
-    time_map[cur] = time;
-    for (int it : graph[cur]) {
-      if (it == parent)
-        continue;
-
-      if (!visited.count(it))
-        tarjin(cur, it, time + 1, visited);
-
-      if (time < time_map[it])
-        found_critical_edge = true;
-
-      time_map[cur] = std::min(time_map[cur], time_map[it]);
-    }
-  }
+        ArticulationPointInfo(bool hasArticulationPoint, int time)
+            : hasArticulationPoint(hasArticulationPoint), time(time) {}
+    };
 
 public:
-  int minDays(vec<vec<int>> &grid) {
-    if (numOfIsland(grid) != 1)
-      return 0;
+    int minDays(vector<vector<int>>& grid) {
+        int rows = grid.size(), cols = grid[0].size();
+        ArticulationPointInfo apInfo(false, 0);
+        int landCells = 0, islandCount = 0;
 
-    if (count == 1)
-      return 1;
+        // Arrays to store information for each cell
+        vector<vector<int>> discoveryTime(
+            rows,
+            vector<int>(cols, -1));  // Time when a cell is first discovered
+        vector<vector<int>> lowestReachable(
+            rows,
+            vector<int>(cols, -1));  // Lowest discovery time reachable from the
+                                     // subtree rooted at this cell
+        vector<vector<int>> parentCell(
+            rows, vector<int>(cols, -1));  // Parent of each cell in DFS tree
 
-    if (count == 2)
-      return 2;
+        // Traverse the grid to find islands and articulation points
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (grid[i][j] == 1) {
+                    landCells++;
+                    if (discoveryTime[i][j] == -1) {  // If not yet visited
+                        // Start DFS for a new island
+                        findArticulationPoints(grid, i, j, discoveryTime,
+                                               lowestReachable, parentCell,
+                                               apInfo);
+                        islandCount++;
+                    }
+                }
+            }
+        }
 
-    buildGraph(grid);
+        // Determine the minimum number of days to disconnect the grid
+        if (islandCount == 0 || islandCount >= 2)
+            return 0;                  // Already disconnected or no land
+        if (landCells == 1) return 1;  // Only one land cell
+        if (apInfo.hasArticulationPoint)
+            return 1;  // An articulation point exists
+        return 2;      // Need to remove any two land cells
+    }
 
-    std::unordered_set<int> visited;
-    tarjin(-1, root, 0, visited);
+private:
+    void findArticulationPoints(vector<vector<int>>& grid, int row, int col,
+                                vector<vector<int>>& discoveryTime,
+                                vector<vector<int>>& lowestReachable,
+                                vector<vector<int>>& parentCell,
+                                ArticulationPointInfo& apInfo) {
+        int rows = grid.size(), cols = grid[0].size();
+        discoveryTime[row][col] = apInfo.time;
+        apInfo.time++;
+        lowestReachable[row][col] = discoveryTime[row][col];
+        int children = 0;
 
-    return found_critical_edge ? 1 : 2;
-  }
+        // Explore all adjacent cells
+        for (const auto& direction : DIRECTIONS) {
+            int newRow = row + direction[0];
+            int newCol = col + direction[1];
+            if (isValidLandCell(grid, newRow, newCol)) {
+                if (discoveryTime[newRow][newCol] == -1) {
+                    children++;
+                    parentCell[newRow][newCol] =
+                        row * cols + col;  // Set parent
+                    findArticulationPoints(grid, newRow, newCol, discoveryTime,
+                                           lowestReachable, parentCell, apInfo);
+
+                    // Update lowest reachable time
+                    lowestReachable[row][col] =
+                        min(lowestReachable[row][col],
+                            lowestReachable[newRow][newCol]);
+
+                    // Check for articulation point condition
+                    if (lowestReachable[newRow][newCol] >=
+                            discoveryTime[row][col] &&
+                        parentCell[row][col] != -1) {
+                        apInfo.hasArticulationPoint = true;
+                    }
+                } else if (newRow * cols + newCol != parentCell[row][col]) {
+                    // Update lowest reachable time for back edge
+                    lowestReachable[row][col] =
+                        min(lowestReachable[row][col],
+                            discoveryTime[newRow][newCol]);
+                }
+            }
+        }
+
+        // Root of DFS tree is an articulation point if it has more than one
+        // child
+        if (parentCell[row][col] == -1 && children > 1) {
+            apInfo.hasArticulationPoint = true;
+        }
+    }
+
+    // Check if the given cell is a valid land cell
+    bool isValidLandCell(const vector<vector<int>>& grid, int row, int col) {
+        int rows = grid.size(), cols = grid[0].size();
+        return row >= 0 && col >= 0 && row < rows && col < cols &&
+               grid[row][col] == 1;
+    }
 };
 ```

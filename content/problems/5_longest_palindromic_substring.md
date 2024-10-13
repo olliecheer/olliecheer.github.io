@@ -7,7 +7,7 @@ tags:
   - expand
   - manacher
 ---
-![[problems/pictures/Pasted image 20240907192035.png]]
+![[pictures/Pasted image 20241012194729.png]]
 
 
 ## Dynamic Programming

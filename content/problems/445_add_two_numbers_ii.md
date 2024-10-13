@@ -1,8 +1,10 @@
 ---
 tags:
 ---
-![[problems/pictures/Pasted image 20240909222641.png]]
-![[problems/pictures/Pasted image 20240909222648.png]]
+![[pictures/Pasted image 20241014010308.png]]
+![[pictures/Pasted image 20241014010319.png]]
+
+
 
 ```c++
 struct ListNode {

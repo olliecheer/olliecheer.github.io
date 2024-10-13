@@ -2,9 +2,10 @@
 tags:
   - path
 ---
-![[problems/pictures/Pasted image 20240910015153.png]]
-![[problems/pictures/Pasted image 20240910015207.png]]
-![[problems/pictures/Pasted image 20240910015216.png]]
+![[pictures/Pasted image 20241013225116.png]]
+![[pictures/Pasted image 20241013225132.png]]
+![[pictures/Pasted image 20241013225144.png]]
+
 
 
 ```c++

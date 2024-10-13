@@ -5,7 +5,9 @@ tags:
   - recursion
   - dfs
 ---
-![[problems/pictures/Pasted image 20240907224104.png]]
+![[pictures/Pasted image 20241012195858.png]]
+![[pictures/Pasted image 20241012195906.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

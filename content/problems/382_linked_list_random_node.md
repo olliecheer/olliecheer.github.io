@@ -3,8 +3,9 @@ tags:
   - random
   - reservoir_sampling
 ---
-![[problems/pictures/Pasted image 20240909220412.png]]
-![[problems/pictures/Pasted image 20240909220421.png]]
+![[pictures/Pasted image 20241014005110.png]]
+![[pictures/Pasted image 20241014005119.png]]
+
 
 
 ### Reservoir Sampling

@@ -3,7 +3,8 @@ tags:
   - island
   - union_find
 ---
-![[problems/pictures/Pasted image 20240910001610.png]]
+![[pictures/Pasted image 20241012095211.png]]
+![[pictures/Pasted image 20241012095222.png]]
 
 
 ```c++
@@ -39,6 +40,7 @@ public:
     }
   }
 };
+
 class Solution {
 public:
   int largestIsland(vec<vec<int>> &grid) {

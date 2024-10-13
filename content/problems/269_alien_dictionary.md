@@ -3,7 +3,8 @@ tags:
   - dfs
   - bfs
 ---
-// vip
+![[pictures/Pasted image 20241014002349.png]]
+![[pictures/Pasted image 20241014002357.png]]
 
 
 ## BFS

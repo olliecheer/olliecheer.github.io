@@ -3,8 +3,10 @@ tags:
   - priority_queue
   - stack
 ---
-![[problems/pictures/Pasted image 20240910002141.png]]
-![[problems/pictures/Pasted image 20240910002148.png]]
+![[pictures/Pasted image 20241013201335.png]]
+![[pictures/Pasted image 20241013201344.png]]
+
+
 
 ```c++
 // Stack

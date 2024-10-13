@@ -5,8 +5,9 @@ tags:
   - preorder
   - tree_construct
 ---
-![[problems/pictures/Pasted image 20240910002106.png]]
-![[problems/pictures/Pasted image 20240910002114.png]]
+![[pictures/Pasted image 20241013201248.png]]
+![[pictures/Pasted image 20241013201308.png]]
+
 
 ```c++
 struct TreeNode {

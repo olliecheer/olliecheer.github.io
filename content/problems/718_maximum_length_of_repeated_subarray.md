@@ -5,7 +5,31 @@ tags:
   - binary_search
   - dynamic_programming
 ---
-![[problems/pictures/Pasted image 20240909232743.png]]
+![[pictures/Pasted image 20241011094657.png]]
+
+### Dynamic Programming
+
+```c++
+template <typename T> using vec = std::vector<T>;
+
+class Solution {
+public:
+  int findLength(vec<int> &A, vec<int> &B) {
+    int M = A.size(), N = B.size();
+    vec<vec<int>> dp(M + 1, vec<int>(N + 1));
+    int res = 0;
+    for (int i = M - 1; i >= 0; i--)
+      for (int j = N - 1; j >= 0; j--) {
+        if (A[i] == B[j])
+          dp[i][j] = dp[i + 1][j + 1] + 1;
+
+        res = std::max(res, dp[i][j]);
+      }
+
+    return res;
+  }
+};
+```
 
 
 ### Binary Search
@@ -38,32 +62,6 @@ public:
     }
 
     return low - 1;
-  }
-};
-```
-
-
-### Dynamic Programming
-
-```c++
-template <typename T> using vec = std::vector<T>;
-
-class Solution {
-public:
-  int findLength(vec<int> &A, vec<int> &B) {
-    int M = A.size(), N = B.size();
-    vec<vec<int>> dp(M + 1, vec<int>(N + 1));
-    int res = 0;
-    for (int i = M - 1; i >= 0; i--) {
-      for (int j = N - 1; j >= 0; j--) {
-        if (A[i] == B[j])
-          dp[i][j] = dp[i + 1][j + 1] + 1;
-
-        res = std::max(res, dp[i][j]);
-      }
-    }
-
-    return res;
   }
 };
 ```

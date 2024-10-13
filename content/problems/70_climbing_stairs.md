@@ -2,7 +2,7 @@
 tags:
   - dynamic_programming
 ---
-![[problems/pictures/Pasted image 20240907234133.png]]
+![[pictures/Pasted image 20241012201022.png]]
 
 
 ```c++

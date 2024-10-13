@@ -2,7 +2,10 @@
 tags:
   - dfs
 ---
-![[problems/pictures/Pasted image 20240909233242.png]]
+![[pictures/Pasted image 20241012085208.png]]
+![[pictures/Pasted image 20241012085223.png]]
+![[pictures/Pasted image 20241012085238.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;
@@ -10,9 +13,8 @@ template <typename T> using vec = std::vector<T>;
 class Solution {
   void dfs(vec<vec<int>> &image, int sr, int sc, int oldColor, int newColor) {
     if (sr < 0 || sc < 0 || sr >= image.size() || sc >= image[0].size() ||
-        image[sr][sc] != oldColor) {
+        image[sr][sc] != oldColor)
       return;
-    }
 
     image[sr][sc] = newColor;
 

@@ -1,7 +1,10 @@
 ---
 tags:
 ---
-![[problems/pictures/Pasted image 20240909223428.png]]
+![[pictures/Pasted image 20241014010848.png]]
+![[pictures/Pasted image 20241014010857.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

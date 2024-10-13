@@ -2,7 +2,9 @@
 tags:
   - prime
 ---
-![[problems/pictures/Pasted image 20240908184850.png]]
+![[pictures/Pasted image 20241013235745.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

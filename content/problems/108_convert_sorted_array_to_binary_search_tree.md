@@ -4,9 +4,10 @@ tags:
   - array
   - tree_construct
 ---
-![[problems/pictures/Pasted image 20240908024951.png]]
+![[pictures/Pasted image 20241013232628.png]]
+![[pictures/Pasted image 20241013232639.png]]
 
-![[problems/pictures/Pasted image 20240908025001.png]]
+
 
 ```c++
 struct TreeNode {

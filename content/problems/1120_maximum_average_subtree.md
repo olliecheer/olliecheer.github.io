@@ -2,10 +2,11 @@
 tags:
   - binary_tree
 ---
-![[problems/pictures/Pasted image 20240910004529.png]]
+![[pictures/Pasted image 20241013210658.png]]
+![[pictures/Pasted image 20241013210707.png]]
 
 
-VIP has not been submitted
+
 
 ```c++
 struct TreeNode {

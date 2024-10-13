@@ -5,7 +5,8 @@ tags:
   - stack
   - 2pass
 ---
-![[problems/pictures/Pasted image 20240907223537.png]]
+![[pictures/Pasted image 20241012195629.png]]
+
 
 ```c++
 class Solution {

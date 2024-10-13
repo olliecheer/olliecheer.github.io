@@ -3,9 +3,10 @@ tags:
   - gas_station
   - dynamic_programming
 ---
+![[pictures/Pasted image 20241013233920.png]]
+![[pictures/Pasted image 20241013233928.png]]
 
 
-![[problems/pictures/Pasted image 20240908031359.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

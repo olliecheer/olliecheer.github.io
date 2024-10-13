@@ -4,7 +4,9 @@ tags:
   - matrix
   - dynamic_programming
 ---
-![[problems/pictures/Pasted image 20240907233845.png]]
+![[pictures/Pasted image 20241012200900.png]]
+![[pictures/Pasted image 20241012200911.png]]
+
 
 
 ```c++

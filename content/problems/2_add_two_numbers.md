@@ -4,8 +4,9 @@ tags:
   - sum
   - carry
 ---
+![[pictures/Pasted image 20241012194520.png]]
+![[pictures/Pasted image 20241012194531.png]]
 
-![[problems/pictures/Pasted image 20240907191239.png]]
 
 ```c++
 struct ListNode {

@@ -4,7 +4,8 @@ tags:
   - greedy
   - subarray
 ---
-![[problems/pictures/Pasted image 20240907233004.png]]
+![[pictures/Pasted image 20241012200328.png]]
+![[pictures/Pasted image 20241012200342.png]]
 
 
 ## Greedy

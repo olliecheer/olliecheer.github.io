@@ -4,8 +4,11 @@ tags:
   - traversal
   - inorder
 ---
+![[pictures/Pasted image 20241013231833.png]]
+![[pictures/Pasted image 20241013231855.png]]
+![[pictures/Pasted image 20241013231905.png]]
 
-![[problems/pictures/Pasted image 20240908023423.png]]![[problems/pictures/Pasted image 20240908023506.png]]
+
 
 ```c++
 struct TreeNode {

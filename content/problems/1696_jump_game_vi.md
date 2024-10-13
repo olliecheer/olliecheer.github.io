@@ -4,7 +4,8 @@ tags:
   - mono_queue
   - priority_queue
 ---
-![[problems/pictures/Pasted image 20240910015805.png]]
+![[pictures/Pasted image 20241013225740.png]]
+![[pictures/Pasted image 20241013225752.png]]
 
 
 ### Mono Queue

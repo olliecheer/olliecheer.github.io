@@ -3,7 +3,10 @@ tags:
   - sell_stock
   - dynamic_programming
 ---
-![[problems/pictures/Pasted image 20240908030510.png]]
+![[pictures/Pasted image 20241013233410.png]]
+![[pictures/Pasted image 20241013233421.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

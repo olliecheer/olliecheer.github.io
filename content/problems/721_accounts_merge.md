@@ -2,8 +2,10 @@
 tags:
   - union_find
 ---
-![[problems/pictures/Pasted image 20240909232827.png]]
-![[problems/pictures/Pasted image 20240909232835.png]]
+![[pictures/Pasted image 20241011100554.png]]
+![[pictures/Pasted image 20241011100605.png]]
+![[pictures/Pasted image 20241011100613.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;
@@ -31,12 +33,12 @@ public:
     DSU dsu;
     std::unordered_map<std::string, std::string> email2name;
 
-    for (auto &&it : accounts) {
+    for (auto &it : accounts) {
       auto name = it[0];
       auto primary_email = it[1];
 
       for (int i = 1; i < it.size(); i++) {
-        auto &&email = it[i];
+        auto &email = it[i];
         email2name[email] = name;
         dsu.union_(primary_email, email);
       }

@@ -3,7 +3,8 @@ tags:
   - permutation
   - dfs
 ---
-![[problems/pictures/Pasted image 20240907224555.png]]
+![[pictures/Pasted image 20241012200106.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

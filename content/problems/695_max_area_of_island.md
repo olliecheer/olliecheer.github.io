@@ -3,8 +3,10 @@ tags:
   - island
   - matrix
 ---
-![[problems/pictures/Pasted image 20240909232127.png]]
-![[problems/pictures/Pasted image 20240909232141.png]]
+![[pictures/Pasted image 20241011085214.png]]
+![[pictures/Pasted image 20241011085222.png]]
+![[pictures/Pasted image 20241011085235.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;
@@ -27,15 +29,13 @@ public:
     int res = 0;
     int area;
 
-    for (int i = 0; i < grid.size(); i++) {
-      for (int j = 0; j < grid[0].size(); j++) {
+    for (int i = 0; i < grid.size(); i++)
+      for (int j = 0; j < grid[0].size(); j++)
         if (grid[i][j] == 1) {
           area = 0;
           dfs(grid, i, j, area);
           res = std::max(area, res);
         }
-      }
-    }
 
     return res;
   }

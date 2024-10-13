@@ -1,7 +1,9 @@
 ---
 tags:
 ---
-![[problems/pictures/Pasted image 20240908191832.png]]
+![[pictures/Pasted image 20241014001206.png]]
+
+
 
 ```c++
 class Solution {

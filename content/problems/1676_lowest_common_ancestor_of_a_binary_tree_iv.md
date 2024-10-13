@@ -2,8 +2,11 @@
 tags:
   - common_ancestor
 ---
-![[problems/pictures/Pasted image 20240910015725.png]]
-![[problems/pictures/Pasted image 20240910015728.png]]
+![[pictures/Pasted image 20241013225639.png]]
+![[pictures/Pasted image 20241013225652.png]]
+![[pictures/Pasted image 20241013225703.png]]
+
+
 
 ```c++
 struct TreeNode {

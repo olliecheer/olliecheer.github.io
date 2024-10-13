@@ -5,8 +5,9 @@ tags:
   - inorder
   - tree_construct
 ---
+![[pictures/Pasted image 20241013232401.png]]
+![[pictures/Pasted image 20241013232412.png]]
 
-![[problems/pictures/Pasted image 20240908024449.png]]![[problems/pictures/Pasted image 20240908024531.png]]
 
 
 

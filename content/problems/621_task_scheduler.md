@@ -1,8 +1,10 @@
 ---
 tags:
+  - scheduler
 ---
-![[problems/pictures/Pasted image 20240909230345.png]]
-![[problems/pictures/Pasted image 20240909230401.png]]
+![[pictures/Pasted image 20241011082433.png]]
+![[pictures/Pasted image 20241011082447.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

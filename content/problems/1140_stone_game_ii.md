@@ -3,7 +3,9 @@ tags:
   - stone_game
   - dynamic_programming
 ---
-![[problems/pictures/Pasted image 20240910005048.png]]
+![[pictures/Pasted image 20241013213439.png]]
+![[pictures/Pasted image 20241013213448.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

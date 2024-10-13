@@ -4,9 +4,10 @@ tags:
   - traversal
   - preorder
 ---
+![[pictures/Pasted image 20241013234442.png]]
+![[pictures/Pasted image 20241013234455.png]]
+![[pictures/Pasted image 20241013234505.png]]
 
-![[problems/pictures/Pasted image 20240908181209.png]]
-![[problems/pictures/Pasted image 20240908181223.png]]
 
 
 ```c++

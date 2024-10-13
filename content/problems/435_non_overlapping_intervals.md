@@ -2,7 +2,10 @@
 tags:
   - greedy
 ---
-![[problems/pictures/Pasted image 20240909222422.png]]
+![[pictures/Pasted image 20241014010209.png]]
+![[pictures/Pasted image 20241014010218.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

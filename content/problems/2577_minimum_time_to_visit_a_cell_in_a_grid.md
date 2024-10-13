@@ -3,9 +3,10 @@ tags:
   - priority_queue
   - dijkstra
 ---
+![[pictures/Pasted image 20241013230638.png]]
+![[pictures/Pasted image 20241013230659.png]]
+![[pictures/Pasted image 20241013230711.png]]
 
-![[problems/pictures/Pasted image 20240910023550.png]]
-![[problems/pictures/Pasted image 20240910023600.png]]
 
 
 ```c++

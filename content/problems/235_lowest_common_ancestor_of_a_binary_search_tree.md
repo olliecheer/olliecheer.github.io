@@ -3,8 +3,10 @@ tags:
   - common_ancestor
   - binary_search_tree
 ---
-![[problems/pictures/Pasted image 20240908192057.png]]
-![[problems/pictures/Pasted image 20240908192105.png]]
+![[pictures/Pasted image 20241014001447.png]]
+![[pictures/Pasted image 20241014001456.png]]
+
+
 
 ```c++
 struct TreeNode {

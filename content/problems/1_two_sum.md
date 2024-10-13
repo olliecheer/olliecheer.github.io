@@ -5,8 +5,8 @@ tags:
   - sort
   - dual_pointer
 ---
-![[problems/pictures/Pasted image 20240907190934.png]]
-
+![[pictures/Pasted image 20241012194116.png]]
+![[pictures/Pasted image 20241012194126.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

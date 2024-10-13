@@ -3,7 +3,9 @@ tags:
   - stack
   - queue
 ---
-![[problems/pictures/Pasted image 20240908191438.png]]
+![[pictures/Pasted image 20241014000817.png]]
+![[pictures/Pasted image 20241014000829.png]]
+
 
 
 ```c++

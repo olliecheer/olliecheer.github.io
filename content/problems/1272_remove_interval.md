@@ -2,9 +2,9 @@
 tags:
   - scanning_line
 ---
+![[pictures/Pasted image 20241013222655.png]]
+![[pictures/Pasted image 20241013222716.png]]
 
-
-![[problems/pictures/Pasted image 20240910010618.png]]
 
 
 ```c++

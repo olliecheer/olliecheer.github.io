@@ -3,7 +3,9 @@ tags:
   - interval
   - array
 ---
-![[problems/pictures/Pasted image 20240907233544.png]]
+![[pictures/Pasted image 20241012200625.png]]
+![[pictures/Pasted image 20241012200637.png]]
+
 
 
 ```c++

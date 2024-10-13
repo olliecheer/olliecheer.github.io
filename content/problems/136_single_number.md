@@ -2,8 +2,10 @@
 tags:
   - bitwise
 ---
+![[pictures/Pasted image 20241013233952.png]]
 
-![[problems/pictures/Pasted image 20240908031454.png]]
+
+
 ```c++
 template <typename T> using vec = std::vector<T>;
 

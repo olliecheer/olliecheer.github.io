@@ -2,8 +2,9 @@
 tags:
   - majority_number
 ---
+![[pictures/Pasted image 20241014001045.png]]
 
-![[problems/pictures/Pasted image 20240908191630.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

@@ -3,7 +3,7 @@ tags:
   - subarray
   - guess
 ---
-![[problems/pictures/Pasted image 20240908185221.png]]
+![[pictures/Pasted image 20241014000100.png]]
 
 
 ## Guess

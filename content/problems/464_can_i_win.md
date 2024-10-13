@@ -5,7 +5,9 @@ tags:
   - dynamic_programming
   - state_compression
 ---
-![[problems/pictures/Pasted image 20240909223329.png]]
+![[pictures/Pasted image 20241014010810.png]]
+![[pictures/Pasted image 20241014010818.png]]
+
 
 
 ```c++

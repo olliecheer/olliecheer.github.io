@@ -5,8 +5,9 @@ tags:
   - recursion
   - iteration
 ---
-![[problems/pictures/Pasted image 20240907223347.png]]
-![[problems/pictures/Pasted image 20240907223355.png]]
+![[pictures/Pasted image 20241012195455.png]]
+![[pictures/Pasted image 20241012195507.png]]
+
 
 ```c++
 struct ListNode {

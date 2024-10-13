@@ -5,7 +5,8 @@ tags:
   - partition
   - backtrack
 ---
-![[problems/pictures/Pasted image 20240908031138.png]]
+![[pictures/Pasted image 20241013233809.png]]
+
 
 
 ## DFS

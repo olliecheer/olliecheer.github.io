@@ -3,7 +3,8 @@ tags:
   - subsequence
   - dynamic_programming
 ---
-![[problems/pictures/Pasted image 20240908230124.png]]
+![[pictures/Pasted image 20241014003133.png]]
+
 
 
 ## Dynamic Programming

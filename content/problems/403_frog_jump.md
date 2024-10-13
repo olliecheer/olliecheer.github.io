@@ -2,7 +2,9 @@
 tags:
   - jump_game
 ---
-![[problems/pictures/Pasted image 20240909221135.png]]
+![[pictures/Pasted image 20241014005500.png]]
+![[pictures/Pasted image 20241014005509.png]]
+
 
 
 ### Brutal Force

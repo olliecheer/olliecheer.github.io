@@ -1,6 +1,7 @@
+![[pictures/Pasted image 20241014002708.png]]
+![[pictures/Pasted image 20241014002721.png]]
 
 
-// vip
 
 ```c++
 template <typename T> using vec = std::vector<T>;

@@ -2,9 +2,9 @@
 tags:
   - meeting_room
 ---
+![[pictures/Pasted image 20241014001915.png]]
 
 
-![[problems/pictures/Pasted image 20240908210744.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

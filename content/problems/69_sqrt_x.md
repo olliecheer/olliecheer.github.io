@@ -2,7 +2,7 @@
 tags:
   - recursion
 ---
-![[problems/pictures/Pasted image 20240907234055.png]]
+![[pictures/Pasted image 20241012200956.png]]
 
 
 ```c++

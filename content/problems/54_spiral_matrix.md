@@ -2,8 +2,9 @@
 tags:
   - matrix
 ---
-![[problems/pictures/Pasted image 20240907233223.png]]
-![[problems/pictures/Pasted image 20240907233230.png]]
+![[pictures/Pasted image 20241012200400.png]]
+![[pictures/Pasted image 20241012200411.png]]
+
 
 
 ```c++

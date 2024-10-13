@@ -4,7 +4,7 @@ tags:
   - backtrack
   - dfs
 ---
-![[problems/pictures/Pasted image 20240907232239.png]]
+![[pictures/Pasted image 20241012200127.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

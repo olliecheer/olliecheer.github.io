@@ -2,7 +2,9 @@
 tags:
   - substring
 ---
-![[problems/pictures/Pasted image 20240910004128.png]]
+![[pictures/Pasted image 20241013204725.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

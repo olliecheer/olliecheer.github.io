@@ -2,7 +2,8 @@
 tags:
   - subarray
 ---
-![[problems/pictures/Pasted image 20240910010329.png]]
+![[pictures/Pasted image 20241013222444.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

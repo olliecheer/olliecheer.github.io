@@ -3,7 +3,8 @@ tags:
   - sell_stock
   - dynamic_programming
 ---
-![[problems/pictures/Pasted image 20240909232706.png]]
+![[pictures/Pasted image 20241011094304.png]]
+![[pictures/Pasted image 20241011094316.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;
@@ -30,7 +31,7 @@ public:
       dp[i][HOLD] = std::max(dp[i - 1][HOLD], dp[i - 1][NOT_HOLD] - prices[i]);
     }
 
-    return dp[N - 1][0];
+    return dp[N - 1][NOT_HOLD];
   }
 };
 ```

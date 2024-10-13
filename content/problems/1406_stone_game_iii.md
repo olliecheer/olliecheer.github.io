@@ -2,9 +2,9 @@
 tags:
   - stone_game
 ---
+![[pictures/Pasted image 20241013223841.png]]
+![[pictures/Pasted image 20241013223856.png]]
 
-![[problems/pictures/Pasted image 20240910012700.png]]
-![[problems/pictures/Pasted image 20240910012709.png]]
 
 
 ```c++

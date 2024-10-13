@@ -4,9 +4,11 @@ tags:
   - traversal
   - postorder
 ---
+![[pictures/Pasted image 20241013234540.png]]
+![[pictures/Pasted image 20241013234551.png]]
+![[pictures/Pasted image 20241013234558.png]]
 
-![[problems/pictures/Pasted image 20240908181306.png]]
-![[problems/pictures/Pasted image 20240908181348.png]]
+
 
 ```c++
 struct TreeNode {

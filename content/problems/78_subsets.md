@@ -2,7 +2,8 @@
 tags:
   - backtrack
 ---
-![[problems/pictures/Pasted image 20240907234653.png]]
+![[pictures/Pasted image 20241012201323.png]]
+
 
 
 ```c++

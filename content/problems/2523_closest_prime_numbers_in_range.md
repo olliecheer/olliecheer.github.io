@@ -3,7 +3,9 @@ tags:
   - prime
   - eratosthenes
 ---
-![[problems/pictures/Pasted image 20240910023417.png]]
+![[pictures/Pasted image 20241013230516.png]]
+![[pictures/Pasted image 20241013230525.png]]
+
 
 
 ```c++

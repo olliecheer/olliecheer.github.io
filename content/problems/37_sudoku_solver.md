@@ -3,10 +3,9 @@ tags:
   - sudoku
   - matrix
 ---
-
-![[problems/pictures/Pasted image 20240907223925.png]]
-![[problems/pictures/Pasted image 20240907224014.png]]
-![[problems/pictures/Pasted image 20240907224025.png]]
+![[pictures/Pasted image 20241012195744.png]]
+![[pictures/Pasted image 20241012195755.png]]
+![[pictures/Pasted image 20241012195806.png]]
 
 
 ```c++

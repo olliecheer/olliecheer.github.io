@@ -3,9 +3,11 @@ tags:
   - matrix
   - sum
 ---
-![[problems/pictures/Pasted image 20240909211159.png]]
-![[problems/pictures/Pasted image 20240909211209.png]]
-![[problems/pictures/Pasted image 20240909211223.png]]
+![[pictures/Pasted image 20241014003232.png]]
+![[pictures/Pasted image 20241014003244.png]]
+![[pictures/Pasted image 20241014003256.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

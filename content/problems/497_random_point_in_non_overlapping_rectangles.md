@@ -2,9 +2,11 @@
 tags:
     - random
 ---
-![[problems/pictures/Pasted image 20240909224155.png]]
-![[problems/pictures/Pasted image 20240909224206.png]]
-![[problems/pictures/Pasted image 20240909224219.png]]
+![[pictures/Pasted image 20241014011423.png]]
+![[pictures/Pasted image 20241014011437.png]]
+![[pictures/Pasted image 20241014011445.png]]
+
+
 
 ### Binary Search
 

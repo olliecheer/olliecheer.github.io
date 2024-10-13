@@ -3,8 +3,10 @@ tags:
   - binary_search_tree
   - linked_list
 ---
-![[problems/pictures/Pasted image 20240909222117.png]]
-![[problems/pictures/Pasted image 20240909222120.png]]
+![[pictures/Pasted image 20241014005933.png]]
+![[pictures/Pasted image 20241014005949.png]]
+![[pictures/Pasted image 20241014005959.png]]
+
 
 
 ```c++

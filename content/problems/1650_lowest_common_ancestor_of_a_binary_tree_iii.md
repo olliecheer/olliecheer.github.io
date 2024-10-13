@@ -2,8 +2,10 @@
 tags:
   - common_ancestor
 ---
-![[problems/pictures/Pasted image 20240910015628.png]]
-![[problems/pictures/Pasted image 20240910015632.png]]
+![[pictures/Pasted image 20241013225525.png]]
+![[pictures/Pasted image 20241013225540.png]]
+
+
 
 ```c++
 struct Node {

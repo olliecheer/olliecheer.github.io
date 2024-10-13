@@ -2,8 +2,9 @@
 tags:
   - matrix
 ---
-![[problems/pictures/Pasted image 20240910003324.png]]
-![[problems/pictures/Pasted image 20240910003332.png]]
+![[pictures/Pasted image 20241013202759.png]]
+![[pictures/Pasted image 20241013202807.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

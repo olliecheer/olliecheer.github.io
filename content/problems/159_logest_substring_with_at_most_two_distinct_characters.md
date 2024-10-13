@@ -2,9 +2,9 @@
 tags:
   - sliding_window
 ---
+![[pictures/Pasted image 20241013234908.png]]
 
 
-![[problems/pictures/Pasted image 20240908182058.png]]
 
 ```c++
 class Solution {

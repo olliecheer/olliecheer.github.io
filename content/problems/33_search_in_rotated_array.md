@@ -4,7 +4,9 @@ tags:
   - array
   - binary_search
 ---
-![[problems/pictures/Pasted image 20240907223655.png]]
+![[pictures/Pasted image 20241012195711.png]]
+![[pictures/Pasted image 20241012195721.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

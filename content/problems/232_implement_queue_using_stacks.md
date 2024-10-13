@@ -3,8 +3,10 @@ tags:
   - stack
   - queue
 ---
-![[problems/pictures/Pasted image 20240908191917.png]]
-![[problems/pictures/Pasted image 20240908191944.png]]
+![[pictures/Pasted image 20241014001242.png]]
+![[pictures/Pasted image 20241014001251.png]]
+
+
 
 ```c++
 class MyQueue {

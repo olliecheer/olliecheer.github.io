@@ -4,8 +4,12 @@ tags:
   - matrix
   - dfs
 ---
-![[problems/pictures/Pasted image 20240907234816.png]]
-![[problems/pictures/Pasted image 20240907234832.png]]
+![[pictures/Pasted image 20241012201345.png]]
+![[pictures/Pasted image 20241012201356.png]]
+![[pictures/Pasted image 20241012201413.png]]
+![[pictures/Pasted image 20241012201420.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

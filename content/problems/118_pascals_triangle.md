@@ -2,10 +2,9 @@
 tags:
   - pascals_triangle
 ---
+![[pictures/Pasted image 20241013232900.png]]
 
 
-
-![[problems/pictures/Pasted image 20240908025724.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

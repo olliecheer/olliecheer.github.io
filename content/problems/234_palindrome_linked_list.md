@@ -3,7 +3,9 @@ tags:
   - palindrome
   - linked_list
 ---
-![[problems/pictures/Pasted image 20240908192017.png]]
+![[pictures/Pasted image 20241014001322.png]]
+
+
 
 ```c++
 struct ListNode {

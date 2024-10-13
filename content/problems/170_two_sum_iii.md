@@ -2,8 +2,9 @@
 tags:
   - sum
 ---
+![[pictures/Pasted image 20241013235219.png]]
+![[pictures/Pasted image 20241013235226.png]]
 
-![[problems/pictures/Pasted image 20240908184059.png]]
 
 
 ```c++

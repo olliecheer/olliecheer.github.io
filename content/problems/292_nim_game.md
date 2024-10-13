@@ -2,7 +2,9 @@
 tags:
   - game
 ---
-![[problems/pictures/Pasted image 20240908225901.png]]
+![[pictures/Pasted image 20241014002915.png]]
+![[pictures/Pasted image 20241014002925.png]]
+
 
 
 ```c++

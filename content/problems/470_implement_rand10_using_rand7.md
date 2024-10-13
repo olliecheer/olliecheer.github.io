@@ -2,7 +2,10 @@
 tags:
   - random
 ---
-![[problems/pictures/Pasted image 20240909223533.png]]
+![[pictures/Pasted image 20241014010921.png]]
+![[pictures/Pasted image 20241014010929.png]]
+
+
 
 ```c++
 extern int rand7();

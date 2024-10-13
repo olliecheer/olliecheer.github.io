@@ -2,7 +2,8 @@
 tags:
   - sliding_window
 ---
-![[problems/pictures/Pasted image 20240908192318.png]]
+![[pictures/Pasted image 20241014001635.png]]
+
 
 
 ```c++

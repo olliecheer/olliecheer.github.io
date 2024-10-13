@@ -2,8 +2,9 @@
 tags:
   - longest_substring
 ---
+![[pictures/Pasted image 20241014005317.png]]
 
-![[problems/pictures/Pasted image 20240909220849.png]]
+
 
 ```c++
 // T(n) = O(26 * N)  

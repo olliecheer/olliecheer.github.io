@@ -2,8 +2,9 @@
 tags:
   - priority_queue
 ---
-![[problems/pictures/Pasted image 20240910002926.png]]
-![[problems/pictures/Pasted image 20240910002935.png]]
+![[pictures/Pasted image 20241013202032.png]]
+![[pictures/Pasted image 20241013202043.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

@@ -3,7 +3,10 @@ tags:
   - data_stream
   - priority_queue
 ---
-![[problems/pictures/Pasted image 20240909232239.png]]
+![[pictures/Pasted image 20241011085331.png]]
+![[pictures/Pasted image 20241011085343.png]]
+![[pictures/Pasted image 20241011085353.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

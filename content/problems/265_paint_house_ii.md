@@ -2,7 +2,9 @@
 tags:
   - paint_house
 ---
-![[problems/pictures/Pasted image 20240908223820.png]]
+![[pictures/Pasted image 20241014002240.png]]
+![[pictures/Pasted image 20241014002249.png]]
+
 
 
 ```c++

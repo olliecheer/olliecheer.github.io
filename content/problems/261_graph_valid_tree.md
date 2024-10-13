@@ -3,7 +3,8 @@ tags:
   - union_find
   - dfs
 ---
-// vip
+![[pictures/Pasted image 20241014002111.png]]
+![[pictures/Pasted image 20241014002120.png]]
 
 
 ## Find Union
@@ -12,7 +13,7 @@ tags:
 // find circle in un-directed graph  
 template <typename T> using vec = std::vector<T>;
 
-class Solution_DSU {
+class Solution {
   class DSU {
     vec<int> parent;
 

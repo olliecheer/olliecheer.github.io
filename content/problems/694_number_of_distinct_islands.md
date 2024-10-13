@@ -3,7 +3,9 @@ tags:
   - island
   - dfs
 ---
-![[problems/pictures/Pasted image 20240909232041.png]]
+![[pictures/Pasted image 20241011085021.png]]
+![[pictures/Pasted image 20241011085030.png]]
+![[pictures/Pasted image 20241011085042.png]]
 
 
 ```c++
@@ -27,15 +29,14 @@ class Solution {
 public:
   int numDistinctIslands(vec<vec<int>> &grid) {
     std::unordered_set<std::string> st;
-    for (int i = 0; i < grid.size(); i++) {
-      for (int j = 0; j < grid[0].size(); j++) {
+    for (int i = 0; i < grid.size(); i++)
+      for (int j = 0; j < grid[0].size(); j++)
         if (grid[i][j] != 0) {
           std::string s;
           dfs(grid, i, j, s, "start#");
           st.insert(std::move(s));
         }
-      }
-    }
+
     return st.size();
   }
 };

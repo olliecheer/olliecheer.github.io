@@ -3,8 +3,10 @@ tags:
   - coin_change
   - dynamic_programming
 ---
+![[pictures/Pasted image 20241014004310.png]]
+![[pictures/Pasted image 20241014004320.png]]
 
-![[problems/pictures/Pasted image 20240909213221.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

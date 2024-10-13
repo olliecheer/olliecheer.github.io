@@ -4,8 +4,10 @@ tags:
   - monostack
   - dfs
 ---
-![[problems/pictures/Pasted image 20240907235407.png]]
-![[problems/pictures/Pasted image 20240907235415.png]]
+![[pictures/Pasted image 20241013231531.png]]
+![[pictures/Pasted image 20241013231549.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

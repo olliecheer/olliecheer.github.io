@@ -3,7 +3,8 @@ tags:
 - dfs
 - bfs
 ---
-![[pictures/Pasted image 20240924213638.png]]![[pictures/Pasted image 20240924213649.png]]
+![[pictures/Pasted image 20241014004435.png]]
+![[pictures/Pasted image 20241014004446.png]]
 
 
 ```c++

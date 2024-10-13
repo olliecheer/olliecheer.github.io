@@ -5,10 +5,10 @@ tags:
   - recursion
   - iteration
 ---
+![[pictures/Pasted image 20241013232203.png]]
+![[pictures/Pasted image 20241013232216.png]]
 
 
-![[problems/pictures/Pasted image 20240908024032.png]]
-![[problems/pictures/Pasted image 20240908024043.png]]
 
 ```c++
 struct TreeNode {

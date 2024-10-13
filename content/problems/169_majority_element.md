@@ -3,7 +3,8 @@ tags:
   - majority_number
   - vote
 ---
-![[problems/pictures/Pasted image 20240908183929.png]]
+![[pictures/Pasted image 20241013235159.png]]
+
 
 
 ## Vote

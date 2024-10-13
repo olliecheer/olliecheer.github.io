@@ -2,8 +2,10 @@
 tags:
   - stack
 ---
-![[problems/pictures/Pasted image 20240908181533.png]]
-![[problems/pictures/Pasted image 20240908181541.png]]
+![[pictures/Pasted image 20241013234651.png]]
+![[pictures/Pasted image 20241013234659.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

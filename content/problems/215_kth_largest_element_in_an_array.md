@@ -2,7 +2,8 @@
 tags:
   - sort
 ---
-![[problems/pictures/Pasted image 20240908190504.png]]
+![[pictures/Pasted image 20241014000457.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

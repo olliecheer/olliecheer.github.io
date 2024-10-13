@@ -4,8 +4,10 @@ tags:
   - mod
   - dynamic_programming
 ---
-![[problems/pictures/Pasted image 20240910014734.png]]
-![[problems/pictures/Pasted image 20240910014748.png]]
+![[pictures/Pasted image 20241013224725.png]]
+![[pictures/Pasted image 20241013224744.png]]
+![[pictures/Pasted image 20241013224755.png]]
+
 
 
 ```c++

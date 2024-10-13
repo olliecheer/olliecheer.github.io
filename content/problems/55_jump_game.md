@@ -4,7 +4,8 @@ tags:
   - dynamic_programming
   - greedy
 ---
-![[problems/pictures/Pasted image 20240907233345.png]]
+![[pictures/Pasted image 20241012200553.png]]
+
 
 
 ```c++

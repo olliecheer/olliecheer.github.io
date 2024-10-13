@@ -2,7 +2,10 @@
 tags:
   - paint_house
 ---
-![[problems/pictures/Pasted image 20240908221850.png]]
+![[pictures/Pasted image 20241014001943.png]]
+![[pictures/Pasted image 20241014001953.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

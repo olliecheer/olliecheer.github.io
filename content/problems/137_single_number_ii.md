@@ -2,7 +2,9 @@
 tags:
   - bitwise
 ---
-![[problems/pictures/Pasted image 20240908031632.png]]
+![[pictures/Pasted image 20241013234023.png]]
+
+
 
 ```c++
 // space O(1)  

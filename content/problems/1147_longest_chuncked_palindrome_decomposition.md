@@ -3,7 +3,10 @@ tags:
   - palindrome
   - mod
 ---
-![[problems/pictures/Pasted image 20240910005209.png]]
+![[pictures/Pasted image 20241013220237.png]]
+![[pictures/Pasted image 20241013220246.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

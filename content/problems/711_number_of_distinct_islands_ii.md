@@ -1,8 +1,12 @@
 ---
 tags:
   - island
+  - rotate
 ---
-![[problems/pictures/Pasted image 20240909232536.png]]
+![[pictures/Pasted image 20241011090342.png]]
+![[pictures/Pasted image 20241011090351.png]]
+![[pictures/Pasted image 20241011090407.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;
@@ -100,14 +104,13 @@ public:
 
     std::set<vec<int>> shapes;
 
-    for (int r = 0; r < M; r++) {
+    for (int r = 0; r < M; r++)
       for (int c = 0; c < N; c++) {
         vec<int> shape = {};
         explore(r, c, shape);
         if (!shape.empty())
           shapes.insert(canonical(std::move(shape)));
       }
-    }
 
     return shapes.size();
   }

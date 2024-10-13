@@ -2,7 +2,9 @@
 tags:
   - game
 ---
-![[problems/pictures/Pasted image 20240910003654.png]]
+![[pictures/Pasted image 20241013203823.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

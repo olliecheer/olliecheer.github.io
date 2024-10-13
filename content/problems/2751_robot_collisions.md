@@ -3,8 +3,10 @@ tags:
     - mono_stack
 ---
 
-![[problems/pictures/Pasted image 20240910023703.png]]
-![[problems/pictures/Pasted image 20240910023715.png]]
+![[pictures/Pasted image 20241013230807.png]]
+![[pictures/Pasted image 20241013230820.png]]
+![[pictures/Pasted image 20241013230833.png]]
+
 
 
 ### Mono Stack

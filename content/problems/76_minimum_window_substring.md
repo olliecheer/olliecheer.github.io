@@ -3,7 +3,8 @@ tags:
   - substring
   - sliding_window
 ---
-![[problems/pictures/Pasted image 20240907234453.png]]
+![[pictures/Pasted image 20241012201205.png]]
+![[pictures/Pasted image 20241012201216.png]]
 
 
 ```c++

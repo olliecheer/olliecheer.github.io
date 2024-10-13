@@ -3,7 +3,9 @@ tags:
   - meeting_room
   - scanning_line
 ---
-![[problems/pictures/Pasted image 20240908210726.png]]
+![[pictures/Pasted image 20241014001846.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

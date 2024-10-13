@@ -2,7 +2,10 @@
 tags:
   - prefix_sum
 ---
-![[problems/pictures/Pasted image 20240909215951.png]]
+![[pictures/Pasted image 20241014004736.png]]
+![[pictures/Pasted image 20241014004801.png]]
+![[pictures/Pasted image 20241014004810.png]]
+
 
 
 ```c++

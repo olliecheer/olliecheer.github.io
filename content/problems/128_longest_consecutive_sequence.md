@@ -2,9 +2,9 @@
 tags:
   - dsu
 ---
+![[pictures/Pasted image 20241013233700.png]]
 
 
-![[problems/pictures/Pasted image 20240908030916.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

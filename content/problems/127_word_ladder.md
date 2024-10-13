@@ -3,7 +3,9 @@ tags:
   - dynamic_programming
   - dual_bfs
 ---
-![[problems/pictures/Pasted image 20240908030814.png]]
+![[pictures/Pasted image 20241013233610.png]]
+![[pictures/Pasted image 20241013233626.png]]
+
 
 
 ## Single BFS

@@ -2,10 +2,10 @@
 tags:
   - linked_list
 ---
+![[pictures/Pasted image 20241012201450.png]]
+![[pictures/Pasted image 20241012201458.png]]
 
 
-![[problems/pictures/Pasted image 20240907234912.png]]
-![[problems/pictures/Pasted image 20240907234933.png]]
 
 ```c++
 struct ListNode {

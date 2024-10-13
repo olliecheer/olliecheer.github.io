@@ -3,9 +3,10 @@ tags:
   - shuffle
   - array
 ---
+![[pictures/Pasted image 20241014005228.png]]
+![[pictures/Pasted image 20241014005236.png]]
 
 
-![[problems/pictures/Pasted image 20240909220518.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

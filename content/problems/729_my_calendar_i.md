@@ -2,7 +2,9 @@
 tags:
   - calendar
 ---
-![[problems/pictures/Pasted image 20240909232914.png]]
+![[pictures/Pasted image 20241011100740.png]]
+![[pictures/Pasted image 20241011100749.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;
@@ -12,7 +14,7 @@ class MyCalendar {
 
 public:
   bool book(int start, int end) {
-    for (auto &&it : calendar)
+    for (auto &it : calendar)
       if (it[0] < end && start < it[1])
         return false;
 

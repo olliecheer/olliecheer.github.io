@@ -2,7 +2,8 @@
 tags:
   - sell_stock
 ---
-![[problems/pictures/Pasted image 20240908030102.png]]
+![[pictures/Pasted image 20241013233312.png]]
+
 
 
 ```c++

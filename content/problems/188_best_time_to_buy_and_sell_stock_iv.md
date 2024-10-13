@@ -2,7 +2,9 @@
 tags:
   - sell_stock
 ---
-![[problems/pictures/Pasted image 20240908184254.png]]
+![[pictures/Pasted image 20241013235343.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

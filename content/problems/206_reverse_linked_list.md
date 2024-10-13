@@ -3,8 +3,10 @@ tags:
   - linked_list
   - reverse
 ---
-![[problems/pictures/Pasted image 20240908184932.png]]
-![[problems/pictures/Pasted image 20240908184942.png]]
+![[pictures/Pasted image 20241013235841.png]]
+![[pictures/Pasted image 20241013235852.png]]
+
+
 
 ```c++
 struct ListNode {

@@ -3,8 +3,9 @@ tags:
   - matrix
   - trie
 ---
-![[problems/pictures/Pasted image 20240908190020.png]]
-![[problems/pictures/Pasted image 20240908190031.png]]
+![[pictures/Pasted image 20241014000258.png]]
+![[pictures/Pasted image 20241014000312.png]]
+
 
 
 ## Skipped This Problem, fix later

@@ -3,9 +3,8 @@ tags:
   - subarray
   - median
 ---
-
-![[problems/pictures/Pasted image 20240910023010.png]]
-
+![[pictures/Pasted image 20241013230347.png]]
+![[pictures/Pasted image 20241013230401.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

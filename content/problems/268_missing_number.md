@@ -2,7 +2,10 @@
 tags:
   - bitwise
 ---
-![[problems/pictures/Pasted image 20240908225329.png]]
+![[pictures/Pasted image 20241014002317.png]]
+![[pictures/Pasted image 20241014002325.png]]
+
+
 
 
 ```c++

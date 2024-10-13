@@ -3,7 +3,8 @@ tags:
   - prime
   - prime_factor
 ---
-![[problems/pictures/Pasted image 20240910023338.png]]
+![[pictures/Pasted image 20241013230456.png]]
+
 
 
 ```c++

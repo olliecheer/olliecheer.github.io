@@ -3,10 +3,12 @@ tags:
   - path
   - offline_algorithm
 ---
-![[pictures/Pasted image 20241010100836.png]]
-![[pictures/Pasted image 20241010100845.png]]
-![[pictures/Pasted image 20241010100900.png]]
-![[pictures/Pasted image 20241010100912.png]]
+![[pictures/Pasted image 20241013225818.png]]
+![[pictures/Pasted image 20241013225829.png]]
+![[pictures/Pasted image 20241013225840.png]]
+![[pictures/Pasted image 20241013225851.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

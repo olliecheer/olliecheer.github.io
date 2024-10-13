@@ -4,9 +4,10 @@ tags:
   - dfs
   - coloring
 ---
-![[problems/pictures/Pasted image 20240910001010.png]]
-![[problems/pictures/Pasted image 20240910001020.png]]
-![[problems/pictures/Pasted image 20240910001028.png]]
+![[pictures/Pasted image 20241012092516.png]]
+![[pictures/Pasted image 20241012092538.png]]
+![[pictures/Pasted image 20241012092557.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

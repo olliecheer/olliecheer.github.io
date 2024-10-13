@@ -2,7 +2,10 @@
 tags:
   - random
 ---
-![[problems/pictures/Pasted image 20240909220158.png]]
+![[pictures/Pasted image 20241014004949.png]]
+![[pictures/Pasted image 20241014004959.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

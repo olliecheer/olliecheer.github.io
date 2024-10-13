@@ -2,7 +2,10 @@
 tags:
   - dfs
 ---
-![[problems/pictures/Pasted image 20240908185328.png]]
+![[pictures/Pasted image 20241014000132.png]]
+![[pictures/Pasted image 20241014000143.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

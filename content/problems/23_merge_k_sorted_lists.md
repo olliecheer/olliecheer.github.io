@@ -5,7 +5,9 @@ tags:
   - priority_queue
   - partition_merge
 ---
-![[problems/pictures/Pasted image 20240907223110.png]]
+![[pictures/Pasted image 20241012195425.png]]
+![[pictures/Pasted image 20241012195435.png]]
+
 
 ```c++
 struct ListNode {

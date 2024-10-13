@@ -3,9 +3,8 @@ tags:
   - pow_mod
   - permutation
 ---
-
-![[problems/pictures/Pasted image 20240910023455.png]]
-![[problems/pictures/Pasted image 20240910023502.png]]
+![[pictures/Pasted image 20241013230549.png]]
+![[pictures/Pasted image 20241013230608.png]]
 
 
 

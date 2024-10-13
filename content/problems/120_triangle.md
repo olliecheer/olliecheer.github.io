@@ -4,9 +4,9 @@ tags:
   - recursion
   - dynamic_programming
 ---
+![[pictures/Pasted image 20241013233019.png]]
+![[pictures/Pasted image 20241013233030.png]]
 
-
-![[problems/pictures/Pasted image 20240908025919.png]]
 
 
 ```c++

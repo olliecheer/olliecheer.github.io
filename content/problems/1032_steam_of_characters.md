@@ -4,8 +4,10 @@ tags:
   - trie
   - ac_automaton
 ---
-![[problems/pictures/Pasted image 20240910003814.png]]
-![[problems/pictures/Pasted image 20240910003823.png]]
+![[pictures/Pasted image 20241013203954.png]]
+![[pictures/Pasted image 20241013204022.png]]
+
+
 
 ### Automaton
 

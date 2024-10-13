@@ -2,7 +2,9 @@
 tags:
   - array
 ---
-![[problems/pictures/Pasted image 20240908181638.png]]
+![[pictures/Pasted image 20241013234724.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

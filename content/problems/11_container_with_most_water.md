@@ -4,7 +4,10 @@ tags:
   - dual_pointers
   - greedy
 ---
-![[problems/pictures/Pasted image 20240907192935.png]]![[pictures/Pasted image 20240907192957.png]]
+![[pictures/Pasted image 20241012194939.png]]
+![[pictures/Pasted image 20241012194954.png]]
+![[pictures/Pasted image 20241012195004.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

@@ -5,7 +5,8 @@ tags:
   - combination
   - dfs
 ---
-![[problems/pictures/Pasted image 20240908023016.png]]
+![[pictures/Pasted image 20241013231631.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

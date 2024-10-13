@@ -3,9 +3,11 @@ tags:
   - jump_game
 ---
 
-![[problems/pictures/Pasted image 20240910012018.png]]
-![[problems/pictures/Pasted image 20240910012042.png]]
-![[problems/pictures/Pasted image 20240910012052.png]]
+![[pictures/Pasted image 20241013223323.png]]
+![[pictures/Pasted image 20241013223336.png]]
+![[pictures/Pasted image 20241013223347.png]]
+
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

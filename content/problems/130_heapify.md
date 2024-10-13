@@ -2,6 +2,8 @@
 tags:
   - heap_sort
 ---
+![[pictures/Pasted image 20241013233737.png]]
+![[pictures/Pasted image 20241013233747.png]]
 
 
 ```c++

@@ -3,7 +3,10 @@ tags:
   - dynamic_programming
   - game
 ---
-![[problems/pictures/Pasted image 20240910004217.png]]
+![[pictures/Pasted image 20241013204800.png]]
+![[pictures/Pasted image 20241013204807.png]]
+
+
 
 
 ```c++

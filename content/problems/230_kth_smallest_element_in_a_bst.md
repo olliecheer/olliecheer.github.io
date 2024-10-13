@@ -2,8 +2,10 @@
 tags:
   - binary_search_tree
 ---
-![[problems/pictures/Pasted image 20240908191712.png]]
-![[problems/pictures/Pasted image 20240908191737.png]]
+![[pictures/Pasted image 20241014001119.png]]
+![[pictures/Pasted image 20241014001135.png]]
+
+
 
 ```c++
 struct TreeNode {

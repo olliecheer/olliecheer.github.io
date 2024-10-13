@@ -4,7 +4,9 @@ tags:
   - recursion
   - iteration
 ---
-![[problems/pictures/Pasted image 20240907232650.png]]
+![[pictures/Pasted image 20241012200223.png]]
+![[pictures/Pasted image 20241012200235.png]]
+
 
 ```c++
 template <typename T> using vec = std::vector<T>;

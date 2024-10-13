@@ -3,7 +3,8 @@ tags:
   - median
   - binary_search
 ---
-![[problems/pictures/Pasted image 20240907191852.png]]
+![[pictures/Pasted image 20241012194700.png]]
+![[pictures/Pasted image 20241012194707.png]]
 
 
 ```c++

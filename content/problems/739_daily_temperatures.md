@@ -2,8 +2,8 @@
 tags:
   - mono_stack
 ---
+![[pictures/Pasted image 20241012085751.png]]
 
-![[problems/pictures/Pasted image 20240910000209.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

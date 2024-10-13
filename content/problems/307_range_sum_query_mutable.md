@@ -2,7 +2,8 @@
 tags:
   - sum
 ---
-![[problems/pictures/Pasted image 20240909211532.png]]
+![[pictures/Pasted image 20241014003640.png]]
+![[pictures/Pasted image 20241014003651.png]]
 
 
 ## Segment Tree
