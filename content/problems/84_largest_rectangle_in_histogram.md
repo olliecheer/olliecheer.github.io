@@ -3,8 +3,8 @@ tags:
   - mono_stack
   - dfs
 ---
-![[pictures/Pasted image 20241012201553.png]]
-![[pictures/Pasted image 20241012201606.png]]
+![[problems/pictures/Pasted image 20241012201553.png]]
+![[problems/pictures/Pasted image 20241012201606.png]]
 
 
 ## Mono Stack

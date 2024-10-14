@@ -5,7 +5,7 @@ tags:
   - stack
   - 2pass
 ---
-![[pictures/Pasted image 20241012195629.png]]
+![[problems/pictures/Pasted image 20241012195629.png]]
 
 
 ```c++

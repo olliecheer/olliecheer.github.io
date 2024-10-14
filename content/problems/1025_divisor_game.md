@@ -2,7 +2,7 @@
 tags:
   - game
 ---
-![[pictures/Pasted image 20241013203823.png]]
+![[problems/pictures/Pasted image 20241013203823.png]]
 
 
 

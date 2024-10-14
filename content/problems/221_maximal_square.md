@@ -2,8 +2,8 @@
 tags:
   - matrix
 ---
-![[pictures/Pasted image 20241014000743.png]]
-![[pictures/Pasted image 20241014000753.png]]
+![[problems/pictures/Pasted image 20241014000743.png]]
+![[problems/pictures/Pasted image 20241014000753.png]]
 
 
 

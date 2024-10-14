@@ -2,7 +2,7 @@
 tags:
   - dsu
 ---
-![[pictures/Pasted image 20241013233700.png]]
+![[problems/pictures/Pasted image 20241013233700.png]]
 
 
 

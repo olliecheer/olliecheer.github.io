@@ -2,8 +2,8 @@
 tags:
   - random
 ---
-![[pictures/Pasted image 20241014004949.png]]
-![[pictures/Pasted image 20241014004959.png]]
+![[problems/pictures/Pasted image 20241014004949.png]]
+![[problems/pictures/Pasted image 20241014004959.png]]
 
 
 

@@ -3,8 +3,8 @@ tags:
   - array
   - binary_index_tree
 ---
-![[pictures/Pasted image 20241013225432.png]]
-![[pictures/Pasted image 20241013225451.png]]
+![[problems/pictures/Pasted image 20241013225432.png]]
+![[problems/pictures/Pasted image 20241013225451.png]]
 
 
 

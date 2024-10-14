@@ -2,9 +2,9 @@
 tags:
   - graph
 ---
-![[pictures/Pasted image 20241013233832.png]]
-![[pictures/Pasted image 20241013233846.png]]
-![[pictures/Pasted image 20241013233858.png]]
+![[problems/pictures/Pasted image 20241013233832.png]]
+![[problems/pictures/Pasted image 20241013233846.png]]
+![[problems/pictures/Pasted image 20241013233858.png]]
 
 
 

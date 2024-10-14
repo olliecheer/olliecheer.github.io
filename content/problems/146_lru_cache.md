@@ -2,8 +2,8 @@
 tags:
   - cache
 ---
-![[pictures/Pasted image 20241013234619.png]]
-![[pictures/Pasted image 20241013234628.png]]
+![[problems/pictures/Pasted image 20241013234619.png]]
+![[problems/pictures/Pasted image 20241013234628.png]]
 
 
 

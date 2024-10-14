@@ -2,9 +2,9 @@
 tags:
   - binary_search_tree
 ---
-![[pictures/Pasted image 20241013235251.png]]
-![[pictures/Pasted image 20241013235304.png]]
-![[pictures/Pasted image 20241013235314.png]]
+![[problems/pictures/Pasted image 20241013235251.png]]
+![[problems/pictures/Pasted image 20241013235304.png]]
+![[problems/pictures/Pasted image 20241013235314.png]]
 
 
 

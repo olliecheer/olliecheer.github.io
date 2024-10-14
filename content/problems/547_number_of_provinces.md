@@ -2,8 +2,8 @@
 tags:
   - union_find
 ---
-![[pictures/Pasted image 20241010220723.png]]
-![[pictures/Pasted image 20241010220733.png]]
+![[problems/pictures/Pasted image 20241010220723.png]]
+![[problems/pictures/Pasted image 20241010220733.png]]
 
 
 ```c++

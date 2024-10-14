@@ -2,7 +2,7 @@
 tags:
   - sliding_window
 ---
-![[pictures/Pasted image 20241014004514.png]]
+![[problems/pictures/Pasted image 20241014004514.png]]
 
 
 

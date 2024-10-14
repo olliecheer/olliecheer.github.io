@@ -2,8 +2,8 @@
 tags:
   - linked_list
 ---
-![[pictures/Pasted image 20241013234258.png]]
-![[pictures/Pasted image 20241013234307.png]]
+![[problems/pictures/Pasted image 20241013234258.png]]
+![[problems/pictures/Pasted image 20241013234307.png]]
 
 
 

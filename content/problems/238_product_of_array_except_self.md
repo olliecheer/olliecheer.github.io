@@ -2,7 +2,7 @@
 tags:
   - array
 ---
-![[pictures/Pasted image 20241014001558.png]]
+![[problems/pictures/Pasted image 20241014001558.png]]
 
 
 

@@ -3,8 +3,8 @@ tags:
   - pascals_triangle
   - combination
 ---
-![[pictures/Pasted image 20241013232939.png]]
-![[pictures/Pasted image 20241013232950.png]]
+![[problems/pictures/Pasted image 20241013232939.png]]
+![[problems/pictures/Pasted image 20241013232950.png]]
 
 
 

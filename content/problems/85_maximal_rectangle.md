@@ -4,8 +4,8 @@ tags:
   - monostack
   - dfs
 ---
-![[pictures/Pasted image 20241013231531.png]]
-![[pictures/Pasted image 20241013231549.png]]
+![[problems/pictures/Pasted image 20241013231531.png]]
+![[problems/pictures/Pasted image 20241013231549.png]]
 
 
 

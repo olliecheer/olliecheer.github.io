@@ -3,7 +3,7 @@ tags:
   - combination
   - dfs
 ---
-![[pictures/Pasted image 20241012201254.png]]
+![[problems/pictures/Pasted image 20241012201254.png]]
 
 
 ```c++

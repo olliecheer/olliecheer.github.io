@@ -2,9 +2,9 @@
 tags:
   - path
 ---
-![[pictures/Pasted image 20241013225116.png]]
-![[pictures/Pasted image 20241013225132.png]]
-![[pictures/Pasted image 20241013225144.png]]
+![[problems/pictures/Pasted image 20241013225116.png]]
+![[problems/pictures/Pasted image 20241013225132.png]]
+![[problems/pictures/Pasted image 20241013225144.png]]
 
 
 

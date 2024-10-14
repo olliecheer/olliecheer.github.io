@@ -3,8 +3,8 @@ tags:
   - union_find
   - dfs
 ---
-![[pictures/Pasted image 20241014002111.png]]
-![[pictures/Pasted image 20241014002120.png]]
+![[problems/pictures/Pasted image 20241014002111.png]]
+![[problems/pictures/Pasted image 20241014002120.png]]
 
 
 ## Find Union

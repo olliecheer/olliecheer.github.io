@@ -2,7 +2,7 @@
 tags:
   - bitwise
 ---
-![[pictures/Pasted image 20241013233952.png]]
+![[problems/pictures/Pasted image 20241013233952.png]]
 
 
 

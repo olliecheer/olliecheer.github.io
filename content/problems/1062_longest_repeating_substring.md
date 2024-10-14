@@ -3,7 +3,7 @@ tags:
   - longest_substring
   - mod
 ---
-![[pictures/Pasted image 20241013204844.png]]
+![[problems/pictures/Pasted image 20241013204844.png]]
 
 
 VIP, not submitted

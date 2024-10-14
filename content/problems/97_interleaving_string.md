@@ -2,9 +2,9 @@
 tags:
   - dynamic_programming
 ---
-![[pictures/Pasted image 20241013232033.png]]
-![[pictures/Pasted image 20241013232044.png]]
-![[pictures/Pasted image 20241013232051.png]]
+![[problems/pictures/Pasted image 20241013232033.png]]
+![[problems/pictures/Pasted image 20241013232044.png]]
+![[problems/pictures/Pasted image 20241013232051.png]]
 
 
 

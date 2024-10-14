@@ -3,9 +3,9 @@ tags:
   - island
   - rotate
 ---
-![[pictures/Pasted image 20241011090342.png]]
-![[pictures/Pasted image 20241011090351.png]]
-![[pictures/Pasted image 20241011090407.png]]
+![[problems/pictures/Pasted image 20241011090342.png]]
+![[problems/pictures/Pasted image 20241011090351.png]]
+![[problems/pictures/Pasted image 20241011090407.png]]
 
 
 ```c++

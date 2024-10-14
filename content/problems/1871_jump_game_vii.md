@@ -2,7 +2,7 @@
 tags:
   - jump_game
 ---
-![[pictures/Pasted image 20241010090403.png]]
+![[problems/pictures/Pasted image 20241010090403.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

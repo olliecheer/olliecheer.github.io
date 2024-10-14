@@ -4,8 +4,8 @@ tags:
   - regular_expression
   - recursion
 ---
-![[pictures/Pasted image 20241012194910.png]]
-![[pictures/Pasted image 20241012194921.png]]
+![[problems/pictures/Pasted image 20241012194910.png]]
+![[problems/pictures/Pasted image 20241012194921.png]]
 
 ### DFS
 ```c++

@@ -4,8 +4,8 @@ tags:
   - path
   - dfs
 ---
-![[pictures/Pasted image 20241012200733.png]]
-![[pictures/Pasted image 20241012200746.png]]
+![[problems/pictures/Pasted image 20241012200733.png]]
+![[problems/pictures/Pasted image 20241012200746.png]]
 
 
 

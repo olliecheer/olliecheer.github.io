@@ -4,7 +4,7 @@ tags:
   - sum
   - prefix_sum
 ---
-![[pictures/Pasted image 20241010221543.png]]
+![[problems/pictures/Pasted image 20241010221543.png]]
 
 ### Prefix Sum
 

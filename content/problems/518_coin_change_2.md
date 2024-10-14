@@ -3,8 +3,8 @@ tags:
   - coin_change
   - dynamic_programming
 ---
-![[pictures/Pasted image 20241010211617.png]]
-![[pictures/Pasted image 20241010211628.png]]
+![[problems/pictures/Pasted image 20241010211617.png]]
+![[problems/pictures/Pasted image 20241010211628.png]]
 
 
 ### DP Array

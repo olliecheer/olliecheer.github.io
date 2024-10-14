@@ -2,7 +2,7 @@
 tags:
   - subsequence
 ---
-![[pictures/Pasted image 20241013223933.png]]
+![[problems/pictures/Pasted image 20241013223933.png]]
 
 
 ```c++

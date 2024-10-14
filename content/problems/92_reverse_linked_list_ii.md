@@ -3,8 +3,8 @@ tags:
   - linked_list
   - reverse
 ---
-![[pictures/Pasted image 20241013231755.png]]
-![[pictures/Pasted image 20241013231802.png]]
+![[problems/pictures/Pasted image 20241013231755.png]]
+![[problems/pictures/Pasted image 20241013231802.png]]
 
 
 ```c++

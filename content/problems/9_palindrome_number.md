@@ -2,8 +2,8 @@
 tags:
   - palindrome
 ---
-![[pictures/Pasted image 20241012194846.png]]
-![[pictures/Pasted image 20241012194854.png]]
+![[problems/pictures/Pasted image 20241012194846.png]]
+![[problems/pictures/Pasted image 20241012194854.png]]
 
 ```c++
 class Solution {

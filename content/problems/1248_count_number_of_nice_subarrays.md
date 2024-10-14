@@ -2,7 +2,7 @@
 tags:
   - subarray
 ---
-![[pictures/Pasted image 20241013222444.png]]
+![[problems/pictures/Pasted image 20241013222444.png]]
 
 
 ```c++

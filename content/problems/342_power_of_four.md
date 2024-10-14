@@ -2,7 +2,7 @@
 tags:
   - pow
 ---
-![[pictures/Pasted image 20241014004558.png]]
+![[problems/pictures/Pasted image 20241014004558.png]]
 
 
 ```c++

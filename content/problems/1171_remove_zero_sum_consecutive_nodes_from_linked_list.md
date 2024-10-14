@@ -2,7 +2,7 @@
 tags:
   - linked_list
 ---
-![[pictures/Pasted image 20241013220621.png]]
+![[problems/pictures/Pasted image 20241013220621.png]]
 
 
 

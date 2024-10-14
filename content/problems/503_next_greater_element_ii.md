@@ -2,8 +2,8 @@
 tags:
   - mono_stack
 ---
-![[pictures/Pasted image 20241010203532.png]]
-![[pictures/Pasted image 20241010203550.png]]
+![[problems/pictures/Pasted image 20241010203532.png]]
+![[problems/pictures/Pasted image 20241010203550.png]]
 
 
 ```c++

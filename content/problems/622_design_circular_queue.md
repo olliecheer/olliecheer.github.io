@@ -2,8 +2,8 @@
 tags:
   - queue
 ---
-![[pictures/Pasted image 20241011083225.png]]
-![[pictures/Pasted image 20241011083235.png]]
+![[problems/pictures/Pasted image 20241011083225.png]]
+![[problems/pictures/Pasted image 20241011083235.png]]
 
 
 ```c++

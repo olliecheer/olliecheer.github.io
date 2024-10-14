@@ -2,7 +2,7 @@
 tags:
   - dfs
 ---
-![[pictures/Pasted image 20241014003905.png]]
+![[problems/pictures/Pasted image 20241014003905.png]]
 
 
 

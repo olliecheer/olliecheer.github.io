@@ -2,8 +2,8 @@
 tags:
   - scanning_line
 ---
-![[pictures/Pasted image 20241013222309.png]]
-![[pictures/Pasted image 20241013222330.png]]
+![[problems/pictures/Pasted image 20241013222309.png]]
+![[problems/pictures/Pasted image 20241013222330.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

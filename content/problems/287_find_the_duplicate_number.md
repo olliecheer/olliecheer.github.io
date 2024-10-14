@@ -1,8 +1,8 @@
 ---
 tags:
 ---
-![[pictures/Pasted image 20241014002827.png]]
-![[pictures/Pasted image 20241014002836.png]]
+![[problems/pictures/Pasted image 20241014002827.png]]
+![[problems/pictures/Pasted image 20241014002836.png]]
 
 
 

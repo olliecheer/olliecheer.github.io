@@ -3,10 +3,10 @@ tags:
   - path
   - offline_algorithm
 ---
-![[pictures/Pasted image 20241013225818.png]]
-![[pictures/Pasted image 20241013225829.png]]
-![[pictures/Pasted image 20241013225840.png]]
-![[pictures/Pasted image 20241013225851.png]]
+![[problems/pictures/Pasted image 20241013225818.png]]
+![[problems/pictures/Pasted image 20241013225829.png]]
+![[problems/pictures/Pasted image 20241013225840.png]]
+![[problems/pictures/Pasted image 20241013225851.png]]
 
 
 

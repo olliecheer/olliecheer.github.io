@@ -4,8 +4,8 @@ tags:
   - level_order
   - traversal
 ---
-![[pictures/Pasted image 20241013232529.png]]
-![[pictures/Pasted image 20241013232539.png]]
+![[problems/pictures/Pasted image 20241013232529.png]]
+![[problems/pictures/Pasted image 20241013232539.png]]
 
 
 

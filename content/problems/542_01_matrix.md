@@ -4,8 +4,8 @@ tags:
   - bfs
   - memo
 ---
-![[pictures/Pasted image 20241010215935.png]]
-![[pictures/Pasted image 20241010215948.png]]
+![[problems/pictures/Pasted image 20241010215935.png]]
+![[problems/pictures/Pasted image 20241010215948.png]]
 
 
 ```c++

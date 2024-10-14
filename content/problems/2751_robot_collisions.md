@@ -3,9 +3,9 @@ tags:
     - mono_stack
 ---
 
-![[pictures/Pasted image 20241013230807.png]]
-![[pictures/Pasted image 20241013230820.png]]
-![[pictures/Pasted image 20241013230833.png]]
+![[problems/pictures/Pasted image 20241013230807.png]]
+![[problems/pictures/Pasted image 20241013230820.png]]
+![[problems/pictures/Pasted image 20241013230833.png]]
 
 
 

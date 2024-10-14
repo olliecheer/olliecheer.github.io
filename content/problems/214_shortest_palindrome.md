@@ -4,7 +4,7 @@ tags:
   - rolling_hash
   - rabin_karp
 ---
-![[pictures/Pasted image 20241014000404.png]]
+![[problems/pictures/Pasted image 20241014000404.png]]
 
 
 

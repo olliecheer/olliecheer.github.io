@@ -3,8 +3,8 @@ tags:
   - dynamic_programming
   - game
 ---
-![[pictures/Pasted image 20241013204800.png]]
-![[pictures/Pasted image 20241013204807.png]]
+![[problems/pictures/Pasted image 20241013204800.png]]
+![[problems/pictures/Pasted image 20241013204807.png]]
 
 
 

@@ -1,7 +1,7 @@
 ---
 tags:
 ---
-![[pictures/Pasted image 20241013235051.png]]
+![[problems/pictures/Pasted image 20241013235051.png]]
 
 
 ## Radix sort

@@ -3,8 +3,8 @@ tags:
   - binary_tree
   - sum
 ---
-![[pictures/Pasted image 20241011084316.png]]
-![[pictures/Pasted image 20241011084329.png]]
+![[problems/pictures/Pasted image 20241011084316.png]]
+![[problems/pictures/Pasted image 20241011084329.png]]
 
 ```c++
 struct TreeNode {

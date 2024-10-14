@@ -4,8 +4,8 @@ tags:
   - matrix
   - dfs
 ---
-![[pictures/Pasted image 20241012200257.png]]
-![[pictures/Pasted image 20241012200310.png]]
+![[problems/pictures/Pasted image 20241012200257.png]]
+![[problems/pictures/Pasted image 20241012200310.png]]
 
 
 ```c++

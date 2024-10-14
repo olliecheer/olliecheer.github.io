@@ -3,7 +3,7 @@ tags:
   - subarray
   - sum
 ---
-![[pictures/Pasted image 20241013202104.png]]
+![[problems/pictures/Pasted image 20241013202104.png]]
 
 
 ```c++

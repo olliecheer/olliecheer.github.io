@@ -3,7 +3,7 @@ tags:
   - dfs
   - pruning
 ---
-![[pictures/Pasted image 20241010092455.png]]
+![[problems/pictures/Pasted image 20241010092455.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

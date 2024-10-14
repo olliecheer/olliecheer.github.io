@@ -3,7 +3,7 @@ tags:
   - subarray
   - prefix_sum
 ---
-![[pictures/Pasted image 20241010213615.png]]
+![[problems/pictures/Pasted image 20241010213615.png]]
 
 
 ### Prefix Sum

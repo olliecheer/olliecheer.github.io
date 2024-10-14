@@ -3,8 +3,8 @@ tags:
   - prime
   - eratosthenes
 ---
-![[pictures/Pasted image 20241013230516.png]]
-![[pictures/Pasted image 20241013230525.png]]
+![[problems/pictures/Pasted image 20241013230516.png]]
+![[problems/pictures/Pasted image 20241013230525.png]]
 
 
 

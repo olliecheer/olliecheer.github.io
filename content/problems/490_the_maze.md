@@ -4,10 +4,10 @@ tags:
   - bfs
   - maze
 ---
-![[pictures/Pasted image 20241014011206.png]]
-![[pictures/Pasted image 20241014011222.png]]
-![[pictures/Pasted image 20241014011233.png]]
-![[pictures/Pasted image 20241014011249.png]]
+![[problems/pictures/Pasted image 20241014011206.png]]
+![[problems/pictures/Pasted image 20241014011222.png]]
+![[problems/pictures/Pasted image 20241014011233.png]]
+![[problems/pictures/Pasted image 20241014011249.png]]
 
 
 ### BFS

@@ -3,8 +3,8 @@ tags:
   - binary_tree
   - balanced
 ---
-![[pictures/Pasted image 20241013232701.png]]
-![[pictures/Pasted image 20241013232717.png]]
+![[problems/pictures/Pasted image 20241013232701.png]]
+![[problems/pictures/Pasted image 20241013232717.png]]
 
 
 

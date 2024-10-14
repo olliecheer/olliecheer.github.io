@@ -4,8 +4,8 @@ tags:
   - trap_water
   - dynamic_programming
 ---
-![[pictures/Pasted image 20241012195926.png]]
-![[pictures/Pasted image 20241012195938.png]]
+![[problems/pictures/Pasted image 20241012195926.png]]
+![[problems/pictures/Pasted image 20241012195938.png]]
 
 
 ```c++

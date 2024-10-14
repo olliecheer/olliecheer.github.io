@@ -5,8 +5,8 @@ tags:
   - dynamic_programming
   - dfs
 ---
-![[pictures/Pasted image 20241013231045.png]]
-![[pictures/Pasted image 20241013231102.png]]
+![[problems/pictures/Pasted image 20241013231045.png]]
+![[problems/pictures/Pasted image 20241013231102.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

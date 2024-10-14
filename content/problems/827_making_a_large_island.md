@@ -3,8 +3,8 @@ tags:
   - island
   - union_find
 ---
-![[pictures/Pasted image 20241012095211.png]]
-![[pictures/Pasted image 20241012095222.png]]
+![[problems/pictures/Pasted image 20241012095211.png]]
+![[problems/pictures/Pasted image 20241012095222.png]]
 
 
 ```c++

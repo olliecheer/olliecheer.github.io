@@ -4,9 +4,9 @@ tags:
   - matrix
   - union_find
 ---
-![[pictures/Pasted image 20241014003318.png]]
-![[pictures/Pasted image 20241014003552.png]]
-![[pictures/Pasted image 20241014003601.png]]
+![[problems/pictures/Pasted image 20241014003318.png]]
+![[problems/pictures/Pasted image 20241014003552.png]]
+![[problems/pictures/Pasted image 20241014003601.png]]
 
 
 

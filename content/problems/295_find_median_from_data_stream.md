@@ -2,8 +2,8 @@
 tags:
   - quick_select
 ---
-![[pictures/Pasted image 20241014002951.png]]
-![[pictures/Pasted image 20241014002959.png]]
+![[problems/pictures/Pasted image 20241014002951.png]]
+![[problems/pictures/Pasted image 20241014002959.png]]
 
 
 

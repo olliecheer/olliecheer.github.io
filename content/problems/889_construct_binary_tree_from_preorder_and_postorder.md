@@ -5,8 +5,8 @@ tags:
   - preorder
   - tree_construct
 ---
-![[pictures/Pasted image 20241013201248.png]]
-![[pictures/Pasted image 20241013201308.png]]
+![[problems/pictures/Pasted image 20241013201248.png]]
+![[problems/pictures/Pasted image 20241013201308.png]]
 
 
 ```c++

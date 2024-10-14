@@ -3,8 +3,8 @@ tags:
   - subarray
   - sliding_window
 ---
-![[pictures/Pasted image 20241009212821.png]]
-![[pictures/Pasted image 20241009212834.png]]
+![[problems/pictures/Pasted image 20241009212821.png]]
+![[problems/pictures/Pasted image 20241009212834.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

@@ -5,8 +5,8 @@ tags:
   - priority_queue
   - partition_merge
 ---
-![[pictures/Pasted image 20241012195425.png]]
-![[pictures/Pasted image 20241012195435.png]]
+![[problems/pictures/Pasted image 20241012195425.png]]
+![[problems/pictures/Pasted image 20241012195435.png]]
 
 
 ```c++

@@ -3,8 +3,8 @@ tags:
   - sort
   - frequency
 ---
-![[pictures/Pasted image 20241014010606.png]]
-![[pictures/Pasted image 20241014010614.png]]
+![[problems/pictures/Pasted image 20241014010606.png]]
+![[problems/pictures/Pasted image 20241014010614.png]]
 
 
 

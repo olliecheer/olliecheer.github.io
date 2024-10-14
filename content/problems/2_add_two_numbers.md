@@ -4,8 +4,8 @@ tags:
   - sum
   - carry
 ---
-![[pictures/Pasted image 20241012194520.png]]
-![[pictures/Pasted image 20241012194531.png]]
+![[problems/pictures/Pasted image 20241012194520.png]]
+![[problems/pictures/Pasted image 20241012194531.png]]
 
 
 ```c++

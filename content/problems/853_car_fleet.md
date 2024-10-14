@@ -2,8 +2,8 @@
 tags:
   - dynamic_programming
 ---
-![[pictures/Pasted image 20241013231306.png]]
-![[pictures/Pasted image 20241013231326.png]]
+![[problems/pictures/Pasted image 20241013231306.png]]
+![[problems/pictures/Pasted image 20241013231326.png]]
 
 
 

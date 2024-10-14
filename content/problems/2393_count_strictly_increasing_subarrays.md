@@ -4,8 +4,8 @@ tags:
   - dp_array
   - sliding_window
 ---
-![[pictures/Pasted image 20241009212220.png]]
-![[pictures/Pasted image 20241009212233.png]]
+![[problems/pictures/Pasted image 20241009212220.png]]
+![[problems/pictures/Pasted image 20241009212233.png]]
 
 ### Sliding Window
 

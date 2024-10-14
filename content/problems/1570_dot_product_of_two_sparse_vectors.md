@@ -2,8 +2,8 @@
 tags:
   - binary_search
 ---
-![[pictures/Pasted image 20241013224830.png]]
-![[pictures/Pasted image 20241013224839.png]]
+![[problems/pictures/Pasted image 20241013224830.png]]
+![[problems/pictures/Pasted image 20241013224839.png]]
 
 
 ```c++

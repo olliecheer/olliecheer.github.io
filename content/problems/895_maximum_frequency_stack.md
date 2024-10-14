@@ -3,8 +3,8 @@ tags:
   - priority_queue
   - stack
 ---
-![[pictures/Pasted image 20241013201335.png]]
-![[pictures/Pasted image 20241013201344.png]]
+![[problems/pictures/Pasted image 20241013201335.png]]
+![[problems/pictures/Pasted image 20241013201344.png]]
 
 
 

@@ -2,7 +2,7 @@
 tags:
   - palindrome
 ---
-![[pictures/Pasted image 20241011084914.png]]
+![[problems/pictures/Pasted image 20241011084914.png]]
 
 
 ```c++

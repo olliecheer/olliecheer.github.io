@@ -5,12 +5,12 @@ tags:
   - dijkstra
 ---
 
-![[pictures/Pasted image 20241010204050.png]]
-![[pictures/Pasted image 20241010204104.png]]
-![[pictures/Pasted image 20241010204117.png]]
-![[pictures/Pasted image 20241010204129.png]]
-![[pictures/Pasted image 20241010204138.png]]
-![[pictures/Pasted image 20241010204147.png]]
+![[problems/pictures/Pasted image 20241010204050.png]]
+![[problems/pictures/Pasted image 20241010204104.png]]
+![[problems/pictures/Pasted image 20241010204117.png]]
+![[problems/pictures/Pasted image 20241010204129.png]]
+![[problems/pictures/Pasted image 20241010204138.png]]
+![[problems/pictures/Pasted image 20241010204147.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

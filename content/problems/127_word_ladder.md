@@ -3,8 +3,8 @@ tags:
   - dynamic_programming
   - dual_bfs
 ---
-![[pictures/Pasted image 20241013233610.png]]
-![[pictures/Pasted image 20241013233626.png]]
+![[problems/pictures/Pasted image 20241013233610.png]]
+![[problems/pictures/Pasted image 20241013233626.png]]
 
 
 

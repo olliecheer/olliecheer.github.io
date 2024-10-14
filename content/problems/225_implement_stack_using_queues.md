@@ -3,8 +3,8 @@ tags:
   - stack
   - queue
 ---
-![[pictures/Pasted image 20241014000817.png]]
-![[pictures/Pasted image 20241014000829.png]]
+![[problems/pictures/Pasted image 20241014000817.png]]
+![[problems/pictures/Pasted image 20241014000829.png]]
 
 
 

@@ -2,7 +2,7 @@
 tags:
   - meeting_room
 ---
-![[pictures/Pasted image 20241014001915.png]]
+![[problems/pictures/Pasted image 20241014001915.png]]
 
 
 

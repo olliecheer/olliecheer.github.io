@@ -7,8 +7,8 @@ tags:
   - bfs
   - dfs
 ---
-![[pictures/Pasted image 20241013232327.png]]
-![[pictures/Pasted image 20241013232342.png]]
+![[problems/pictures/Pasted image 20241013232327.png]]
+![[problems/pictures/Pasted image 20241013232342.png]]
 
 
 

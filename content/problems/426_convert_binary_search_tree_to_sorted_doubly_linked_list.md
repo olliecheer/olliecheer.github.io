@@ -3,9 +3,9 @@ tags:
   - binary_search_tree
   - linked_list
 ---
-![[pictures/Pasted image 20241014005933.png]]
-![[pictures/Pasted image 20241014005949.png]]
-![[pictures/Pasted image 20241014005959.png]]
+![[problems/pictures/Pasted image 20241014005933.png]]
+![[problems/pictures/Pasted image 20241014005949.png]]
+![[problems/pictures/Pasted image 20241014005959.png]]
 
 
 

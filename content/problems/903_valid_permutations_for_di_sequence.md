@@ -3,8 +3,8 @@ tags:
   - permutation
   - mod
 ---
-![[pictures/Pasted image 20241013201427.png]]
-![[pictures/Pasted image 20241013201436.png]]
+![[problems/pictures/Pasted image 20241013201427.png]]
+![[problems/pictures/Pasted image 20241013201436.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

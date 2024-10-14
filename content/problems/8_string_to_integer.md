@@ -3,10 +3,10 @@ tags:
   - integer_overflow
   - atoi
 ---
-![[pictures/Pasted image 20241012194748.png]]
-![[pictures/Pasted image 20241012194802.png]]
-![[pictures/Pasted image 20241012194816.png]]
-![[pictures/Pasted image 20241012194826.png]]
+![[problems/pictures/Pasted image 20241012194748.png]]
+![[problems/pictures/Pasted image 20241012194802.png]]
+![[problems/pictures/Pasted image 20241012194816.png]]
+![[problems/pictures/Pasted image 20241012194826.png]]
 
 
 ```c++

@@ -2,7 +2,7 @@
 tags:
   - substring
 ---
-![[pictures/Pasted image 20241013204725.png]]
+![[problems/pictures/Pasted image 20241013204725.png]]
 
 
 

@@ -4,9 +4,9 @@ tags:
   - sort
   - recursion
 ---
-![[pictures/Pasted image 20241012195306.png]]
-![[pictures/Pasted image 20241012195322.png]]
-![[pictures/Pasted image 20241012195330.png]]
+![[problems/pictures/Pasted image 20241012195306.png]]
+![[problems/pictures/Pasted image 20241012195322.png]]
+![[problems/pictures/Pasted image 20241012195330.png]]
 
 
 ### iteration

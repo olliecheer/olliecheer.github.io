@@ -5,8 +5,8 @@ tags:
   - inorder
   - postorder
 ---
-![[pictures/Pasted image 20241013232438.png]]
-![[pictures/Pasted image 20241013232505.png]]
+![[problems/pictures/Pasted image 20241013232438.png]]
+![[problems/pictures/Pasted image 20241013232505.png]]
 
 
 ```c++

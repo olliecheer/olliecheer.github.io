@@ -2,8 +2,8 @@
 tags:
   - sum
 ---
-![[pictures/Pasted image 20241014011316.png]]
-![[pictures/Pasted image 20241014011328.png]]
+![[problems/pictures/Pasted image 20241014011316.png]]
+![[problems/pictures/Pasted image 20241014011328.png]]
 
 
 

@@ -3,7 +3,7 @@ tags:
   - substring
   - mod
 ---
-![[pictures/Pasted image 20241013223304.png]]
+![[problems/pictures/Pasted image 20241013223304.png]]
 
 
 ### Rolling Hash + Prefix Sum

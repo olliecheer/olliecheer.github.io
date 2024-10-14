@@ -3,8 +3,8 @@ tags:
   - dynamic_programming
   - word_break
 ---
-![[pictures/Pasted image 20241013234201.png]]
-![[pictures/Pasted image 20241013234209.png]]
+![[problems/pictures/Pasted image 20241013234201.png]]
+![[problems/pictures/Pasted image 20241013234209.png]]
 
 
 

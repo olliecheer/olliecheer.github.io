@@ -2,7 +2,7 @@
 tags:
   - pascals_triangle
 ---
-![[pictures/Pasted image 20241013232900.png]]
+![[problems/pictures/Pasted image 20241013232900.png]]
 
 
 

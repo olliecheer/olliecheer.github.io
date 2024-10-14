@@ -2,10 +2,10 @@
 tags:
   - linked_list
 ---
-![[pictures/Pasted image 20241013234934.png]]
-![[pictures/Pasted image 20241013234945.png]]
-![[pictures/Pasted image 20241013234956.png]]
-![[pictures/Pasted image 20241013235008.png]]
+![[problems/pictures/Pasted image 20241013234934.png]]
+![[problems/pictures/Pasted image 20241013234945.png]]
+![[problems/pictures/Pasted image 20241013234956.png]]
+![[problems/pictures/Pasted image 20241013235008.png]]
 
 
 ```c++

@@ -3,8 +3,8 @@ tags:
   - gas_station
   - dynamic_programming
 ---
-![[pictures/Pasted image 20241013233920.png]]
-![[pictures/Pasted image 20241013233928.png]]
+![[problems/pictures/Pasted image 20241013233920.png]]
+![[problems/pictures/Pasted image 20241013233928.png]]
 
 
 

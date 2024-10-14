@@ -2,7 +2,7 @@
 tags:
   - parentheses
 ---
-![[pictures/Pasted image 20241014003207.png]]
+![[problems/pictures/Pasted image 20241014003207.png]]
 
 
 

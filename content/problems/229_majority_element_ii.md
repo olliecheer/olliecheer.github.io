@@ -2,7 +2,7 @@
 tags:
   - majority_number
 ---
-![[pictures/Pasted image 20241014001045.png]]
+![[problems/pictures/Pasted image 20241014001045.png]]
 
 
 

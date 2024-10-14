@@ -3,8 +3,8 @@ tags:
   - binary_tree
   - tree_depth
 ---
-![[pictures/Pasted image 20241013232751.png]]
-![[pictures/Pasted image 20241013232759.png]]
+![[problems/pictures/Pasted image 20241013232751.png]]
+![[problems/pictures/Pasted image 20241013232759.png]]
 
 
 

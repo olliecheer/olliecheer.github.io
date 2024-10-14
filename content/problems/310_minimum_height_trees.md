@@ -2,8 +2,8 @@
 tags:
   - tree_depth
 ---
-![[pictures/Pasted image 20241014003827.png]]
-![[pictures/Pasted image 20241014003839.png]]
+![[problems/pictures/Pasted image 20241014003827.png]]
+![[problems/pictures/Pasted image 20241014003839.png]]
 
 
 

@@ -4,9 +4,9 @@ tags:
   - dfs
   - coloring
 ---
-![[pictures/Pasted image 20241012092516.png]]
-![[pictures/Pasted image 20241012092538.png]]
-![[pictures/Pasted image 20241012092557.png]]
+![[problems/pictures/Pasted image 20241012092516.png]]
+![[problems/pictures/Pasted image 20241012092538.png]]
+![[problems/pictures/Pasted image 20241012092557.png]]
 
 
 ```c++

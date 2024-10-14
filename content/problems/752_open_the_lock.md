@@ -2,8 +2,8 @@
 tags:
   - bfs
 ---
-![[pictures/Pasted image 20241012091134.png]]
-![[pictures/Pasted image 20241012091156.png]]
+![[problems/pictures/Pasted image 20241012091134.png]]
+![[problems/pictures/Pasted image 20241012091156.png]]
 
 
 ### BFS

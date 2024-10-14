@@ -2,8 +2,8 @@
 tags:
   - scanning_line
 ---
-![[pictures/Pasted image 20241014000553.png]]
-![[pictures/Pasted image 20241014000611.png]]
+![[problems/pictures/Pasted image 20241014000553.png]]
+![[problems/pictures/Pasted image 20241014000611.png]]
 
 
 

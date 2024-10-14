@@ -3,8 +3,8 @@ tags:
   - array
   - majority_number
 ---
-![[pictures/Pasted image 20241012200148.png]]
-![[pictures/Pasted image 20241012200158.png]]
+![[problems/pictures/Pasted image 20241012200148.png]]
+![[problems/pictures/Pasted image 20241012200158.png]]
 
 
 ```c++

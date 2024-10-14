@@ -3,7 +3,7 @@ tags:
   - mod
   - subarray
 ---
-![[pictures/Pasted image 20241013230311.png]]
+![[problems/pictures/Pasted image 20241013230311.png]]
 
 
 ```c++

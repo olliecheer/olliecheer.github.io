@@ -4,7 +4,7 @@ tags:
   - dynamic_programming
   - greedy
 ---
-![[pictures/Pasted image 20241012200553.png]]
+![[problems/pictures/Pasted image 20241012200553.png]]
 
 
 

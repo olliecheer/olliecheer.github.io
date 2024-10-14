@@ -3,8 +3,8 @@ tags:
   - matrix
   - dynamic_programming
 ---
-![[pictures/Pasted image 20241012200833.png]]
-![[pictures/Pasted image 20241012200843.png]]
+![[problems/pictures/Pasted image 20241012200833.png]]
+![[problems/pictures/Pasted image 20241012200843.png]]
 
 
 

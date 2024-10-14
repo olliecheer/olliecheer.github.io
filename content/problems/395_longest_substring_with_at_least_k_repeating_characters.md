@@ -2,7 +2,7 @@
 tags:
   - longest_substring
 ---
-![[pictures/Pasted image 20241014005317.png]]
+![[problems/pictures/Pasted image 20241014005317.png]]
 
 
 

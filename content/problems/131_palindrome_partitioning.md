@@ -5,7 +5,7 @@ tags:
   - partition
   - backtrack
 ---
-![[pictures/Pasted image 20241013233809.png]]
+![[problems/pictures/Pasted image 20241013233809.png]]
 
 
 

@@ -3,7 +3,7 @@ tags:
   - sum
   - bit
 ---
-![[pictures/Pasted image 20241014004925.png]]
+![[problems/pictures/Pasted image 20241014004925.png]]
 
 
 ```c++

@@ -3,7 +3,7 @@ tags:
   - house_robber
   - dynamic_programming
 ---
-![[pictures/Pasted image 20241013235440.png]]
+![[problems/pictures/Pasted image 20241013235440.png]]
 
 
 

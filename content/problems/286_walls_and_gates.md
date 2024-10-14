@@ -1,5 +1,5 @@
-![[pictures/Pasted image 20241014002708.png]]
-![[pictures/Pasted image 20241014002721.png]]
+![[problems/pictures/Pasted image 20241014002708.png]]
+![[problems/pictures/Pasted image 20241014002721.png]]
 
 
 

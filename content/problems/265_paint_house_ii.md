@@ -2,8 +2,8 @@
 tags:
   - paint_house
 ---
-![[pictures/Pasted image 20241014002240.png]]
-![[pictures/Pasted image 20241014002249.png]]
+![[problems/pictures/Pasted image 20241014002240.png]]
+![[problems/pictures/Pasted image 20241014002249.png]]
 
 
 

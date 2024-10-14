@@ -2,7 +2,7 @@
 tags:
   - sort
 ---
-![[pictures/Pasted image 20241014000457.png]]
+![[problems/pictures/Pasted image 20241014000457.png]]
 
 
 ```c++

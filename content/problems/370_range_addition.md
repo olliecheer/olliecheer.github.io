@@ -2,9 +2,9 @@
 tags:
   - prefix_sum
 ---
-![[pictures/Pasted image 20241014004736.png]]
-![[pictures/Pasted image 20241014004801.png]]
-![[pictures/Pasted image 20241014004810.png]]
+![[problems/pictures/Pasted image 20241014004736.png]]
+![[problems/pictures/Pasted image 20241014004801.png]]
+![[problems/pictures/Pasted image 20241014004810.png]]
 
 
 

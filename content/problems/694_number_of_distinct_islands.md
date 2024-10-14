@@ -3,9 +3,9 @@ tags:
   - island
   - dfs
 ---
-![[pictures/Pasted image 20241011085021.png]]
-![[pictures/Pasted image 20241011085030.png]]
-![[pictures/Pasted image 20241011085042.png]]
+![[problems/pictures/Pasted image 20241011085021.png]]
+![[problems/pictures/Pasted image 20241011085030.png]]
+![[problems/pictures/Pasted image 20241011085042.png]]
 
 
 ```c++

@@ -4,8 +4,8 @@ tags:
   - array
   - tree_construct
 ---
-![[pictures/Pasted image 20241013232628.png]]
-![[pictures/Pasted image 20241013232639.png]]
+![[problems/pictures/Pasted image 20241013232628.png]]
+![[problems/pictures/Pasted image 20241013232639.png]]
 
 
 

@@ -2,9 +2,9 @@
 tags:
   - linked_list
 ---
-![[pictures/Pasted image 20241013234043.png]]
-![[pictures/Pasted image 20241013234058.png]]
-![[pictures/Pasted image 20241013234105.png]]
+![[problems/pictures/Pasted image 20241013234043.png]]
+![[problems/pictures/Pasted image 20241013234058.png]]
+![[problems/pictures/Pasted image 20241013234105.png]]
 
 
 

@@ -3,8 +3,8 @@ tags:
   - graph
   - matrix
 ---
-![[pictures/Pasted image 20241013201621.png]]
-![[pictures/Pasted image 20241013201635.png]]
+![[problems/pictures/Pasted image 20241013201621.png]]
+![[problems/pictures/Pasted image 20241013201635.png]]
 
 
 

@@ -5,8 +5,8 @@ tags:
   - fibonacci
 ---
 
-![[pictures/Pasted image 20241010210711.png]]
-![[pictures/Pasted image 20241010210724.png]]
+![[problems/pictures/Pasted image 20241010210711.png]]
+![[problems/pictures/Pasted image 20241010210724.png]]
 
 
 ```c++

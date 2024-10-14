@@ -3,8 +3,8 @@ tags:
   - matrix
   - trie
 ---
-![[pictures/Pasted image 20241014000258.png]]
-![[pictures/Pasted image 20241014000312.png]]
+![[problems/pictures/Pasted image 20241014000258.png]]
+![[problems/pictures/Pasted image 20241014000312.png]]
 
 
 

@@ -3,7 +3,7 @@ tags:
   - array
   - interval
 ---
-![[pictures/Pasted image 20241012200609.png]]
+![[problems/pictures/Pasted image 20241012200609.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

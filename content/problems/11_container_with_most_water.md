@@ -4,9 +4,9 @@ tags:
   - dual_pointers
   - greedy
 ---
-![[pictures/Pasted image 20241012194939.png]]
-![[pictures/Pasted image 20241012194954.png]]
-![[pictures/Pasted image 20241012195004.png]]
+![[problems/pictures/Pasted image 20241012194939.png]]
+![[problems/pictures/Pasted image 20241012194954.png]]
+![[problems/pictures/Pasted image 20241012195004.png]]
 
 
 ```c++

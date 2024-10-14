@@ -2,7 +2,7 @@
 tags:
   - stack
 ---
-![[pictures/Pasted image 20241014005431.png]]
+![[problems/pictures/Pasted image 20241014005431.png]]
 
 
 

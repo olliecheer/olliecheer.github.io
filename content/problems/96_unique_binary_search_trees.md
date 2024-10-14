@@ -4,7 +4,7 @@ tags:
   - dfs
   - dynamic_programming
 ---
-![[pictures/Pasted image 20241013232005.png]]
+![[problems/pictures/Pasted image 20241013232005.png]]
 
 
 

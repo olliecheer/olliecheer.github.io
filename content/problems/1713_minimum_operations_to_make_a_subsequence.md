@@ -3,7 +3,7 @@ tags:
   - greedy
   - subsequence
 ---
-![[pictures/Pasted image 20241010093654.png]]
+![[problems/pictures/Pasted image 20241010093654.png]]
 
 
 ```c++

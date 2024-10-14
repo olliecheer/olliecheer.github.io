@@ -2,9 +2,9 @@
 tags:
   - tree_construct
 ---
-![[pictures/Pasted image 20241014010035.png]]
-![[pictures/Pasted image 20241014010059.png]]
-![[pictures/Pasted image 20241014010131.png]]
+![[problems/pictures/Pasted image 20241014010035.png]]
+![[problems/pictures/Pasted image 20241014010059.png]]
+![[problems/pictures/Pasted image 20241014010131.png]]
 
 
 

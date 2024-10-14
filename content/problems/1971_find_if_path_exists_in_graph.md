@@ -2,8 +2,8 @@
 tags:
   - bfs
 ---
-![[pictures/Pasted image 20241010085956.png]]
-![[pictures/Pasted image 20241010090017.png]]
+![[problems/pictures/Pasted image 20241010085956.png]]
+![[problems/pictures/Pasted image 20241010090017.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

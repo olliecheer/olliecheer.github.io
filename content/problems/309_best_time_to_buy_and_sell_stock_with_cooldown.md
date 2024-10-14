@@ -2,7 +2,7 @@
 tags:
   - sell_stock
 ---
-![[pictures/Pasted image 20241014003748.png]]
+![[problems/pictures/Pasted image 20241014003748.png]]
 
 
 

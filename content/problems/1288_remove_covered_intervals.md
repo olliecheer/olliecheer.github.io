@@ -1,7 +1,7 @@
 ---
 tags:
 ---
-![[pictures/Pasted image 20241013222757.png]]
+![[problems/pictures/Pasted image 20241013222757.png]]
 
 
 ```c++

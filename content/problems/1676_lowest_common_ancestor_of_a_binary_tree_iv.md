@@ -2,9 +2,9 @@
 tags:
   - common_ancestor
 ---
-![[pictures/Pasted image 20241013225639.png]]
-![[pictures/Pasted image 20241013225652.png]]
-![[pictures/Pasted image 20241013225703.png]]
+![[problems/pictures/Pasted image 20241013225639.png]]
+![[problems/pictures/Pasted image 20241013225652.png]]
+![[problems/pictures/Pasted image 20241013225703.png]]
 
 
 

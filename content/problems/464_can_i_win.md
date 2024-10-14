@@ -5,8 +5,8 @@ tags:
   - dynamic_programming
   - state_compression
 ---
-![[pictures/Pasted image 20241014010810.png]]
-![[pictures/Pasted image 20241014010818.png]]
+![[problems/pictures/Pasted image 20241014010810.png]]
+![[problems/pictures/Pasted image 20241014010818.png]]
 
 
 

@@ -2,8 +2,8 @@
 tags:
   - sort
 ---
-![[pictures/Pasted image 20241012201133.png]]
-![[pictures/Pasted image 20241012201140.png]]
+![[problems/pictures/Pasted image 20241012201133.png]]
+![[problems/pictures/Pasted image 20241012201140.png]]
 
 
 ```c++

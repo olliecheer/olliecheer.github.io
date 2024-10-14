@@ -3,8 +3,8 @@ tags:
   - dfs
   - memo
 ---
-![[pictures/Pasted image 20241013231717.png]]
-![[pictures/Pasted image 20241013231729.png]]
+![[problems/pictures/Pasted image 20241013231717.png]]
+![[problems/pictures/Pasted image 20241013231729.png]]
 
 
 

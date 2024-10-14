@@ -2,8 +2,8 @@
 tags:
   - binary_tree
 ---
-![[pictures/Pasted image 20241010220344.png]]
-![[pictures/Pasted image 20241010220353.png]]
+![[problems/pictures/Pasted image 20241010220344.png]]
+![[problems/pictures/Pasted image 20241010220353.png]]
 
 
 ```c++

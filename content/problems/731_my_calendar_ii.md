@@ -3,8 +3,8 @@ tags:
   - calendar
   - scanning_line
 ---
-![[pictures/Pasted image 20241012084349.png]]
-![[pictures/Pasted image 20241012084402.png]]
+![[problems/pictures/Pasted image 20241012084349.png]]
+![[problems/pictures/Pasted image 20241012084402.png]]
 
 ### Scanning Line
 

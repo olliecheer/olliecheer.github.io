@@ -2,7 +2,7 @@
 tags:
   - scanning_line
 ---
-![[pictures/Pasted image 20240925224332.png]]
+![[problems/pictures/Pasted image 20240925224332.png]]
 
 
 ```c++

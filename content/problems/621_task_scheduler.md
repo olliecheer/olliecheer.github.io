@@ -2,8 +2,8 @@
 tags:
   - scheduler
 ---
-![[pictures/Pasted image 20241011082433.png]]
-![[pictures/Pasted image 20241011082447.png]]
+![[problems/pictures/Pasted image 20241011082433.png]]
+![[problems/pictures/Pasted image 20241011082447.png]]
 
 
 ```c++

@@ -3,8 +3,8 @@ tags:
   - common_ancestor
   - binary_tree
 ---
-![[pictures/Pasted image 20241014001518.png]]
-![[pictures/Pasted image 20241014001527.png]]
+![[problems/pictures/Pasted image 20241014001518.png]]
+![[problems/pictures/Pasted image 20241014001527.png]]
 
 
 

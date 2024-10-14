@@ -3,7 +3,7 @@ tags:
   - permutation
   - dfs
 ---
-![[pictures/Pasted image 20241012200106.png]]
+![[problems/pictures/Pasted image 20241012200106.png]]
 
 
 ```c++

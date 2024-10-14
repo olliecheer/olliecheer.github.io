@@ -4,7 +4,7 @@ tags:
   - dynamic_programming
   - dp_array
 ---
-![[pictures/Pasted image 20241011083724.png]]
+![[problems/pictures/Pasted image 20241011083724.png]]
 
 
 ### Dynamic Programming

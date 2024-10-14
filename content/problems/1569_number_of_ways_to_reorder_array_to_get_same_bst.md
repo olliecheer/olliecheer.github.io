@@ -4,9 +4,9 @@ tags:
   - mod
   - dynamic_programming
 ---
-![[pictures/Pasted image 20241013224725.png]]
-![[pictures/Pasted image 20241013224744.png]]
-![[pictures/Pasted image 20241013224755.png]]
+![[problems/pictures/Pasted image 20241013224725.png]]
+![[problems/pictures/Pasted image 20241013224744.png]]
+![[problems/pictures/Pasted image 20241013224755.png]]
 
 
 

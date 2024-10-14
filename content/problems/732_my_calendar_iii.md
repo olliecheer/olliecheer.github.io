@@ -2,8 +2,8 @@
 tags:
   - calendar
 ---
-![[pictures/Pasted image 20241012085023.png]]
-![[pictures/Pasted image 20241012085039.png]]
+![[problems/pictures/Pasted image 20241012085023.png]]
+![[problems/pictures/Pasted image 20241012085039.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

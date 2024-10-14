@@ -2,8 +2,8 @@
 tags:
   - calendar
 ---
-![[pictures/Pasted image 20241011100740.png]]
-![[pictures/Pasted image 20241011100749.png]]
+![[problems/pictures/Pasted image 20241011100740.png]]
+![[problems/pictures/Pasted image 20241011100749.png]]
 
 
 ```c++

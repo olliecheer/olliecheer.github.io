@@ -2,9 +2,9 @@
 tags:
   - dfs
 ---
-![[pictures/Pasted image 20241012085208.png]]
-![[pictures/Pasted image 20241012085223.png]]
-![[pictures/Pasted image 20241012085238.png]]
+![[problems/pictures/Pasted image 20241012085208.png]]
+![[problems/pictures/Pasted image 20241012085223.png]]
+![[problems/pictures/Pasted image 20241012085238.png]]
 
 
 ```c++

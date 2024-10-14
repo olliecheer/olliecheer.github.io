@@ -5,7 +5,7 @@ tags:
   - binary_search
   - dynamic_programming
 ---
-![[pictures/Pasted image 20241011094657.png]]
+![[problems/pictures/Pasted image 20241011094657.png]]
 
 ### Dynamic Programming
 

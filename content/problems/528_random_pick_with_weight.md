@@ -2,9 +2,9 @@
 tags:
   - random
 ---
-![[pictures/Pasted image 20241010215614.png]]
-![[pictures/Pasted image 20241010215634.png]]
-![[pictures/Pasted image 20241010215644.png]]
+![[problems/pictures/Pasted image 20241010215614.png]]
+![[problems/pictures/Pasted image 20241010215634.png]]
+![[problems/pictures/Pasted image 20241010215644.png]]
 
 ### Tree Map
 

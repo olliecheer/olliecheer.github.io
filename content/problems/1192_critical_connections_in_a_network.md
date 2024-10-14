@@ -4,8 +4,8 @@ tags:
   - dfs
   - graph
 ---
-![[pictures/Pasted image 20241013220655.png]]
-![[pictures/Pasted image 20241013220701.png]]
+![[problems/pictures/Pasted image 20241013220655.png]]
+![[problems/pictures/Pasted image 20241013220701.png]]
 
 
 ```c++

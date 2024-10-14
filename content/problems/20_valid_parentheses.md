@@ -3,8 +3,8 @@ tags:
   - stack
   - parentheses
 ---
-![[pictures/Pasted image 20241012195240.png]]
-![[pictures/Pasted image 20241012195249.png]]
+![[problems/pictures/Pasted image 20241012195240.png]]
+![[problems/pictures/Pasted image 20241012195249.png]]
 
 
 ```c++

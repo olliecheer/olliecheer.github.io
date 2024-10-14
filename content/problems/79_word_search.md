@@ -4,10 +4,10 @@ tags:
   - matrix
   - dfs
 ---
-![[pictures/Pasted image 20241012201345.png]]
-![[pictures/Pasted image 20241012201356.png]]
-![[pictures/Pasted image 20241012201413.png]]
-![[pictures/Pasted image 20241012201420.png]]
+![[problems/pictures/Pasted image 20241012201345.png]]
+![[problems/pictures/Pasted image 20241012201356.png]]
+![[problems/pictures/Pasted image 20241012201413.png]]
+![[problems/pictures/Pasted image 20241012201420.png]]
 
 
 

@@ -3,11 +3,11 @@ tags:
   - priority_queue
   - dijkstra
 ---
-![[pictures/Pasted image 20241009223858.png]]
-![[pictures/Pasted image 20241009223910.png]]
-![[pictures/Pasted image 20241009223922.png]]
-![[pictures/Pasted image 20241009223936.png]]
-![[pictures/Pasted image 20241009223947.png]]
+![[problems/pictures/Pasted image 20241009223858.png]]
+![[problems/pictures/Pasted image 20241009223910.png]]
+![[problems/pictures/Pasted image 20241009223922.png]]
+![[problems/pictures/Pasted image 20241009223936.png]]
+![[problems/pictures/Pasted image 20241009223947.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

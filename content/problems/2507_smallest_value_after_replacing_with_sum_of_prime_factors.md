@@ -3,7 +3,7 @@ tags:
   - prime
   - prime_factor
 ---
-![[pictures/Pasted image 20241013230426.png]]
+![[problems/pictures/Pasted image 20241013230426.png]]
 
 
 

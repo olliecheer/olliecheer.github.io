@@ -2,7 +2,7 @@
 tags:
   - prime
 ---
-![[pictures/Pasted image 20241013235745.png]]
+![[problems/pictures/Pasted image 20241013235745.png]]
 
 
 

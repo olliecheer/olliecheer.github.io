@@ -3,8 +3,8 @@ tags:
   - linked_list
   - reverse
 ---
-![[pictures/Pasted image 20241013235841.png]]
-![[pictures/Pasted image 20241013235852.png]]
+![[problems/pictures/Pasted image 20241013235841.png]]
+![[problems/pictures/Pasted image 20241013235852.png]]
 
 
 

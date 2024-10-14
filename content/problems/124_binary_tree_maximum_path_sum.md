@@ -3,8 +3,8 @@ tags:
   - binary_tree
   - traversal
 ---
-![[pictures/Pasted image 20241013233443.png]]
-![[pictures/Pasted image 20241013233514.png]]
+![[problems/pictures/Pasted image 20241013233443.png]]
+![[problems/pictures/Pasted image 20241013233514.png]]
 
 
 

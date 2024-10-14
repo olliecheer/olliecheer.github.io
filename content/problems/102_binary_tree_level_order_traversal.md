@@ -6,8 +6,8 @@ tags:
   - recursion
   - iteration
 ---
-![[pictures/Pasted image 20241013232253.png]]
-![[pictures/Pasted image 20241013232303.png]]
+![[problems/pictures/Pasted image 20241013232253.png]]
+![[problems/pictures/Pasted image 20241013232303.png]]
 
 
 

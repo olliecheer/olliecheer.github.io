@@ -6,8 +6,8 @@ tags:
   - priority_queue
   - bfs
 ---
-![[pictures/Pasted image 20241014005535.png]]
-![[pictures/Pasted image 20241014005549.png]]
+![[problems/pictures/Pasted image 20241014005535.png]]
+![[problems/pictures/Pasted image 20241014005549.png]]
 
 
 

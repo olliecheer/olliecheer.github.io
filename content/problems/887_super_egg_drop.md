@@ -3,8 +3,8 @@ tags:
   - egg_drop
   - dynamic_programming
 ---
-![[pictures/Pasted image 20241013201208.png]]
-![[pictures/Pasted image 20241013201219.png]]
+![[problems/pictures/Pasted image 20241013201208.png]]
+![[problems/pictures/Pasted image 20241013201219.png]]
 
 
 ```c++

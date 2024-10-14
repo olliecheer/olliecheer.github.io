@@ -2,8 +2,8 @@
 tags:
   - jump_game
 ---
-![[pictures/Pasted image 20241013222901.png]]
-![[pictures/Pasted image 20241013222910.png]]
+![[problems/pictures/Pasted image 20241013222901.png]]
+![[problems/pictures/Pasted image 20241013222910.png]]
 
 
 ### Recursion

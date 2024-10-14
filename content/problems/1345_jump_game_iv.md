@@ -2,8 +2,8 @@
 tags:
   - dual_bfs
 ---
-![[pictures/Pasted image 20241013223422.png]]
-![[pictures/Pasted image 20241013223433.png]]
+![[problems/pictures/Pasted image 20241013223422.png]]
+![[problems/pictures/Pasted image 20241013223433.png]]
 
 ```c++
 template <typename T> using vec = std::vector<T>;

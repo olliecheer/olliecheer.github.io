@@ -3,8 +3,8 @@ tags:
   - interval
   - array
 ---
-![[pictures/Pasted image 20241012200625.png]]
-![[pictures/Pasted image 20241012200637.png]]
+![[problems/pictures/Pasted image 20241012200625.png]]
+![[problems/pictures/Pasted image 20241012200637.png]]
 
 
 

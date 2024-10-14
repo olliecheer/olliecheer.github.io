@@ -3,7 +3,7 @@ tags:
   - meeting_room
   - scanning_line
 ---
-![[pictures/Pasted image 20241014001846.png]]
+![[problems/pictures/Pasted image 20241014001846.png]]
 
 
 

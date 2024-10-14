@@ -2,7 +2,7 @@
 tags:
   - priority_queue
 ---
-![[pictures/Pasted image 20241012092043.png]]
+![[problems/pictures/Pasted image 20241012092043.png]]
 
 
 ```c++

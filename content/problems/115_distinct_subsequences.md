@@ -5,7 +5,7 @@ tags:
   - recursion
   - iteration
 ---
-![[pictures/Pasted image 20241013232830.png]]
+![[problems/pictures/Pasted image 20241013232830.png]]
 
 
 

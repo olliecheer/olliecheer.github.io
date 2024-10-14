@@ -4,8 +4,8 @@ tags:
   - tree_construct
   - preorder
 ---
-![[pictures/Pasted image 20241013202830.png]]
-![[pictures/Pasted image 20241013202841.png]]
+![[problems/pictures/Pasted image 20241013202830.png]]
+![[problems/pictures/Pasted image 20241013202841.png]]
 
 
 

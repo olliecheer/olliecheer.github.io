@@ -3,7 +3,7 @@ tags:
   - subarray
   - product
 ---
-![[pictures/Pasted image 20241011094033.png]]
+![[problems/pictures/Pasted image 20241011094033.png]]
 
 
 ```c++

@@ -5,8 +5,8 @@ tags:
   - dfs
   - union_find
 ---
-![[pictures/Pasted image 20241013235532.png]]
-![[pictures/Pasted image 20241013235539.png]]
+![[problems/pictures/Pasted image 20241013235532.png]]
+![[problems/pictures/Pasted image 20241013235539.png]]
 
 
 

@@ -2,7 +2,7 @@
 tags:
   - palindrome
 ---
-![[pictures/Pasted image 20241014005649.png]]
+![[problems/pictures/Pasted image 20241014005649.png]]
 
 
 

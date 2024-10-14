@@ -3,9 +3,9 @@ tags:
   - data_stream
   - priority_queue
 ---
-![[pictures/Pasted image 20241011085331.png]]
-![[pictures/Pasted image 20241011085343.png]]
-![[pictures/Pasted image 20241011085353.png]]
+![[problems/pictures/Pasted image 20241011085331.png]]
+![[problems/pictures/Pasted image 20241011085343.png]]
+![[problems/pictures/Pasted image 20241011085353.png]]
 
 
 ```c++

@@ -2,7 +2,7 @@
 tags:
   - top_k
 ---
-![[pictures/Pasted image 20241014004624.png]]
+![[problems/pictures/Pasted image 20241014004624.png]]
 
 
 ### Max Heap

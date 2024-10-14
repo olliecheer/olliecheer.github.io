@@ -5,8 +5,8 @@ tags:
   - dfs
   - dynamic_programming
 ---
-![[pictures/Pasted image 20241013222822.png]]
-![[pictures/Pasted image 20241013222835.png]]
+![[problems/pictures/Pasted image 20241013222822.png]]
+![[problems/pictures/Pasted image 20241013222835.png]]
 
 
 ```c++

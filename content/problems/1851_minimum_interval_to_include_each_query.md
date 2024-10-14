@@ -3,8 +3,8 @@ tags:
   - priority_queue
   - offline_algorithm
 ---
-![[pictures/Pasted image 20241010091254.png]]
-![[pictures/Pasted image 20241010091307.png]]
+![[problems/pictures/Pasted image 20241010091254.png]]
+![[problems/pictures/Pasted image 20241010091307.png]]
 
 
 ```c++

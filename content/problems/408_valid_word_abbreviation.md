@@ -2,8 +2,8 @@
 tags:
   - dual_pointers
 ---
-![[pictures/Pasted image 20241014005618.png]]
-![[pictures/Pasted image 20241014005627.png]]
+![[problems/pictures/Pasted image 20241014005618.png]]
+![[problems/pictures/Pasted image 20241014005627.png]]
 
 
 

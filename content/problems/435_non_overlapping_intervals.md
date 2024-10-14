@@ -2,8 +2,8 @@
 tags:
   - greedy
 ---
-![[pictures/Pasted image 20241014010209.png]]
-![[pictures/Pasted image 20241014010218.png]]
+![[problems/pictures/Pasted image 20241014010209.png]]
+![[problems/pictures/Pasted image 20241014010218.png]]
 
 
 

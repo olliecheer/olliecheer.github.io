@@ -4,8 +4,8 @@ tags:
   - recursion
   - iteration
 ---
-![[pictures/Pasted image 20241012201519.png]]
-![[pictures/Pasted image 20241012201530.png]]
+![[problems/pictures/Pasted image 20241012201519.png]]
+![[problems/pictures/Pasted image 20241012201530.png]]
 
 
 ```c++

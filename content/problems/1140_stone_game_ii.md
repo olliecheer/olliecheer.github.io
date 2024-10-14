@@ -3,8 +3,8 @@ tags:
   - stone_game
   - dynamic_programming
 ---
-![[pictures/Pasted image 20241013213439.png]]
-![[pictures/Pasted image 20241013213448.png]]
+![[problems/pictures/Pasted image 20241013213439.png]]
+![[problems/pictures/Pasted image 20241013213448.png]]
 
 
 ```c++

@@ -2,9 +2,9 @@
 tags:
   - tree
 ---
-![[pictures/Pasted image 20241013224321.png]]
-![[pictures/Pasted image 20241013224332.png]]
-![[pictures/Pasted image 20241013224343.png]]
+![[problems/pictures/Pasted image 20241013224321.png]]
+![[problems/pictures/Pasted image 20241013224332.png]]
+![[problems/pictures/Pasted image 20241013224343.png]]
 
 
 

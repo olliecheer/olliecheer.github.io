@@ -3,9 +3,9 @@ tags:
   - jump_game
 ---
 
-![[pictures/Pasted image 20241013223323.png]]
-![[pictures/Pasted image 20241013223336.png]]
-![[pictures/Pasted image 20241013223347.png]]
+![[problems/pictures/Pasted image 20241013223323.png]]
+![[problems/pictures/Pasted image 20241013223336.png]]
+![[problems/pictures/Pasted image 20241013223347.png]]
 
 
 

@@ -3,8 +3,8 @@ tags:
   - binary_tree
   - dfs
 ---
-![[pictures/Pasted image 20241013201704.png]]
-![[pictures/Pasted image 20241013201716.png]]
+![[problems/pictures/Pasted image 20241013201704.png]]
+![[problems/pictures/Pasted image 20241013201716.png]]
 
 
 

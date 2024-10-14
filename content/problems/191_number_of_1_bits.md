@@ -2,8 +2,8 @@
 tags:
   - bitwise
 ---
-![[pictures/Pasted image 20241013235410.png]]
-![[pictures/Pasted image 20241013235418.png]]
+![[problems/pictures/Pasted image 20241013235410.png]]
+![[problems/pictures/Pasted image 20241013235418.png]]
 
 
 

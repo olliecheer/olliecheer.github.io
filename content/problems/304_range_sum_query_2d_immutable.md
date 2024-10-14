@@ -3,9 +3,9 @@ tags:
   - matrix
   - sum
 ---
-![[pictures/Pasted image 20241014003232.png]]
-![[pictures/Pasted image 20241014003244.png]]
-![[pictures/Pasted image 20241014003256.png]]
+![[problems/pictures/Pasted image 20241014003232.png]]
+![[problems/pictures/Pasted image 20241014003244.png]]
+![[problems/pictures/Pasted image 20241014003256.png]]
 
 
 

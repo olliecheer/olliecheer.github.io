@@ -5,8 +5,8 @@ tags:
   - recursion
   - dfs
 ---
-![[pictures/Pasted image 20241012195858.png]]
-![[pictures/Pasted image 20241012195906.png]]
+![[problems/pictures/Pasted image 20241012195858.png]]
+![[problems/pictures/Pasted image 20241012195906.png]]
 
 
 ```c++

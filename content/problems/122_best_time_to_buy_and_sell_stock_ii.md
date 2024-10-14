@@ -3,8 +3,8 @@ tags:
   - sell_stock
   - dynamic_programming
 ---
-![[pictures/Pasted image 20241013233331.png]]
-![[pictures/Pasted image 20241013233344.png]]
+![[problems/pictures/Pasted image 20241013233331.png]]
+![[problems/pictures/Pasted image 20241013233344.png]]
 
 
 

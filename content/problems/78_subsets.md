@@ -2,7 +2,7 @@
 tags:
   - backtrack
 ---
-![[pictures/Pasted image 20241012201323.png]]
+![[problems/pictures/Pasted image 20241012201323.png]]
 
 
 

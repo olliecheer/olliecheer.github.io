@@ -4,8 +4,8 @@ tags:
   - backtracking
 ---
 
-![[pictures/Pasted image 20241010214028.png]]
-![[pictures/Pasted image 20241010214037.png]]
+![[problems/pictures/Pasted image 20241010214028.png]]
+![[problems/pictures/Pasted image 20241010214037.png]]
 
 ### Dynamic Programming
 

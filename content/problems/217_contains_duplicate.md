@@ -2,8 +2,8 @@
 tags:
   - sort
 ---
-![[pictures/Pasted image 20241014000518.png]]
-![[pictures/Pasted image 20241014000530.png]]
+![[problems/pictures/Pasted image 20241014000518.png]]
+![[problems/pictures/Pasted image 20241014000530.png]]
 
 
 

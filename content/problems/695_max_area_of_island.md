@@ -3,9 +3,9 @@ tags:
   - island
   - matrix
 ---
-![[pictures/Pasted image 20241011085214.png]]
-![[pictures/Pasted image 20241011085222.png]]
-![[pictures/Pasted image 20241011085235.png]]
+![[problems/pictures/Pasted image 20241011085214.png]]
+![[problems/pictures/Pasted image 20241011085222.png]]
+![[problems/pictures/Pasted image 20241011085235.png]]
 
 
 ```c++

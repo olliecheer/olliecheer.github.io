@@ -4,8 +4,8 @@ tags:
   - floyd
   - sssp
 ---
-![[pictures/Pasted image 20241012090007.png]]
-![[pictures/Pasted image 20241012090023.png]]
+![[problems/pictures/Pasted image 20241012090007.png]]
+![[problems/pictures/Pasted image 20241012090023.png]]
 
 ### Floyd Warshall
 

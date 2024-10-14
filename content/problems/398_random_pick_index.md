@@ -3,8 +3,8 @@ tags:
   - random
   - reservoir_sampling
 ---
-![[pictures/Pasted image 20241014005355.png]]
-![[pictures/Pasted image 20241014005404.png]]
+![[problems/pictures/Pasted image 20241014005355.png]]
+![[problems/pictures/Pasted image 20241014005404.png]]
 
 
 ```c++

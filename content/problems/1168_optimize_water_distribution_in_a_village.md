@@ -3,8 +3,8 @@ tags:
   - union_find
   - prim
 ---
-![[pictures/Pasted image 20241013220318.png]]
-![[pictures/Pasted image 20241013220329.png]]
+![[problems/pictures/Pasted image 20241013220318.png]]
+![[problems/pictures/Pasted image 20241013220329.png]]
 
 ### Kruscal
 

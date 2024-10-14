@@ -3,8 +3,8 @@ tags:
   - prim
   - kruscal
 ---
-![[pictures/Pasted image 20241013210950.png]]
-![[pictures/Pasted image 20241013211000.png]]
+![[problems/pictures/Pasted image 20241013210950.png]]
+![[problems/pictures/Pasted image 20241013211000.png]]
 
 
 ```c++

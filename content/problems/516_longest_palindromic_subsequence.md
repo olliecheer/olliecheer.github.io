@@ -3,7 +3,7 @@ tags:
   - palindrome
   - subsequence
 ---
-![[pictures/Pasted image 20241010210829.png]]
+![[problems/pictures/Pasted image 20241010210829.png]]
 
 ### Based on Longest Common Subsequence
 
