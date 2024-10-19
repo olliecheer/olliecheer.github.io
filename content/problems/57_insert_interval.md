@@ -7,7 +7,6 @@ tags:
 ![[problems/pictures/Pasted image 20241012200637.png]]
 
 
-
 ```c++
 template <typename T> using vec = std::vector<T>;
 
@@ -25,17 +24,16 @@ public:
           placed = true;
         }
         res.push_back(interval);
-      } else if (interval[1] < left) {
+      } else if (interval[1] < left)
         res.push_back(interval);
-      } else {
+      else {
         left = std::min(left, interval[0]);
         right = std::max(right, interval[1]);
       }
     }
 
-    if (!placed) {
+    if (!placed)
       res.push_back({left, right});
-    }
 
     return res;
   }

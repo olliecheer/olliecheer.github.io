@@ -23,9 +23,8 @@ public:
         vec<Number> vec{};
         int nr = nums.size();
 
-        for (int i = 0; i < nr; i++) {
+        for (int i = 0; i < nr; i++)
             vec.push_back({nums[i], i});
-        }
 
         std::sort(vec.begin(), vec.end(),
                   [](Number const& left, Number const& right) {
@@ -33,8 +32,8 @@ public:
                   });
 
         for (int left = 0, right = vec.size() - 1; left != right;) {
-            auto&& left_it = vec[left];
-            auto&& right_it = vec[right];
+            auto left_it = vec[left];
+            auto right_it = vec[right];
             if (left_it.value + right_it.value > target)
                 right--;
             else if (left_it.value + right_it.value < target)

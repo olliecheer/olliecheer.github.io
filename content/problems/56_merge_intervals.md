@@ -14,13 +14,11 @@ public:
     auto res = vec<vec<int>>{};
     std::sort(intervals.begin(), intervals.end());
 
-    for (auto &it : intervals) {
-      if (res.empty() || it[0] > res.back()[1]) {
+    for (auto &it : intervals)
+      if (res.empty() || it[0] > res.back()[1])
         res.push_back(it);
-      } else if (it[1] > res.back()[1]) {
+      else if (it[1] > res.back()[1])
         res.back()[1] = it[1];
-      }
-    }
 
     return res;
   }

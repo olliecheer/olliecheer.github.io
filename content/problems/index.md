@@ -77,7 +77,7 @@ title: problems
 
 [[47_permutations_ii.md]]
 
-[[48_majority_number_iii.md]]
+[[48_rotate_image.md]]
 
 [[50_pow_x_n.md]]
 

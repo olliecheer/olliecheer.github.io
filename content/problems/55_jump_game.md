@@ -20,12 +20,11 @@ class Solution {
       return memo[pos].value();
 
     int furthest = std::min(pos + nums[pos], (int)nums.size() - 1);
-    for (int next = pos + 1; next <= furthest; next++) {
+    for (int next = pos + 1; next <= furthest; next++)
       if (canJumpFromPosition(next, nums) == 1) {
         memo[pos] = true;
         return true;
       }
-    }
 
     memo[pos] = false;
     return false;

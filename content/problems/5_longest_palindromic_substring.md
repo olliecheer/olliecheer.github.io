@@ -36,7 +36,6 @@ class Solution {
               end = j;
             }
           }
-
         } else if (s[i] == s[j] && dp[i + 1][j - 1]) {
           dp[i][j] = true;
           if (j - i > end - start) {

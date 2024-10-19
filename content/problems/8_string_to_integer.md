@@ -12,7 +12,7 @@ tags:
 ```c++
 class Solution {
   bool integerOverflow(int base, int currentDigit) {
-    int int_max = std::numeric_limits<int>::max();
+    int int_max = INT_MAX;
     return base > int_max / 10 ||
            (base == int_max / 10 && currentDigit > int_max % 10);
   }

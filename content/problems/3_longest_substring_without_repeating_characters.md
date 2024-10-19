@@ -14,9 +14,8 @@ class Solution {
 public:
     int lengthOfLongestSubstring(std::string s) {
         int nr = s.size();
-        if (nr <= 1) {
-            return nr;template <typename T> using vec = std::vector<T>;
-        }
+        if (nr <= 1)
+            return nr;
 
         vec<int> last_posi(128, -1);
         int res = 0;

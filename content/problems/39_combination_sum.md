@@ -17,9 +17,8 @@ class Solution {
 
   void dfs(vec<int> &candidates, int index, vec<int> &tmp, int target) {
     if (index == candidates.size()) {
-      if (target == 0) {
+      if (target == 0)
         res.push_back(tmp);
-      }
       return;
     }
 
