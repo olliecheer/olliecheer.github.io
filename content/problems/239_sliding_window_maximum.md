@@ -16,7 +16,6 @@ public:
     std::deque<int> dq;
     vec<int> res(N - k + 1);
     for (int i = 0; i < N; i++) {
-      int start_window_index = i - k + 1;
       while (!dq.empty() && i - dq.front() >= k)
         dq.pop_front();
 
@@ -24,6 +23,8 @@ public:
         dq.pop_back();
 
       dq.push_back(i);
+
+      int start_window_index = i - k + 1;
       if (start_window_index >= 0)
         res[start_window_index] = nums[dq.front()];
     }

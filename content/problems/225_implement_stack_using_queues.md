@@ -71,19 +71,21 @@ public:
 };
 ```
 
+### 1 Queue
+
 ```c++
 class MyStack {
   std::queue<int> q;
 
 public:
   void push(int x) {
-    std::queue<int> tmp;
-    tmp.push(x);
-    while (!q.empty()) {
-      tmp.push(q.front());
-      q.pop();
-    }
-    std::swap(tmp, q);
+	q.push(x);
+	int sz = q.size();
+	while(sz > 1) {
+		q.push(q.front());
+		q.pop();
+		sz--;
+	}
   }
 
   int pop() {

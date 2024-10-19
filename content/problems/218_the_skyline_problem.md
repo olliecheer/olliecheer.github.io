@@ -15,7 +15,7 @@ public:
   vec<vec<int>> getSkyline(vec<vec<int>> &buildings) {
     vec<vec<int>> res;
     vec<vec<int>> heights;
-    for (auto &&it : buildings) {
+    for (auto &it : buildings) {
       int left = it[0], right = it[1], height = it[2];
       heights.push_back({left, -height});
       heights.push_back({right, height});
@@ -27,9 +27,9 @@ public:
     pq.insert(0);
 
     int prev_max = 0;
-    for (auto &&it : heights) {
-      auto &&location = it[0];
-      auto &&height = it[1];
+    for (auto &it : heights) {
+      auto &location = it[0];
+      auto &height = it[1];
       if (height < 0)
         pq.insert(-height);
       else
