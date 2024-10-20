@@ -37,7 +37,7 @@ class Solution {
 public:
   bool validTree(int n, vec<vec<int>> &edges) {
     DSU dsu(n);
-    for (auto &&e : edges) {
+    for (auto &e : edges) {
       if (dsu.find(e[0]) == dsu.find(e[1]))
         return false;
 

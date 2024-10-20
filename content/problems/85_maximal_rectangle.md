@@ -1,8 +1,8 @@
 ---
 tags:
   - matrix
-  - monostack
   - dfs
+  - mono_stack
 ---
 ![[problems/pictures/Pasted image 20241013231531.png]]
 ![[problems/pictures/Pasted image 20241013231549.png]]

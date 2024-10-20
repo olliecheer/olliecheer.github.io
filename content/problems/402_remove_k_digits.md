@@ -1,6 +1,6 @@
 ---
 tags:
-  - stack
+  - mono_stack
 ---
 ![[problems/pictures/Pasted image 20241014005431.png]]
 

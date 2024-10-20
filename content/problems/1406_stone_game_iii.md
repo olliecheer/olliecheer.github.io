@@ -1,6 +1,7 @@
 ---
 tags:
   - stone_game
+  - dynamic_programming
 ---
 ![[problems/pictures/Pasted image 20241013223841.png]]
 ![[problems/pictures/Pasted image 20241013223856.png]]

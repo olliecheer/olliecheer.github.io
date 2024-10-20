@@ -2,6 +2,29 @@
 title: problems
 ---
 
+[[0_coin_change_problems.md]]
+
+[[0_dynamic_programming_problems.md]]
+
+[[0_jump_problems.md]]
+
+[[0_mono_stack_problems.md]]
+
+[[0_palindrome_problems.md]]
+
+[[0_priority_queue_problems.md]]
+
+[[0_segment_tree_problems.md]]
+
+[[0_sequence_problems.md]]
+
+[[0_stock_problems.md]]
+
+[[0_stone_game_problems.md]]
+
+[[0_substring_subarray_problems.md]]
+
+[[0_trap_water_problems.md]]
 
 [[calculator.md]]
 
@@ -10,8 +33,6 @@ title: problems
 [[dsu_with_rank.md]]
 
 [[fast_pow.md]]
-
-[[index.md]]
 
 [[kmp.md]]
 
@@ -171,7 +192,7 @@ title: problems
 
 [[122_best_time_to_buy_and_sell_stock_ii.md]]
 
-[[123_best_time_to_buy_and_sell_iii.md]]
+[[123_best_time_to_buy_and_sell_stock_iii.md]]
 
 [[124_binary_tree_maximum_path_sum.md]]
 
@@ -215,7 +236,7 @@ title: problems
 
 [[155_min_stack.md]]
 
-[[159_logest_substring_with_at_most_two_distinct_characters.md]]
+[[159_longest_substring_with_at_most_two_distinct_characters.md]]
 
 [[160_intersection_of_two_linked_lists.md]]
 
@@ -439,7 +460,7 @@ title: problems
 
 [[494_target_sum.md]]
 
-[[496_mono_stack.md]]
+[[496_next_greater_element_i.md]]
 
 [[497_random_point_in_non_overlapping_rectangles.md]]
 
@@ -451,7 +472,7 @@ title: problems
 
 [[516_longest_palindromic_subsequence.md]]
 
-[[518_coin_change_2.md]]
+[[518_coin_change_ii.md]]
 
 [[523_continuous_subarray_sum.md]]
 

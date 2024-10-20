@@ -1,5 +1,6 @@
 ---
 tags:
+  - rolling_hash
 ---
 ![[problems/pictures/Pasted image 20241013223811.png]]
 

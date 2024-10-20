@@ -1,10 +1,12 @@
 ---
 tags:
   - substring
+  - rolling_hash
 ---
 ![[problems/pictures/Pasted image 20241013204725.png]]
 
 
+### Rolling Hash
 
 ```c++
 template <typename T> using vec = std::vector<T>;
