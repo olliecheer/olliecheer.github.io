@@ -1,7 +1,7 @@
 
 ### Backpack
 [[lintcode_798_backpack_vii.md]]
-
+[[494_target_sum.md]]
 
 ### Palindrome
 [[5_longest_palindromic_substring.md]]
@@ -99,10 +99,6 @@
 ### Subset
 [[416_partition_equal_subset_sum.md]]
 [[474_ones_and_zeros.md]]
-
-
-### Sum
-[[494_target_sum.md]]
 
 
 ### Others

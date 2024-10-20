@@ -8,26 +8,29 @@ tags:
 
 
 ```c++
-template <typename T> using vec = std::vector<T>;
-
 class Solution {
 public:
-  int findTargetSumWays(vec<int> &nums, int target) {
-    int sum = std::accumulate(nums.begin(), nums.end(), 0);
+  int findTargetSumWays(std::vector<int> &nums, int target) {
+    int sum = 0;
+    for (int &num : nums)
+      sum += num;
 
     int diff = sum - target;
-    if (diff < 0 || diff % 2)
+    if (diff < 0 || diff % 2 != 0)
       return 0;
 
-    int negative = diff / 2;
-    vec<int> dp(negative + 1);
-    dp[0] = 1;
-
-    for (int &n : nums)
-      for (int j = negative; j >= n; j--)
-        dp[j] += dp[j - n];
-
-    return dp[negative];
+    int n = nums.size(), neg = diff / 2;
+    std::vector<std::vector<int>> dp(n + 1, std::vector<int>(neg + 1));
+    dp[0][0] = 1;
+    for (int i = 1; i <= n; i++) {
+      int num = nums[i - 1];
+      for (int j = 0; j <= neg; j++) {
+        dp[i][j] = dp[i - 1][j];
+        if (j >= num)
+          dp[i][j] += dp[i - 1][j - num];
+      }
+    }
+    return dp[n][neg];
   }
 };
 ```
